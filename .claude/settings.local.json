@@ -1,7 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep:*)"
+      "Read(//c/Users/Leadshield/Documents/Agency/**)",
+      "Bash(pandoc \"Agent_Lead_Engine_Internal_Handbook.docx\" -t markdown -o /tmp/doc1.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Monthly_Service_Delivery_SOP.docx\" -t markdown -o /tmp/doc2.md)",
+      "Bash(find /c/Users/Leadshield/Desktop/Website1 -type f -name *.json -o -name *.config.*)",
+      "Bash(pandoc \"Agent_Lead_Engine_VA_Training_Guide.docx\" -t markdown -o /tmp/doc3.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Snapshot_Deployment_Guide.docx\" -t markdown -o /tmp/doc4.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Sales_Playbook.docx\" -t markdown -o /tmp/doc5.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_CRM_Operations_Training.docx\" -t markdown -o /tmp/doc6.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Client_Onboarding_Checklist.docx\" -t markdown -o /tmp/doc7.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Client_Offboarding_SOP.docx\" -t markdown -o /tmp/doc8.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Internal_Handbook.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc1.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Monthly_Service_Delivery_SOP.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc2.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_VA_Training_Guide.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc3.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Snapshot_Deployment_Guide.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc4.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Sales_Playbook.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc5.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_CRM_Operations_Training.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc6.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Client_Onboarding_Checklist.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc7.md)",
+      "Bash(pandoc \"Agent_Lead_Engine_Client_Offboarding_SOP.docx\" -t markdown -o /c/Users/Leadshield/Desktop/Website1/doc8.md)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(node -e \":*)",
+      "Bash(node _fix-icons.js)",
+      "mcp__Desktop_Commander__read_file",
+      "Bash(find C:/Users/Leadshield/Desktop/Website1 -type f \\\\\\(-name *.docx -o -name *.pdf -o -name *.txt -o -name *.md \\\\\\))",
+      "Bash(node -e \"console.log\\(''ok''\\)\")",
+      "Bash(grep -E \"\\\\.\\(html|css|js|json\\)$\")",
+      "Bash(git --version)",
+      "Bash(gh --version)"
     ]
   }
 }

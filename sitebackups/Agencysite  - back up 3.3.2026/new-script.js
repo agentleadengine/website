@@ -6,68 +6,17 @@ if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
-        // Close all dropdowns when closing menu
-        if (!navMenu.classList.contains('active')) {
-            document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
-        }
     });
 }
 
-// Dropdown toggle for mobile
-document.querySelectorAll('.has-dropdown > a').forEach(toggle => {
-    toggle.addEventListener('click', function(e) {
-        if (window.innerWidth <= 991) {
-            e.preventDefault();
-            const parent = this.parentElement;
-            // Close other open dropdowns
-            document.querySelectorAll('.has-dropdown.open').forEach(d => {
-                if (d !== parent) d.classList.remove('open');
-            });
-            parent.classList.toggle('open');
-        }
-    });
-});
-
-// Close mobile menu when clicking a dropdown link (not the parent toggle)
+// Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // Only close if this is NOT a dropdown parent toggle on mobile
-        if (!this.parentElement.classList.contains('has-dropdown') || window.innerWidth > 991) {
-            navMenu.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
-            document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
-        }
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
     });
 });
-
-// Set active nav state based on current page
-(function() {
-    const rawPage = window.location.pathname.split('/').pop() || 'index.html';
-    // Normalize: ensure .html extension for matching
-    const currentPage = rawPage.includes('.') ? rawPage : (rawPage === '' ? 'index.html' : rawPage + '.html');
-
-    const servicePages = ['services.html', 'crm.html', 'automations.html', 'templates.html'];
-    const learnPages = ['faq.html', 'guides.html', 'about.html', 'guide-dashboard.html', 'guide-pipelines.html', 'guide-automations.html', 'guide-calendar.html', 'guide-contacts.html', 'guide-forms.html'];
-
-    // Set active on the exact link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPage) {
-            link.classList.add('active');
-        }
-    });
-
-    // Set active on parent dropdown
-    if (servicePages.includes(currentPage)) {
-        const dropdown = document.querySelector('.has-dropdown.services-dropdown');
-        if (dropdown) dropdown.classList.add('active');
-    }
-    if (learnPages.includes(currentPage)) {
-        const dropdown = document.querySelector('.has-dropdown.learn-dropdown');
-        if (dropdown) dropdown.classList.add('active');
-    }
-})();
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
