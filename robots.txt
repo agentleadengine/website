@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# NOTE for site owner: confirm your production domain is agentleadengine.com
+Sitemap: https://agentleadengine.com/sitemap.xml
