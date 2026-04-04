@@ -93,26 +93,160 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+// ── Contact Form — GoHighLevel Integration ───────────────────────────────────
+(function () {
+    const contactForm    = document.getElementById('contactForm');
+    if (!contactForm) return; // only runs on pages that have the form
+
+    const submitBtn      = document.getElementById('formSubmitBtn');
+    const successEl      = document.getElementById('formSuccess');
+    const errorBanner    = document.getElementById('formErrorBanner');
+    const errorBannerMsg = document.getElementById('formErrorText');
+
+    const GHL_ENDPOINT   = 'https://services.leadconnectorhq.com/funnels/submit';
+    const GHL_FORM_ID    = 'WvMtjqzJFsT8KKYGmP0b';
+    const GHL_LOCATION   = '3YEf1u4MnIkbrLqJaqdQ';
+
+    // ── Validators ──────────────────────────────────────────────────────────
+    function isValidEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+    }
+    function isValidPhone(v) {
+        return v.replace(/\D/g, '').length >= 10;
+    }
+
+    // Field config: label shown in errors, optional custom validator + message
+    const FIELDS = {
+        first_name: { label: 'First name' },
+        last_name:  { label: 'Last name' },
+        email:      { label: 'Email', validate: isValidEmail, msg: 'Please enter a valid email address.' },
+        phone:      { label: 'Phone', validate: isValidPhone, msg: 'Please enter a valid phone number (10+ digits).' },
+    };
+
+    // ── Field state helpers ──────────────────────────────────────────────────
+    function setError(id, msg) {
+        const input = document.getElementById(id);
+        const errEl = document.getElementById(id + '-error');
+        if (!input) return;
+        input.classList.add('input-error');
+        input.classList.remove('input-success');
+        if (errEl) { errEl.textContent = msg; errEl.classList.add('visible'); }
+    }
+
+    function setValid(id) {
+        const input = document.getElementById(id);
+        const errEl = document.getElementById(id + '-error');
+        if (!input) return;
+        input.classList.remove('input-error');
+        input.classList.add('input-success');
+        if (errEl) errEl.classList.remove('visible');
+    }
+
+    function clearState(id) {
+        const input = document.getElementById(id);
+        const errEl = document.getElementById(id + '-error');
+        if (!input) return;
+        input.classList.remove('input-error', 'input-success');
+        if (errEl) errEl.classList.remove('visible');
+    }
+
+    // ── Validate all required fields; returns true if form is valid ──────────
+    function validateAll(data) {
+        let valid = true;
+        Object.entries(FIELDS).forEach(([id, cfg]) => {
+            const val = (data[id] || '').trim();
+            if (!val) {
+                setError(id, cfg.label + ' is required.');
+                valid = false;
+            } else if (cfg.validate && !cfg.validate(val)) {
+                setError(id, cfg.msg);
+                valid = false;
+            } else {
+                setValid(id);
+            }
+        });
+        return valid;
+    }
+
+    // ── Real-time validation on blur / clear on input ────────────────────────
+    Object.entries(FIELDS).forEach(([id, cfg]) => {
+        const input = document.getElementById(id);
+        if (!input) return;
+
+        input.addEventListener('blur', function () {
+            const val = this.value.trim();
+            if (!val) {
+                setError(id, cfg.label + ' is required.');
+            } else if (cfg.validate && !cfg.validate(val)) {
+                setError(id, cfg.msg);
+            } else {
+                setValid(id);
+            }
+        });
+
+        // Clear error styling while the user is typing
+        input.addEventListener('input', function () {
+            if (this.classList.contains('input-error')) clearState(id);
+        });
+    });
+
+    // ── Loading / reset helpers ──────────────────────────────────────────────
+    function setLoading(on) {
+        submitBtn.disabled = on;
+        submitBtn.classList.toggle('loading', on);
+    }
+
+    function showErrorBanner(msg) {
+        errorBannerMsg.textContent = msg;
+        errorBanner.classList.add('visible');
+        errorBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ── Submit handler ───────────────────────────────────────────────────────
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
+        // Hide any previous error banner
+        errorBanner.classList.remove('visible');
 
-        // Here you would typically send the data to your server
-        console.log('Form submitted with data:', data);
+        // Collect + validate
+        const raw  = Object.fromEntries(new FormData(contactForm));
+        if (!validateAll(raw)) return;
 
-        // Show success message (you can customize this)
-        alert('Thank you for your interest! We will contact you shortly.');
+        setLoading(true);
 
-        // Reset form
-        contactForm.reset();
+        const params = new URLSearchParams({
+            formId:      GHL_FORM_ID,
+            location_id: GHL_LOCATION,
+            first_name:  raw.first_name.trim(),
+            last_name:   raw.last_name.trim(),
+            email:       raw.email.trim(),
+            phone:       raw.phone.trim(),
+            message:     (raw.message || '').trim(),
+        });
+
+        try {
+            const res = await fetch(GHL_ENDPOINT, {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body:    params.toString(),
+            });
+
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+
+            // Success — swap form for confirmation
+            contactForm.classList.add('form-hidden');
+            successEl.classList.add('visible');
+
+        } catch (err) {
+            console.error('GHL form submit error:', err);
+            showErrorBanner(
+                'Something went wrong. Please try again or call us at (516) 780-1385.'
+            );
+            setLoading(false);
+        }
     });
-}
+}());
 
 // Add animation on scroll
 const observerOptions = {

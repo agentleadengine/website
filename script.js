@@ -117,30 +117,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(this);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-
-        // Here you would normally send the data to your backend
-        console.log('Form submitted with data:', data);
-
-        // Show success message (you can customize this)
-        alert('Thank you for your inquiry! We will contact you shortly.');
-
-        // Reset form
-        this.reset();
-    });
-}
+// Contact Form — handled by new-script.js (GoHighLevel integration)
 
 // Animate on Scroll
 const observerOptions = {
@@ -181,42 +158,6 @@ window.addEventListener('scroll', () => {
         hero.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
-
-// Form validation
-const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-};
-
-const validatePhone = (phone) => {
-    if (!phone) return true; // Phone is optional
-    const re = /^[\d\s\-\+\(\)]+$/;
-    return re.test(phone);
-};
-
-// Add real-time validation to form inputs
-const emailInput = document.getElementById('email');
-const phoneInput = document.getElementById('phone');
-
-if (emailInput) {
-    emailInput.addEventListener('blur', function() {
-        if (this.value && !validateEmail(this.value)) {
-            this.style.borderColor = '#ff0000';
-        } else {
-            this.style.borderColor = '';
-        }
-    });
-}
-
-if (phoneInput) {
-    phoneInput.addEventListener('blur', function() {
-        if (this.value && !validatePhone(this.value)) {
-            this.style.borderColor = '#ff0000';
-        } else {
-            this.style.borderColor = '';
-        }
-    });
-}
 
 // Smooth reveal for elements
 const revealElements = document.querySelectorAll('.feature-item, .requirement-item, .legal-item');
