@@ -110,6 +110,11 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -117,10 +122,14 @@ p {
     width: auto;
 }
 
+.header-cta {
+    flex-shrink: 0;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 36px;
+    gap: 28px;
     align-items: center;
 }
 
@@ -284,6 +293,7 @@ p {
     font-size: 15px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: 2px solid transparent;
