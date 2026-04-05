@@ -352,4 +352,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Comparison Pages -->
+  <url><loc>https://agentleadengine.com/ale-vs-agencyzoom.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/ale-vs-betteragency.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/ale-vs-agencybloc.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/ale-vs-hubspot.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/ale-vs-ringy.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/ale-vs-radius.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>
