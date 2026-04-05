@@ -1150,6 +1150,7 @@ p {
     padding: 100px 0 40px;
     color: #ffffff;
     position: relative;
+    overflow: hidden;
     border-top: none;
 }
 
