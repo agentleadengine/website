@@ -143,6 +143,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://agentleadengine.com/medicare-aep-crm.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/life-insurance-crm.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/commercial-insurance-crm.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/final-expense-crm.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/reviews.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- CRM Guides -->
   <url>
