@@ -1,0 +1,9 @@
+Add 4 conversion pages: speed to lead, AI receptionist, ROI calculator, guarantee
+
+New pages:
+- speed-to-lead.html: the 5 minute rule, conversion stats, sub 60 second automation stack, SMS timing waterfall
+- ai-receptionist.html: 24/7 AI voice agent, qualification flow, live transfer, sample call script, honest limitations
+- roi-calculator.html: interactive calculator with live inputs for leads, close rate, premium, commission, speed to lead lift, plan tier, payback period
+- guarantee.html: 30 day satisfaction refund, month to month terms, cancellation policy, full data export on offboarding
+
+Expanded SERVICES nav with AI Receptionist, LEARN nav with Speed to Lead, ROI Calculator, and Guarantee. Updated sitemap.xml.

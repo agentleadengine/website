@@ -1,0 +1,69 @@
+start
+--- status before ---
+STDOUT:  M .claude/launch.json
+?? .claude/worktrees/
+?? _check.log
+?? _check.ps1
+?? _check2.log
+?? _err.txt
+?? _findgit.log
+?? _findgit.ps1
+?? _gitwork.log
+?? _gitwork.ps1
+?? _gitwork2.log
+?? _gitwork3.log
+?? _out.txt
+?? _test.log
+?? _test.ps1
+?? _test2.log
+?? _test2.ps1
+?? _v.txt
+?? _ve.txt
+
+--- add ---
+--- staged ---
+--- commit ---
+STDOUT: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .claude/launch.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.claude/worktrees/
+	_check.log
+	_check.ps1
+	_check2.log
+	_err.txt
+	_findgit.log
+	_findgit.ps1
+	_gitwork.log
+	_gitwork.ps1
+	_gitwork2.log
+	_gitwork3.log
+	_msg.txt
+	_out.txt
+	_test.log
+	_test.ps1
+	_test2.log
+	_test2.ps1
+	_v.txt
+	_ve.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+--- push ---
+STDERR: Everything up-to-date
+
+--- head ---
+STDOUT: 0acb873 Add 5 learn pages: compliance guide, missed call text-back, insurance basics, comparison, template guide
+f881d31 SEO: trim meta descriptions, expand state pages, add BreadcrumbList and FAQPage schema
+aaa58f0 Add 6 state location pages + By State footer navigation on all pages
+
+--- rev ---
+STDOUT: 0acb8731e41933653f070b9e8dfcdbb44c126207
+
+DONE

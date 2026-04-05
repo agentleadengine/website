@@ -1,0 +1,45 @@
+commit 0acb8731e41933653f070b9e8dfcdbb44c126207
+Author: agentleadengine <agentleadengine@gmail.com>
+Date:   Sat Apr 4 20:12:02 2026 -0400
+
+    Add 5 learn pages: compliance guide, missed call text-back, insurance basics, comparison, template guide
+    
+    New pages built from internal agency docs:
+    - compliance-guide.html: TCPA and CAN-SPAM rules, consent templates, opt-out handling, setup checklist
+    - missed-call-textback.html: the problem, how the automation works, ROI math, SMS scripts, what ships with every tier
+    - insurance-basics.html: plain-English glossary, 5 lines of business, agent types, 8 CRM metrics to watch
+    - comparison.html: DIY vs. generic marketing agency vs. Agent Lead Engine with a full side-by-side table
+    - website-templates-guide.html: all 9 templates compared, 4-question selection quiz, customization scope, ownership terms
+    
+    Expanded the LEARN dropdown nav on existing pages to link the new content and updated sitemap.xml.
+
+ about.html                      |   3 +
+ automations.html                |   3 +
+ comparison.html                 | 317 ++++++++++++++++++++++++++++++
+ compliance-guide.html           | 426 ++++++++++++++++++++++++++++++++++++++++
+ contact.html                    |   3 +
+ crm.html                        |   3 +
+ faq.html                        |   3 +
+ guide-automations.html          |   3 +
+ guide-calendar.html             |   3 +
+ guide-contacts.html             |   3 +
+ guide-dashboard.html            |   3 +
+ guide-forms.html                |   3 +
+ guide-pipelines.html            |   3 +
+ guides.html                     |   3 +
+ index.html                      |   3 +
+ insurance-basics.html           | 330 +++++++++++++++++++++++++++++++
+ insurance-crm-california.html   |   3 +
+ insurance-crm-florida.html      |   3 +
+ insurance-crm-michigan.html     |   3 +
+ insurance-crm-new-jersey.html   |   3 +
+ insurance-crm-new-york.html     |   3 +
+ insurance-crm-pennsylvania.html |   3 +
+ missed-call-textback.html       | 360 +++++++++++++++++++++++++++++++++
+ packages.html                   |   3 +
+ process.html                    |   3 +
+ services.html                   |   3 +
+ sitemap.xml                     |  32 +++
+ templates.html                  |   3 +
+ website-templates-guide.html    | 369 ++++++++++++++++++++++++++++++++++
+ 29 files changed, 1903 insertions(+)

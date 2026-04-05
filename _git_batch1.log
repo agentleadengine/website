@@ -1,0 +1,93 @@
+start
+--- add ---
+STDERR: warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'automations.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'comparison.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'compliance-guide.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'crm.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'faq.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-automations.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-calendar.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-contacts.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-dashboard.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-forms.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guide-pipelines.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guides.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-basics.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-california.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-florida.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-michigan.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-new-jersey.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-new-york.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'insurance-crm-pennsylvania.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'missed-call-textback.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'process.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'templates.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'website-templates-guide.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ai-receptionist.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'guarantee.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'roi-calculator.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'speed-to-lead.html', LF will be replaced by CRLF the next time Git touches it
+
+--- staged ---
+STDOUT:  about.html                      |   4 +
+ ai-receptionist.html            |  49 ++++++++
+ automations.html                |   4 +
+ comparison.html                 |   4 +
+ compliance-guide.html           |   4 +
+ contact.html                    |   4 +
+ crm.html                        |   4 +
+ faq.html                        |   4 +
+ guarantee.html                  |  49 ++++++++
+ guide-automations.html          |   4 +
+ guide-calendar.html             |   4 +
+ guide-contacts.html             |   4 +
+ guide-dashboard.html            |   4 +
+ guide-forms.html                |   4 +
+ guide-pipelines.html            |   4 +
+ guides.html                     |   4 +
+ index.html                      |   4 +
+ insurance-basics.html           |   4 +
+ insurance-crm-california.html   |   4 +
+ insurance-crm-florida.html      |   4 +
+ insurance-crm-michigan.html     |   4 +
+ insurance-crm-new-jersey.html   |   4 +
+ insurance-crm-new-york.html     |   4 +
+ insurance-crm-pennsylvania.html |   4 +
+ missed-call-textback.html       |   4 +
+ packages.html                   |   4 +
+ process.html                    |   4 +
+ roi-calculator.html             | 105 +++++++++++++++++
+ services.html                   |   4 +
+ sitemap.xml                     |  24 ++++
+ speed-to-lead.html              | 245 ++++++++++++++++++++++++++++++++++++++++
+ templates.html                  |   4 +
+ website-templates-guide.html    |   4 +
+ 33 files changed, 584 insertions(+)
+
+--- commit ---
+STDOUT: [main 53fbaa6] Add 4 conversion pages: speed to lead, AI receptionist, ROI calculator, guarantee
+ 33 files changed, 584 insertions(+)
+ create mode 100644 ai-receptionist.html
+ create mode 100644 guarantee.html
+ create mode 100644 roi-calculator.html
+ create mode 100644 speed-to-lead.html
+
+--- push ---
+STDERR: To https://github.com/agentleadengine/website.git
+   0acb873..53fbaa6  main -> main
+
+--- rev ---
+STDOUT: 53fbaa6b45914f19acd2470f7579d7c286b1560d
+
+--- head ---
+STDOUT: 53fbaa6 Add 4 conversion pages: speed to lead, AI receptionist, ROI calculator, guarantee
+0acb873 Add 5 learn pages: compliance guide, missed call text-back, insurance basics, comparison, template guide
+f881d31 SEO: trim meta descriptions, expand state pages, add BreadcrumbList and FAQPage schema
+
+DONE

@@ -4,7 +4,7 @@
     {
       "name": "website",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3000", "C:\\Users\\Leadshield\\Desktop\\Website1"],
+      "runtimeArgs": ["http-server", "C:\\Users\\Leadshield\\Documents\\GitHub\\site\\.claude\\worktrees\\optimistic-noether", "-p", "3000", "--cors", "-c-1"],
       "port": 3000
     }
   ]

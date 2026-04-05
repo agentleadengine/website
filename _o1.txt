@@ -1,0 +1,3 @@
+53fbaa6 Add 4 conversion pages: speed to lead, AI receptionist, ROI calculator, guarantee
+0acb873 Add 5 learn pages: compliance guide, missed call text-back, insurance basics, comparison, template guide
+f881d31 SEO: trim meta descriptions, expand state pages, add BreadcrumbList and FAQPage schema

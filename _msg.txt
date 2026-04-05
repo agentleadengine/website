@@ -1,0 +1,10 @@
+Add 5 learn pages: compliance guide, missed call text-back, insurance basics, comparison, template guide
+
+New pages built from internal agency docs:
+- compliance-guide.html: TCPA and CAN-SPAM rules, consent templates, opt-out handling, setup checklist
+- missed-call-textback.html: the problem, how the automation works, ROI math, SMS scripts, what ships with every tier
+- insurance-basics.html: plain-English glossary, 5 lines of business, agent types, 8 CRM metrics to watch
+- comparison.html: DIY vs. generic marketing agency vs. Agent Lead Engine with a full side-by-side table
+- website-templates-guide.html: all 9 templates compared, 4-question selection quiz, customization scope, ownership terms
+
+Expanded the LEARN dropdown nav on existing pages to link the new content and updated sitemap.xml.
