@@ -1,5 +1,6 @@
 .claude/
 .claude/worktrees/
+.mcp.json
 _*.txt
 _*.log
 _*.ps1
