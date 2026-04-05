@@ -688,6 +688,26 @@ p {
     margin-top: 80px;
 }
 
+.packages-grid.grid-2 > *,
+.packages-grid[style*="repeat(2,"] > * {
+    flex: 0 1 calc(50% - 20px);
+}
+
+.packages-grid.grid-3 > *,
+.packages-grid[style*="repeat(3,"] > * {
+    flex: 0 1 calc(33.333% - 27px);
+}
+
+.template-gallery.grid-2 > *,
+.template-gallery[style*="repeat(2,"] > * {
+    flex: 0 1 calc(50% - 18px);
+}
+
+.template-gallery.grid-3 > *,
+.template-gallery[style*="repeat(3,"] > * {
+    flex: 0 1 calc(33.333% - 24px);
+}
+
 .packages-grid > * {
     flex: 0 1 calc(33.333% - 27px);
     min-width: 280px;
@@ -2737,3 +2757,20 @@ body > .footer:last-child,
         font-size: 34px;
     }
 }
+
+/* ROI Calculator */
+.roi-calc { max-width: 960px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.roi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 780px) { .roi-grid { grid-template-columns: 1fr; } }
+.roi-inputs label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary); font-size: 14px; }
+.roi-inputs .field { margin-bottom: 20px; }
+.roi-inputs input[type=number] { width: 100%; padding: 12px 14px; border: 1px solid #d5d5da; border-radius: 8px; font-size: 16px; font-family: inherit; }
+.roi-inputs input[type=range] { width: 100%; }
+.roi-inputs .range-value { font-weight: 700; color: var(--accent, #0B1F3A); font-size: 16px; margin-left: 8px; }
+.roi-output { background: #f5f5f7; border-radius: 12px; padding: 28px; }
+.roi-output .metric { padding: 16px 0; border-bottom: 1px solid #e5e5e7; }
+.roi-output .metric:last-child { border-bottom: none; }
+.roi-output .label { font-size: 13px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.roi-output .value { font-size: 28px; font-weight: 800; color: var(--text-primary); }
+.roi-output .value.payback { color: #0a7f3f; }
+.roi-note { font-size: 13px; color: var(--text-secondary); text-align: center; margin-top: 24px; font-style: italic; }
