@@ -1296,8 +1296,12 @@ p {
         display: none;
     }
 
-    .dropdown-menu {
+    .dropdown-menu,
+    .has-dropdown:hover .dropdown-menu {
         position: static;
+        left: auto;
+        right: auto;
+        top: auto;
         transform: none;
         opacity: 1;
         visibility: visible;
@@ -1305,13 +1309,20 @@ p {
         border: none;
         border-radius: 0;
         min-width: 0;
+        width: 100%;
         padding: 0;
         display: none;
         background: var(--gray-50);
     }
 
-    .has-dropdown.open .dropdown-menu {
+    .has-dropdown.open .dropdown-menu,
+    .has-dropdown.open:hover .dropdown-menu {
         display: block;
+        transform: none;
+    }
+
+    .dropdown-menu a {
+        white-space: normal;
     }
 
     .has-dropdown.open .dropdown-arrow {
