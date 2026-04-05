@@ -1237,6 +1237,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Batch 61 lead magnets -->
+  <url><loc>https://agentleadengine.com/aep-checklist-download.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/11-workflow-starter-kit.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/quote-form-pack-download.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/soa-workflow-guide.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/website-audit-rubric.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/gbp-audit-checklist.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <!-- Legal pages -->
   <url><loc>https://agentleadengine.com/privacy-policy.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://agentleadengine.com/terms-of-service.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
