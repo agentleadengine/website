@@ -1308,7 +1308,73 @@ body > .footer:last-child,
 .footer-bottom p {
     color: rgba(255,255,255,0.5);
     font-size: 14px;
-    margin: 0;
+    margin: 0 0 12px 0;
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-legal {
+    font-size: 13px !important;
+}
+
+.footer-legal a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.legal-content {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.legal-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content p {
+    margin: 0 0 16px 0;
+}
+
+.legal-content ul {
+    margin: 0 0 16px 0;
+    padding-left: 24px;
+}
+
+.legal-content ul li {
+    margin-bottom: 8px;
+}
+
+.legal-content a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.legal-content a:hover {
+    border-bottom-color: var(--primary-purple);
+}
+
+.legal-content strong {
+    color: #0f172a;
+    font-weight: 600;
 }
 
 /* Responsive Design */
