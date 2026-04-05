@@ -269,6 +269,21 @@ p {
     color: var(--primary-purple);
 }
 
+/* Belt-and-suspenders: ensure no ancestor or hover-sticky state can shift dropdown links */
+.dropdown-menu a,
+.dropdown-menu a:hover,
+.dropdown-menu a:focus,
+.dropdown-menu a:active,
+.dropdown-menu li,
+.dropdown-menu li:hover {
+    transform: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    position: static !important;
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
