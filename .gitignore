@@ -1,0 +1,8 @@
+.claude/
+.claude/worktrees/
+_*.txt
+_*.log
+_*.ps1
+_*.py
+_live.css
+_home.html
