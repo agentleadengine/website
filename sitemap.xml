@@ -1207,6 +1207,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-carrier-appointment-tracking.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-commission-tracking.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-producer-scorecards.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-team-leaderboards.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-sales-coaching.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentleadengine.com/insurance-agent-new-producer-onboarding.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Legal pages -->
   <url><loc>https://agentleadengine.com/privacy-policy.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://agentleadengine.com/terms-of-service.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
