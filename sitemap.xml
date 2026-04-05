@@ -489,6 +489,14 @@
   <url><loc>https://agentleadengine.com/insurance-agent-annual-review-automation.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://agentleadengine.com/insurance-agent-cross-sell-automation.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- Batch 26: Major city pages -->
+  <url><loc>https://agentleadengine.com/insurance-crm-new-york-city.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agentleadengine.com/insurance-crm-long-island.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://agentleadengine.com/insurance-crm-los-angeles.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agentleadengine.com/insurance-crm-chicago.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agentleadengine.com/insurance-crm-houston.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://agentleadengine.com/insurance-crm-miami.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
   <!-- Legal pages -->
   <url><loc>https://agentleadengine.com/privacy-policy.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://agentleadengine.com/terms-of-service.html</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
