@@ -348,8 +348,8 @@ p {
 }
 
 .btn-large {
-    padding: 22px 50px;
-    font-size: 16px;
+    padding: 16px 36px;
+    font-size: 15px;
 }
 
 .btn-block {
@@ -1136,7 +1136,7 @@ p {
 
 /* CTA Section */
 .cta {
-    padding: 120px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, #3b0a8a 0%, #6d28d9 100%);
     text-align: center;
     position: relative;
@@ -1165,14 +1165,14 @@ p {
 }
 
 .cta-content h2 {
-    font-size: 56px;
-    margin-bottom: 28px;
+    font-size: 42px;
+    margin-bottom: 20px;
     color: #ffffff;
 }
 
 .cta-content p {
-    font-size: 20px;
-    margin-bottom: 50px;
+    font-size: 18px;
+    margin-bottom: 36px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -1847,7 +1847,9 @@ body > .footer:last-child,
     overflow-x: auto;
     margin-top: 60px;
     border-radius: 20px;
-    border: 2px solid var(--gray-100);
+    border: none;
+    background: var(--white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .comparison-table {
@@ -1863,12 +1865,12 @@ body > .footer:last-child,
 }
 
 .comparison-table th {
-    background: linear-gradient(135deg, #3b0a8a 0%, #6d28d9 100%);
+    background: var(--gray-900);
     color: var(--white);
-    padding: 20px 24px;
+    padding: 16px 24px;
     text-align: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -1878,10 +1880,11 @@ body > .footer:last-child,
 }
 
 .comparison-table td {
-    padding: 18px 24px;
+    padding: 14px 24px;
     border-bottom: 1px solid var(--gray-100);
     text-align: center;
     color: var(--gray-600);
+    font-size: 14px;
 }
 
 .comparison-table td:first-child {
@@ -1895,7 +1898,7 @@ body > .footer:last-child,
 }
 
 .comparison-table tbody tr:hover {
-    background-color: var(--light-bg);
+    background-color: #f0edff;
 }
 
 .comparison-table .check {
