@@ -1237,7 +1237,7 @@ p {
 /* Footer */
 .footer {
     background: linear-gradient(135deg, #1a0033 0%, #4c1d95 100%);
-    padding: 100px 0 40px;
+    padding: 72px 0 40px;
     color: #ffffff;
     position: relative;
     overflow: hidden;
@@ -1266,28 +1266,28 @@ body > .footer:last-child,
 
 .footer-main {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 80px;
-    margin-bottom: 80px;
+    grid-template-columns: 1fr 3fr;
+    gap: 60px;
+    margin-bottom: 60px;
 }
 
 .footer-logo img {
-    height: 60px;
+    height: 50px;
     width: auto;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 .footer-logo p {
     color: rgba(255,255,255,0.7);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
 }
 
 .footer-column h4 {
@@ -1567,7 +1567,12 @@ body > .footer:last-child,
 
     .footer-main {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
 }
 
@@ -1668,8 +1673,8 @@ body > .footer:last-child,
     }
 
     .footer-links {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
     }
 
     .stat-number {
