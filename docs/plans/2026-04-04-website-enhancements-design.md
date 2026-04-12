@@ -5,25 +5,25 @@
 
 ## Goals
 
-1. **Functional forms** — Replace broken console-log forms with GHL-embedded forms that actually capture leads
+1. **Functional forms** — Replace broken console-log forms with CRM-embedded forms that actually capture leads
 2. **Email capture / lead magnets** — Add lead magnet form for guide downloads to grow email list
 3. **SEO infrastructure** — Add blog system and SEO foundations to drive organic traffic
 
-## Section 1: GHL Forms Integration
+## Section 1: CRM Forms Integration
 
 ### Contact/Inquiry Form
 - **Fields:** Name, Email, Phone, Insurance Type (dropdown), Message
 - **Placement:** `contact.html` (replace existing dead form), footer CTAs across site
-- **Integration:** Create in GHL Form Builder → embed via iframe
-- **GHL Workflow:** Auto-create contact, tag as "Website Inquiry", notify via email
+- **Integration:** Create in CRM Form Builder → embed via iframe
+- **CRM Workflow:** Auto-create contact, tag as "Website Inquiry", notify via email
 
 ### Lead Magnet Form
 - **Fields:** Name, Email
 - **Placement:** New section on `index.html`, `guides.html`, potential popup/banner
 - **Lead Magnet:** Free guide download (e.g., "5 Lead Generation Mistakes Insurance Agents Make")
-- **GHL Workflow:** Auto-create contact, tag as "Lead Magnet", send PDF via email workflow
+- **CRM Workflow:** Auto-create contact, tag as "Lead Magnet", send PDF via email workflow
 
-### GHL Sub-Account
+### CRM Sub-Account
 - **Account:** Agent Lead Engine LLC (ID: 3YEf1u4MnIkbrLqJaqdQ)
 - **Forms location:** Sites > Forms > Builder
 
@@ -70,7 +70,7 @@
 
 - Pure static HTML/CSS/JS — no build tools, no frameworks
 - Must match existing purple design system (Inter font, #4a00e0 primary)
-- GHL forms via iframe embed (not API)
+- CRM forms via iframe embed (not API)
 - Blog posts are static HTML files (no CMS)
 
 ## Out of Scope

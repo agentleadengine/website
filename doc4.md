@@ -1,6 +1,6 @@
 AGENT LEAD ENGINE
 
-GHL Snapshot Deployment Guide
+Snapshot Deployment Guide
 
 CONFIDENTIAL
 
@@ -33,7 +33,7 @@ immediately upon deployment.
 When We Deploy
 
 We deploy a snapshot every time a new client signs up to the Agent Lead
-Engine platform. The deployment process is automated through GoHighLevel
+Engine platform. The deployment process is automated through the CRM
 and typically completes within minutes.
 
 What\'s Inside Each Snapshot

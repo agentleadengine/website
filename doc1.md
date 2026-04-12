@@ -175,7 +175,7 @@ What Is Included
 
 - Monthly local presence report with strategy notes
 
-- Powered by SEMRush Local
+- Managed local presence tools
 
 Pricing and Packages
 
@@ -378,7 +378,7 @@ Our Key Differentiators
 
 CRM Architecture Overview
 
-Agent Lead Engine runs on GoHighLevel (GHL), a white-label CRM and
+Agent Lead Engine runs on a white-label CRM and
 marketing platform. Our CRM is organized at the agency level with five
 specialized sub-accounts, one for each major line of insurance. Each
 sub-account is a fully self-contained CRM environment with its own
@@ -387,7 +387,7 @@ fields, and intake forms.
 
 Platform Details
 
-- Platform: GoHighLevel (GHL)
+- Platform: Agent Lead Engine CRM (white-label)
 
 - Agency-level private integration with 22 scopes enabled
 
@@ -396,7 +396,7 @@ Platform Details
 
 - Client support portal: support.agentleadengine.com
 
-- App URL: app.gohighlevel.com
+- App URL: provided to team members during onboarding
 
 The Five Sub-Accounts
 
@@ -1097,7 +1097,7 @@ is the status of each phase as of March 29, 2026.
               Compliance**                           language, STOP handling
 
   11          **Integrations +          Not Started  EZLynx Zapier integration,
-              Scaling**                              GHL white-labeling
+              Scaling**                              CRM white-labeling
   ----------- ------------------------- ------------ --------------------------
 
 Phase 7: Missed Call Text-Back + Internal Notifications (In Progress)
@@ -1210,20 +1210,20 @@ Phase 10: Chat Widget + SMS Compliance (Not Started)
 
 Phase 11: Integrations + Scaling (Not Started)
 
-- EZLynx-GHL Zapier Integration (3 Zaps)
+- EZLynx-CRM Zapier Integration (3 Zaps)
 
-- GHL White-Labeling setup for selling to other agencies
+- CRM White-Labeling setup for selling to other agencies
 
 - Snapshots from Phase 6 become the sellable product
 
-GHL Dashboard Widget Reference
+CRM Dashboard Widget Reference
 
-When building dashboards in GoHighLevel, the default widget names do not
-always match what we display. Below is the mapping of GHL widget names
+When building dashboards in the CRM, the default widget names do not
+always match what we display. Below is the mapping of CRM widget names
 to our dashboard labels:
 
   ----------------------------------- -----------------------------------
-  **Our Dashboard Label**             **GHL Widget Name**
+  **Our Dashboard Label**             **CRM Widget Name**
 
   **New Leads This Month**            Opened Opportunities (renamed)
 
@@ -1242,10 +1242,10 @@ to our dashboard labels:
   **Stale Leads**                     Abandoned Opportunities (renamed)
   ----------------------------------- -----------------------------------
 
-GoHighLevel UI Tips and Troubleshooting
+CRM UI Tips and Troubleshooting
 
 These tips were learned through 25+ build sessions and will save
-significant time when working in the GHL interface. Every team member
+significant time when working in the CRM interface. Every team member
 who touches the CRM should read this section.
 
 Workflow Builder
@@ -1412,7 +1412,7 @@ Calendar Creation
 
 Switching Sub-Accounts
 
-- Use this URL: https://app.gohighlevel.com/v2/location/list
+- Use the sub-account list URL in your CRM dashboard
 
 - Search \> click sub-account \> \'Switch to Sub-Account\'
 
@@ -1541,7 +1541,7 @@ CRM
 
 What CRM platform do we use?
 
-Agent Lead Engine CRM, built on GoHighLevel, deployed from proven
+Agent Lead Engine CRM, deployed from proven
 insurance snapshots and configured specifically for insurance agencies.
 
 What happens to CRM data if a client cancels?

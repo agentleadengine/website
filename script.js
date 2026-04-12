@@ -117,7 +117,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Contact Form — handled by new-script.js (GoHighLevel integration)
+// Contact Form — handled by new-script.js (CRM integration)
 
 // Animate on Scroll
 const observerOptions = {

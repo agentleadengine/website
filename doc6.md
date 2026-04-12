@@ -2,14 +2,14 @@ AGENT LEAD ENGINE**AGENT LEAD ENGINE**
 
 CRM Operations Training**CRM Operations Training**
 
-A Hands-On Guide to Working in GoHighLevel*A Hands-On Guide to Working
-in GoHighLevel*
+A Hands-On Guide to Working in the Agent Lead Engine CRM*A Hands-On Guide to Working
+in the Agent Lead Engine CRM*
 
 CONFIDENTIAL**CONFIDENTIAL**
 
 TABLE OF CONTENTS
 
-- Section 1: Getting Started with GoHighLevel
+- Section 1: Getting Started with the CRM
 
 - Section 2: The Dashboard
 
@@ -29,20 +29,20 @@ TABLE OF CONTENTS
 
 - Section 10: Common Mistakes to Avoid
 
-SECTION 1: GETTING STARTED WITH GOHIGHLEVEL
+SECTION 1: GETTING STARTED WITH THE CRM
 
-What is GoHighLevel?
+What is the Agent Lead Engine CRM?
 
-GoHighLevel (GHL) is our CRM (Customer Relationship Management) and
-marketing automation platform. It\'s the central hub where we manage all
+The Agent Lead Engine CRM is our customer relationship management and
+marketing automation platform. It is the central hub where we manage all
 our leads, clients, appointments, communications, and workflows across
 five sub-accounts representing different insurance lines.
 
 How to Log In
 
-To access GoHighLevel:
+To access the CRM:
 
-- Navigate to app.gohighlevel.com in your browser
+- Navigate to your CRM login URL in your browser
 
 - Enter your username and password
 
@@ -74,7 +74,7 @@ Agent Lead Engine has five sub-accounts: Personal Lines, Commercial
 Lines, Life Insurance, Medicare & ACA, and Final Expense. To switch
 between them:
 
-- Go to https://app.gohighlevel.com/v2/location/list
+- Go to the sub-account list in your CRM dashboard
 
 - Search for the sub-account by name
 
@@ -142,7 +142,7 @@ of the business and identify areas that need attention.
 
 Real-Time Data Refresh
 
-GoHighLevel dashboards update in real time as new leads come in, deals
+CRM dashboards update in real time as new leads come in, deals
 are closed, and workflows execute. You do not need to manually refresh
 the page, though you may do so with Ctrl+R or Cmd+R if you want to see
 the very latest data immediately.
@@ -151,7 +151,7 @@ SECTION 3: CONTACTS
 
 How to Find a Contact
 
-There are two ways to find a contact in GoHighLevel:
+There are two ways to find a contact in the CRM:
 
 - Use the search bar at the top of the Contacts section and type the
   contact\'s name, phone number, or email
@@ -480,7 +480,7 @@ The Booking URL
 Each calendar has a unique URL that clients use to book appointments.
 You may share this URL in emails, text messages, or your website.
 Clients visit the URL, see available time slots, and book directly.
-Common URL format: app.gohighlevel.com/calendars/\[calendar-id\]
+Common URL format: your CRM booking URL / calendar ID
 
 What Happens When Someone Books
 
@@ -654,7 +654,7 @@ Morning Routine
 
 Start your day by reviewing the system and getting up to speed:
 
-- Log in to GoHighLevel
+- Log in to the CRM
 
 - Check the dashboard for each sub-account you manage (review new leads,
   revenue, pipeline health)
@@ -730,7 +730,7 @@ Learn from these common pitfalls to protect the integrity of the CRM:
 
 CONCLUSION
 
-GoHighLevel is a powerful tool for managing leads, clients, and
+The Agent Lead Engine CRM is a powerful tool for managing leads, clients, and
 automations. By following the practices outlined in this guide, you will
 help keep the CRM organized, ensure workflows execute correctly, and
 support the agents in closing more deals.
@@ -739,4 +739,4 @@ If you have questions or encounter issues not covered in this guide,
 reach out to your manager. They are here to help you succeed.
 
 Welcome to the Agent Lead Engine team. Let us know how we can help you
-get the most out of GoHighLevel.
+get the most out of the CRM.

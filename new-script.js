@@ -93,7 +93,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ── Contact Form — GoHighLevel Integration ───────────────────────────────────
+// ── Contact Form — CRM Integration ───────────────────────────────────────────
 (function () {
     const contactForm    = document.getElementById('contactForm');
     if (!contactForm) return; // only runs on pages that have the form
@@ -103,9 +103,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const errorBanner    = document.getElementById('formErrorBanner');
     const errorBannerMsg = document.getElementById('formErrorText');
 
-    const GHL_ENDPOINT   = 'https://services.leadconnectorhq.com/funnels/submit';
-    const GHL_FORM_ID    = 'WvMtjqzJFsT8KKYGmP0b';
-    const GHL_LOCATION   = '3YEf1u4MnIkbrLqJaqdQ';
+    const CRM_ENDPOINT   = 'https://services.leadconnectorhq.com/funnels/submit';
+    const CRM_FORM_ID    = 'WvMtjqzJFsT8KKYGmP0b';
+    const CRM_LOCATION   = '3YEf1u4MnIkbrLqJaqdQ';
 
     // ── Validators ──────────────────────────────────────────────────────────
     function isValidEmail(v) {
@@ -216,8 +216,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         setLoading(true);
 
         const params = new URLSearchParams({
-            formId:      GHL_FORM_ID,
-            location_id: GHL_LOCATION,
+            formId:      CRM_FORM_ID,
+            location_id: CRM_LOCATION,
             first_name:  raw.first_name.trim(),
             last_name:   raw.last_name.trim(),
             email:       raw.email.trim(),
@@ -226,7 +226,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
 
         try {
-            const res = await fetch(GHL_ENDPOINT, {
+            const res = await fetch(CRM_ENDPOINT, {
                 method:  'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body:    params.toString(),
@@ -239,7 +239,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             successEl.classList.add('visible');
 
         } catch (err) {
-            console.error('GHL form submit error:', err);
+            console.error('CRM form submit error:', err);
             showErrorBanner(
                 'Something went wrong. Please try again or call us at (516) 780-1385.'
             );

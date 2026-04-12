@@ -74,7 +74,7 @@ The client owns all their contacts and data. Here is how to export it:
 
 Export Steps
 
-1\. Switch to the client\'s sub-account in GHL.
+1\. Switch to the client\'s sub-account in the CRM.
 
 2\. Go to Contacts.
 
@@ -102,7 +102,7 @@ What the Client Keeps
 
 What Stays With Us
 
-- CRM pipelines and automation configurations (tied to the GHL platform)
+- CRM pipelines and automation configurations (tied to the CRM platform)
 
 - Website template license (included in the monthly service, not a
   separate purchase)

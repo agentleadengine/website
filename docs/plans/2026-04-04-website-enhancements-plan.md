@@ -2,22 +2,22 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Add functional GHL forms, email capture/lead magnets, a blog system, and SEO foundations to the Agent Lead Engine marketing website.
+**Goal:** Add functional CRM forms, email capture/lead magnets, a blog system, and SEO foundations to the Agent Lead Engine marketing website.
 
-**Architecture:** Pure static HTML/CSS/JS site — no frameworks, no build tools. GHL forms are embedded via iframe. Blog posts are individual HTML files using a shared template structure. SEO is added via meta tags, JSON-LD scripts, and static XML/txt files.
+**Architecture:** Pure static HTML/CSS/JS site — no frameworks, no build tools. CRM forms are embedded via iframe. Blog posts are individual HTML files using a shared template structure. SEO is added via meta tags, JSON-LD scripts, and static XML/txt files.
 
-**Tech Stack:** HTML5, CSS3, vanilla JavaScript, GoHighLevel (forms via iframe embed), Google Fonts (Inter)
+**Tech Stack:** HTML5, CSS3, vanilla JavaScript, CRM platform (forms via iframe embed), Google Fonts (Inter)
 
 ---
 
-## Phase 1: GHL Forms Integration
+## Phase 1: CRM Forms Integration
 
-### Task 1: Create Contact/Inquiry Form in GHL
+### Task 1: Create Contact/Inquiry Form in CRM
 
-**Context:** The contact page currently has no working form — the existing JS handler just logs to console. We need a real form in GHL that creates contacts and triggers workflows.
+**Context:** The contact page currently has no working form — the existing JS handler just logs to console. We need a real form in CRM that creates contacts and triggers workflows.
 
-**Step 1: Navigate to GHL Form Builder**
-- URL: `https://app.gohighlevel.com/v2/location/3YEf1u4MnIkbrLqJaqdQ/form-builder/main`
+**Step 1: Navigate to CRM Form Builder**
+- URL: `https://app.crm-platform-url/v2/location/3YEf1u4MnIkbrLqJaqdQ/form-builder/main`
 - Click "Create New" button
 
 **Step 2: Build the form with these fields**
@@ -45,11 +45,11 @@ Save the embed code in a comment or notes file for Task 3
 
 ---
 
-### Task 2: Create Lead Magnet Form in GHL
+### Task 2: Create Lead Magnet Form in CRM
 
 **Context:** A simpler form for email capture — visitors give name + email to get a free guide.
 
-**Step 1: Create new form in GHL Form Builder**
+**Step 1: Create new form in CRM Form Builder**
 - Click "Create New"
 
 **Step 2: Build with these fields**
@@ -118,8 +118,8 @@ Replace the section at lines 69-101 with a 3-column layout that adds an inquiry 
                 <p>Fill out the form and we'll get back to you within 24 hours.</p>
             </div>
             <div class="ghl-form-wrapper">
-                <!-- REPLACE with actual GHL iframe from Task 1 -->
-                <iframe src="GHL_CONTACT_FORM_URL" style="border:none;width:100%;max-width:700px;margin:0 auto;display:block;" scrolling="no" id="ghl-contact-form"></iframe>
+                <!-- REPLACE with actual CRM iframe from Task 1 -->
+                <iframe src="CRM_CONTACT_FORM_URL" style="border:none;width:100%;max-width:700px;margin:0 auto;display:block;" scrolling="no" id="ghl-contact-form"></iframe>
             </div>
         </div>
     </div>
@@ -131,7 +131,7 @@ Replace the section at lines 69-101 with a 3-column layout that adds an inquiry 
 Add to `new-styles.css`:
 
 ```css
-/* GHL Form Embeds */
+/* CRM Form Embeds */
 .ghl-form-wrapper {
     max-width: 700px;
     margin: 0 auto;
@@ -163,13 +163,13 @@ if (contactForm) { ... }
 
 **Step 4: Verify via preview**
 - Start dev server, check contact.html loads
-- Confirm GHL form iframe appears
-- Test form submission reaches GHL
+- Confirm CRM form iframe appears
+- Test form submission reaches CRM
 
 **Step 5: Commit**
 ```bash
 git add contact.html new-styles.css new-script.js
-git commit -m "feat: replace dead contact form with GHL embedded form"
+git commit -m "feat: replace dead contact form with CRM embedded form"
 ```
 
 ---
@@ -199,8 +199,8 @@ Insert before the CTA section (line 302):
                 </ul>
             </div>
             <div class="lead-magnet-form">
-                <!-- REPLACE with actual GHL iframe from Task 2 -->
-                <iframe src="GHL_LEAD_MAGNET_FORM_URL" style="border:none;width:100%;" scrolling="no" id="ghl-lead-magnet-form"></iframe>
+                <!-- REPLACE with actual CRM iframe from Task 2 -->
+                <iframe src="CRM_LEAD_MAGNET_FORM_URL" style="border:none;width:100%;" scrolling="no" id="ghl-lead-magnet-form"></iframe>
             </div>
         </div>
     </div>
@@ -290,7 +290,7 @@ Add to `new-styles.css`:
 **Step 4: Commit**
 ```bash
 git add index.html new-styles.css
-git commit -m "feat: add lead magnet section with GHL form to homepage"
+git commit -m "feat: add lead magnet section with CRM form to homepage"
 ```
 
 ---
@@ -803,7 +803,7 @@ git commit -m "feat: add JSON-LD structured data (Organization, FAQ, BlogPosting
 
 ## Execution Order
 
-1. **Tasks 1-2** (GHL forms) — must be done in browser first to get embed codes
+1. **Tasks 1-2** (CRM forms) — must be done in browser first to get embed codes
 2. **Tasks 3-5** (embed forms on site) — depends on Tasks 1-2
 3. **Tasks 6-8** (blog infrastructure) — independent, can parallel with forms
 4. **Tasks 9-12** (SEO foundations) — independent, can parallel with blog
@@ -822,7 +822,7 @@ git commit -m "feat: add JSON-LD structured data (Organization, FAQ, BlogPosting
 | Create | `blog/local-seo-insurance-agents.html` |
 | Create | `robots.txt` |
 | Create | `sitemap.xml` |
-| Modify | `contact.html` (embed GHL form) |
+| Modify | `contact.html` (embed CRM form) |
 | Modify | `index.html` (lead magnet section + OG tags + JSON-LD) |
 | Modify | `guides.html` (lead magnet section + OG tags) |
 | Modify | `new-styles.css` (blog + lead magnet + form styles) |

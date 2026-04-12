@@ -30,7 +30,7 @@ Send welcome email with what to expect and timeline
 
 Schedule onboarding call (30 min for Launch, 60 min for Build/Command)
 
-Create client sub-account in GHL using appropriate snapshot
+Create client sub-account in the CRM using appropriate snapshot
 
 Deploy CRM snapshot to new sub-account
 
@@ -198,7 +198,7 @@ Command Tier (add these)
 
 Run 12-point Google Business Profile optimization
 
-Set up SEMRush Local
+Set up local presence management tools
 
 Submit first 5 citations
 

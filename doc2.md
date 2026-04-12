@@ -145,7 +145,7 @@ Google Business Profile Management
 
 Local Presence Audit
 
-- Run local presence audit using SEMRush Local
+- Run local presence audit using managed tools
 
 Comprehensive Reporting
 
@@ -248,9 +248,9 @@ Section 8: Tools and Access
 
 Required Tools and Platforms
 
-- GoHighLevel CRM: app.gohighlevel.com
+- Agent Lead Engine CRM platform
 
-- SEMRush Local: for citation and local presence management
+- Local presence management tools: for citation and local presence management
 
 - Google Business Profile: business.google.com
 
