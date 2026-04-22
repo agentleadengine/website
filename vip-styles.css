@@ -1,0 +1,109 @@
+/* VIP-specific styles. Layered on top of new-styles.css. */
+
+/* Password gate card */
+.vip-gate-card{
+  background:#fff;
+  border-radius:16px;
+  padding:48px 40px;
+  max-width:420px;
+  width:90%;
+  box-shadow:0 20px 60px rgba(0,0,0,.3);
+  text-align:center;
+}
+.vip-gate-card h2{margin:16px 0 8px;font-size:28px;color:#1a1a1a}
+.vip-gate-card p{color:#555;margin:0 0 24px}
+.vip-gate-badge{
+  display:inline-block;background:#4a00e0;color:#fff;
+  padding:6px 14px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:1px
+}
+#vipGateForm{display:flex;flex-direction:column;gap:12px}
+#vipGateInput{
+  padding:14px 16px;border:2px solid #e5e5e5;border-radius:8px;
+  font-size:16px;font-family:inherit;outline:none
+}
+#vipGateInput:focus{border-color:#4a00e0}
+#vipGateForm button{
+  padding:14px;background:#4a00e0;color:#fff;border:none;border-radius:8px;
+  font-weight:700;letter-spacing:1px;cursor:pointer;font-size:14px
+}
+#vipGateForm button:hover{background:#3b0a8a}
+.vip-gate-err{color:#d32f2f;font-size:13px;margin-top:4px}
+.vip-gate-foot{margin-top:24px;font-size:13px}
+.vip-gate-foot a{color:#888;text-decoration:none}
+.vip-gate-foot a:hover{color:#4a00e0}
+
+/* VIP module page additions */
+.vip-bar{
+  background:#1a1a1a;color:#fff;padding:8px 0;font-size:12px;letter-spacing:1px
+}
+.vip-bar .container{display:flex;justify-content:space-between;align-items:center}
+.vip-bar a{color:#bda3ff;text-decoration:none}
+.vip-bar a:hover{color:#fff}
+
+/* Module diagram */
+.vip-diagram{
+  background:#fafafa;border:1px solid #eee;border-radius:12px;
+  padding:24px;margin:24px 0;text-align:center;overflow-x:auto
+}
+.vip-diagram svg{max-width:100%;height:auto}
+.vip-diagram-caption{font-size:13px;color:#666;margin-top:12px;font-style:italic}
+
+/* Module navigation */
+.vip-modnav{display:flex;justify-content:space-between;gap:16px;margin:48px 0 16px;flex-wrap:wrap}
+.vip-modnav a{
+  flex:1;min-width:240px;padding:18px 22px;background:#f5f5f5;border-radius:10px;
+  text-decoration:none;color:#1a1a1a;border:1px solid #eee;transition:all .2s
+}
+.vip-modnav a:hover{background:#fff;border-color:#4a00e0;box-shadow:0 4px 12px rgba(74,0,224,.1)}
+.vip-modnav .mn-label{font-size:11px;color:#888;letter-spacing:1px;font-weight:600}
+.vip-modnav .mn-title{font-weight:700;margin-top:4px;display:block}
+.vip-modnav .mn-next{text-align:right}
+
+/* Glossary callouts inside body content */
+.vip-callout{
+  background:#f5efff;border-left:4px solid #4a00e0;padding:18px 22px;border-radius:6px;
+  margin:20px 0
+}
+.vip-callout strong{color:#4a00e0}
+
+/* Module list grid on hub */
+.vip-module-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-top:32px}
+.vip-module-card{
+  background:#fff;border:1px solid #eee;border-radius:12px;padding:24px;
+  text-decoration:none;color:#1a1a1a;display:block;transition:all .2s
+}
+.vip-module-card:hover{border-color:#4a00e0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.vip-module-card .vmc-num{
+  display:inline-block;background:#4a00e0;color:#fff;
+  padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:1px
+}
+.vip-module-card h3{margin:12px 0 8px;font-size:18px}
+.vip-module-card p{margin:0;color:#555;font-size:14px}
+
+/* Helpful videos grid */
+.vip-video-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:16px 0 32px
+}
+.vip-video-card{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;
+  background:#fff;border:1px solid #eee;border-radius:10px;
+  text-decoration:none;color:#1a1a1a;transition:all .2s
+}
+.vip-video-card:hover{
+  border-color:#4a00e0;background:#f5efff;
+  box-shadow:0 4px 12px rgba(74,0,224,.08);transform:translateY(-1px)
+}
+.vvc-icon{
+  flex:0 0 38px;height:38px;border-radius:50%;
+  background:#4a00e0;color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:14px;padding-left:3px
+}
+.vvc-text{display:flex;flex-direction:column;line-height:1.3}
+.vvc-title{font-weight:600;font-size:14px}
+.vvc-sub{font-size:11px;color:#888;letter-spacing:.5px;text-transform:uppercase;margin-top:2px}
+
+/* Tables for cold-call scripts and objection handling */
+.vip-table{width:100%;border-collapse:collapse;margin:16px 0}
+.vip-table th,.vip-table td{padding:12px 16px;text-align:left;border-bottom:1px solid #eee;vertical-align:top}
+.vip-table th{background:#f5efff;color:#4a00e0;font-weight:700;font-size:13px;letter-spacing:.5px}
+.vip-table tr:last-child td{border-bottom:none}
