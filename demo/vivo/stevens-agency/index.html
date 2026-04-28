@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+ ╔══════════════════════════════════════════════════════════════════╗
+ ║ TEMPLATE C, Vivo ║
+ ║ Insurance Agency Website Template • © Stevens Agency ║
+ ╠══════════════════════════════════════════════════════════════════╣
+ ║ DELIVERY CHECKLIST, Find & Replace before going live: ║
+ ║ ║
+ ║ Stevens Agency → "Stevens Agency" ║
+ ║ Coverage You Can Count On → "Coverage You Can Count On" ║
+ ║ (516) 780-1385 → "(516) 780-1385" ║
+ ║ 5167801385 → "5167801385" ║
+ ║ info@stevensagency.com → "info@stevensagency.com" ║
+ ║ 8801 Lead Mine Rd, Raleigh, NC 27615 → "8801 Lead Mine Rd, Raleigh, NC 27615" ║
+ ║ https://facebook.com/StevensAgencyNC → "https://facebook.com/StevensAgency" ║
+ ║ https://instagram.com/stevensagencync → "https://instagram.com/stevensagency" ║
+ ║ https://linkedin.com/company/stevens-agency-nc → "https://linkedin.com/company/stevens-agency" ║
+ ╠══════════════════════════════════════════════════════════════════╣
+ ║ CSS BRANDING: Edit styles.css, search "CLIENT CONFIG" ║
+ ╚══════════════════════════════════════════════════════════════════╝
+-->
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Home | Stevens Agency</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ <!-- FLOATING CTA -->
+ <div class="floating-cta" id="floatingCta">
+ <a href="ins-contact.html">
+ <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+ Get a Free Quote
+ </a>
+ </div>
+
+ <!-- TOP BAR -->
+ <div class="topbar">
+ <div class="container">
+ <div class="topbar-left">
+ <a href="#" class="topbar-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+ 8801 Lead Mine Rd, Raleigh, NC 27615
+ </a>
+ <span style="opacity:.3">|</span>
+ <a href="mailto:info@stevensagency.com" class="topbar-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+ info@stevensagency.com
+ </a>
+ </div>
+ <div class="topbar-right">
+ 
+ </div>
+ </div>
+ </div>
+
+ <!-- HEADER -->
+ <header class="site-header" id="siteHeader">
+ <div class="header-inner">
+ <a href="index.html" class="logo-wrap">
+ <div class="logo-mark">
+ <svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+ </div>
+ <div class="logo-text">
+ <strong>Stevens Agency</strong>
+ <span>Coverage You Can Count On</span>
+ </div>
+ </a>
+ <nav class="primary-nav">
+ <div class="nav-dropdown">
+ <a href="personal-lines.html">Coverage</a>
+ <div class="dropdown-menu">
+ <a href="personal-lines.html">Personal Lines</a>
+ <a href="commercial-lines.html">Commercial Lines</a>
+ <a href="life-insurance.html">Life Insurance</a>
+ <a href="medicare-aca.html">Medicare &amp; ACA</a>
+ <a href="final-expense.html">Final Expense</a>
+ <a href="auto-insurance.html">Auto Insurance</a>
+ <a href="home-insurance.html">Home Insurance</a>
+ <a href="business-insurance.html">Business Insurance</a>
+ <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
+ </div>
+ </div>
+ <a href="claims-payments.html">Claims</a>
+ <a href="blog.html">Blog</a>
+ <div class="nav-dropdown">
+ <a href="#">Contact</a>
+ <div class="dropdown-menu">
+ <a href="ins-contact.html">Contact Our Office</a>
+ <a href="ins-faq.html">FAQ</a>
+ </div>
+ </div>
+ </nav>
+ <div class="header-right">
+ <a href="tel:5167801385" class="phone-link">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+ (516) 780-1385
+ </a>
+ <a href="ins-contact.html" class="btn btn-primary">Free Quote</a>
+ <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+ </div>
+ </div>
+ </header>
+
+ <!-- MOBILE NAV -->
+ <div class="mobile-nav" id="mobileNav">
+ <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#x2715;</button>
+ <a href="index.html" class="active">Home</a>
+ <a href="personal-lines.html">Personal Lines</a>
+ <a href="commercial-lines.html">Commercial Lines</a>
+ <a href="life-insurance.html">Life Insurance</a>
+ <a href="medicare-aca.html">Medicare &amp; ACA</a>
+ <a href="final-expense.html">Final Expense</a>
+ <a href="auto-insurance.html">Auto</a>
+ <a href="home-insurance.html">Home</a>
+ <a href="business-insurance.html">Business</a>
+ <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
+ <a href="claims-payments.html">Claims &amp; Payments</a>
+ <a href="blog.html">Blog</a>
+ <a href="ins-contact.html">Contact Us</a>
+ <a href="ins-faq.html">FAQ</a>
+ <a href="tel:5167801385" style="color: var(--gold); font-weight: 700;">(516) 780-1385</a>
+ <a href="ins-contact.html" class="btn btn-primary btn-full">Get a Free Quote</a>
+ </div>
+
+ <main>
+
+ <!-- HERO -->
+ <section class="hero">
+ <div class="container">
+ <div class="hero-grid">
+ <div>
+ <div class="hero-badge">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:15px;height:15px;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+ Serving the Triangle region Since 1984
+ </div>
+ <h1>Protecting Your Family<br><span style="color:var(--gold)">Has Always Been Our Mission.</span></h1>
+ <p class="hero-sub">A full-service independent agency in Raleigh, NC. We compare 15+ top carriers across personal, commercial, life, Medicare, and final expense, and our responsive agents are here every step of the way.</p>
+ <div class="hero-ctas">
+ <a href="ins-contact.html" class="btn btn-primary">Get Your Free Quote</a>
+ <a href="tel:5167801385" class="btn btn-outline">Call (516) 780-1385</a>
+ </div>
+ <div class="hero-stats">
+ <div class="stat-pill">
+ <strong>40+</strong>
+ <span>Years Serving the Triangle</span>
+ </div>
+ <div class="stat-pill">
+ <strong>12,000+</strong>
+ <span>Families Protected</span>
+ </div>
+ <div class="stat-pill">
+ <strong>15+</strong>
+ <span>Carriers Compared</span>
+ </div>
+ <div class="stat-pill">
+ <strong>5&#9733;</strong>
+ <span>Community Rated</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- QUOTE CARD -->
+ <div class="quote-card">
+ <div class="quote-card-header">
+ <h3>Get Your Free Quote</h3>
+ <p>No obligation. Results in minutes.</p>
+ </div>
+ <form action="ins-contact.html" method="get">
+ <div class="form-row">
+ <div class="form-group">
+ <label for="firstName">First Name</label>
+ <input type="text" id="firstName" name="first" placeholder="Sarah" />
+ </div>
+ <div class="form-group">
+ <label for="lastName">Last Name</label>
+ <input type="text" id="lastName" name="last" placeholder="Mitchell" />
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="heroPhone">Phone Number</label>
+ <input type="tel" id="heroPhone" name="phone" placeholder="(516) 555-0100" />
+ </div>
+ <div class="form-group">
+ <label for="heroEmail">Email Address</label>
+ <input type="email" id="heroEmail" name="email" placeholder="sarah@example.com" />
+ </div>
+ <div class="form-group">
+ <label for="coverageType">Coverage Type</label>
+ <select id="coverageType" name="coverage">
+ <option value="">Select coverage type...</option>
+ <option value="personal-lines">Personal Lines (Auto, Home, Umbrella)</option>
+ <option value="commercial-lines">Commercial Lines (Business)</option>
+ <option value="life">Life Insurance</option>
+ <option value="medicare-aca">Medicare or ACA</option>
+ <option value="final-expense">Final Expense</option>
+ <option value="other">Other</option>
+ </select>
+ </div>
+ <button type="submit" class="btn btn-primary btn-full">Get My Free Quote &#8594;</button>
+ </form>
+ </div>
+
+ </div>
+ </div>
+ </section>
+
+ <!-- COVERAGE CARDS -->
+ <section class="coverage">
+ <div class="container">
+ <div class="section-header">
+ <span class="section-label">What We Cover</span>
+ <h2 class="section-title">Five Core Lines, One Local Agency</h2>
+ <p class="section-sub">Stevens Agency writes coverage across five primary lines for North Carolina families and businesses. Pick a line below to request a quote, or call us and we'll point you to the right place.</p>
+ </div>
+ <div class="cards-grid">
+
+ <div class="coverage-card reveal">
+ <div class="coverage-card-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+ </div>
+ <h3>Personal Lines</h3>
+ <p>Auto, home, renters, umbrella, motorcycle, boat, and RV. The everyday coverage that protects you, your family, and the things you've worked for.</p>
+ <a href="personal-lines.html">Quote Personal Lines &#8594;</a>
+ </div>
+
+ <div class="coverage-card reveal reveal-delay-1">
+ <div class="coverage-card-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+ </div>
+ <h3>Commercial Lines</h3>
+ <p>General liability, workers' comp, commercial auto, BOPs, and industry-specific coverage. Built for North Carolina small business.</p>
+ <a href="commercial-lines.html">Quote Commercial Lines &#8594;</a>
+ </div>
+
+ <div class="coverage-card reveal reveal-delay-2">
+ <div class="coverage-card-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+ </div>
+ <h3>Life Insurance</h3>
+ <p>Term, whole, IUL, and final expense, structured around your income, family, and long-term goals. Free needs analysis on every quote.</p>
+ <a href="life-insurance.html">Quote Life Insurance &#8594;</a>
+ </div>
+
+ <div class="coverage-card reveal reveal-delay-3">
+ <div class="coverage-card-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+ </div>
+ <h3>Medicare &amp; ACA</h3>
+ <p>Medicare Advantage, Supplements, Part D, and ACA marketplace plans. We compare carriers side by side and walk you through enrollment.</p>
+ <a href="medicare-aca.html">Compare Plans &#8594;</a>
+ </div>
+
+ <div class="coverage-card reveal reveal-delay-4">
+ <div class="coverage-card-icon">
+ <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+ </div>
+ <h3>Final Expense</h3>
+ <p>Affordable burial and final expense coverage with simplified underwriting. Lock in a fixed premium so your family is not left with the bill.</p>
+ <a href="final-expense.html">Get Final Expense Quote &#8594;</a>
+ </div>
+
+ </div>
+ </div>
+ </section>
+
+ <!-- ABOUT -->
+ <section class="about">
+ <div class="container">
+ <div class="about-grid">
+
+ <div class="about-img-wrap reveal-left">
+ <div style="text-align:center;padding:32px;">
+ <svg fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" style="width:72px;height:72px;color:var(--gray-400);margin:0 auto 16px;display:block;"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+ <p style="font-size:13px;color:var(--gray-400);font-weight:600;">The Stevens Family, Serving the Triangle Since 1984</p>
+ </div>
+ </div>
+
+ <div class="about-content reveal-right">
+ <span class="section-label">Our Story</span>
+ <h2 class="section-title">40 Years of Protecting Families in the Triangle region</h2>
+ <p>Stevens Agency was founded in 1984 by James and Margaret Stevens with one mission: make quality insurance accessible to every family in our community, regardless of where you are in life or the budget you're working with.</p>
+ <p>Today, we are an independent agency representing 15+ top-rated carriers. That means we work for <strong>you</strong>, not the insurance company. We compare rates, explain your options in plain language, and help you choose coverage that actually makes sense for your life.</p>
+ <ul class="features-list">
+ <li class="feature-item">
+ <div class="feature-dot">
+ <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+ </div>
+ <p><strong>Independent agency</strong>, we compare 15+ top carriers to find your lowest rate, every time.</p>
+ </li>
+ <li class="feature-item">
+ <div class="feature-dot">
+ <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+ </div>
+ <p><strong>Responsive service</strong>, our agents are licensed across all major lines and respond fast. </p>
+ </li>
+ <li class="feature-item">
+ <div class="feature-dot">
+ <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+ </div>
+ <p><strong>Free annual policy reviews</strong>, your life changes, and your coverage should keep pace with it.</p>
+ </li>
+ <li class="feature-item">
+ <div class="feature-dot">
+ <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+ </div>
+ <p><strong>Local and always accessible</strong>, call, text, visit our Raleigh office, or get a quote online.</p>
+ </li>
+ </ul>
+ <a href="ins-contact.html" class="btn btn-primary">Talk to an Agent Today</a>
+ </div>
+
+ </div>
+ </div>
+ </section>
+
+ <!-- STATS STRIP -->
+ <section class="why-strip">
+ <div class="container">
+ <div class="why-stat reveal">
+ <strong>40+</strong>
+ <p>Years protecting Triangle families</p>
+ </div>
+ <div class="why-stat-divider"></div>
+ <div class="why-stat reveal reveal-delay-1">
+ <strong>12,000+</strong>
+ <p>Families covered and counting</p>
+ </div>
+ <div class="why-stat-divider"></div>
+ <div class="why-stat reveal reveal-delay-2">
+ <strong>15+</strong>
+ <p>Top-rated carriers compared</p>
+ </div>
+ <div class="why-stat-divider"></div>
+ <div class="why-stat reveal reveal-delay-3">
+ <strong>98%</strong>
+ <p>Client satisfaction rate</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- CARRIERS -->
+ <section class="carriers">
+ <div class="container">
+ <div class="carriers-header">
+ <span class="section-label">Our Carrier Partners</span>
+ <h2 class="section-title">15+ Top-Rated Insurance Carriers</h2>
+ <p class="section-sub">Because we're independent, we're not tied to any single company. We shop the entire market to find your best rate.</p>
+ </div>
+ <div class="carriers-strip">
+ <div class="carrier-logo">Progressive</div>
+ <div class="carrier-logo">State Farm</div>
+ <div class="carrier-logo">Allstate</div>
+ <div class="carrier-logo">Farmers</div>
+ <div class="carrier-logo">GEICO</div>
+ <div class="carrier-logo">Liberty Mutual</div>
+ <div class="carrier-logo">Travelers</div>
+ <div class="carrier-logo">Nationwide</div>
+ <div class="carrier-logo">Safeco</div>
+ <div class="carrier-logo">Kemper</div>
+ <div class="carrier-logo">Bristol West</div>
+ <div class="carrier-logo">Dairyland</div>
+ <div class="carrier-logo">National General</div>
+ <div class="carrier-logo">Foremost</div>
+ <div class="carrier-logo">Elephant</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- CTA BANNER -->
+ <section class="cta-banner">
+ <div class="container">
+ <h2 class="reveal">Ready to Save on Your Insurance?</h2>
+ <p class="reveal reveal-delay-1">Get a free, no-obligation quote in minutes. Our responsive agents compare top carriers to find you the best rate.</p>
+ <div class="cta-btns reveal reveal-delay-2">
+ <a href="ins-contact.html" class="btn btn-white">Get Your Free Quote</a>
+ <a href="tel:5167801385" class="btn btn-ghost">Call (516) 780-1385</a>
+ </div>
+ </div>
+ </section>
+
+ </main>
+
+ <!-- FOOTER -->
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="logo-wrap" style="margin-bottom:20px;">
+ <div class="logo-mark"><svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+ <div class="logo-text"><strong>Stevens Agency</strong><span>Coverage You Can Count On</span></div>
+ </div>
+ <p>An independent insurance agency committed to finding you the best coverage at the best price. Proudly serving the Triangle community for over 40 years.</p>
+ <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>8801 Lead Mine Rd, Raleigh, NC 27615</div>
+ <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:5167801385">(516) 780-1385</a></div>
+ <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@stevensagency.com">info@stevensagency.com</a></div>
+ </div>
+ <div class="footer-col">
+ <h4>Coverage</h4>
+ <ul>
+ <li><a href="personal-lines.html">Personal Lines</a></li>
+ <li><a href="commercial-lines.html">Commercial Lines</a></li>
+ <li><a href="life-insurance.html">Life Insurance</a></li>
+ <li><a href="medicare-aca.html">Medicare &amp; ACA</a></li>
+ <li><a href="final-expense.html">Final Expense</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Resources</h4>
+ <ul>
+ <li><a href="claims-payments.html">Claims &amp; Payments</a></li>
+ <li><a href="blog.html">Blog &amp; Articles</a></li>
+ <li><a href="ins-faq.html">FAQ</a></li>
+ <li><a href="ins-contact.html">Contact Us</a></li>
+ <li><a href="terms-of-service.html">Terms of Service</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Office Hours</h4>
+ <ul class="footer-hours">
+ <li><span>Mon - Fri</span><span>9:00 AM - 6:00 PM</span></li>
+ <li><span>Saturday</span><span>10:00 AM - 3:00 PM</span></li>
+ <li><span>Sunday</span><span>Closed</span></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&#169; Stevens Agency. All Rights Reserved.</p>
+ <div class="footer-links">
+ <a href="#">Privacy Policy</a>
+ <a href="terms-of-service.html">Terms of Service</a>
+ <a href="blog.html">Blog</a>
+ </div>
+ <div class="social-links">
+ <a href="https://facebook.com/StevensAgency" class="social-link" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+ <a href="https://instagram.com/stevensagency" class="social-link" aria-label="Instagram"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+ <a href="https://linkedin.com/company/stevens-agency" class="social-link" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <script>
+ // Scroll Reveal
+ const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+ const revealObs = new IntersectionObserver(entries => {
+ entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); } });
+ }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+ revealEls.forEach(el => revealObs.observe(el));
+
+ // Header scroll shadow
+ const header = document.getElementById('siteHeader');
+ window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+ // Floating CTA
+ const floatingCta = document.getElementById('floatingCta');
+ let ctaVisible = false;
+ window.addEventListener('scroll', () => {
+ const show = window.scrollY > 400;
+ if (show !== ctaVisible) { ctaVisible = show; floatingCta.classList.toggle('visible', ctaVisible); }
+ }, { passive: true });
+
+ // Mobile menu
+ const hamburger = document.getElementById('hamburger');
+ const mobileNav = document.getElementById('mobileNav');
+ const mobileNavClose = document.getElementById('mobileNavClose');
+ hamburger.addEventListener('click', () => {
+ hamburger.classList.toggle('open');
+ mobileNav.classList.toggle('open');
+ document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+ });
+ mobileNavClose.addEventListener('click', () => {
+ hamburger.classList.remove('open');
+ mobileNav.classList.remove('open');
+ document.body.style.overflow = '';
+ });
+ mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+ hamburger.classList.remove('open');
+ mobileNav.classList.remove('open');
+ document.body.style.overflow = '';
+ }));
+
+ // ADD PAGE-SPECIFIC JS BELOW THIS LINE
+ </script>
+</body>
+</html>
