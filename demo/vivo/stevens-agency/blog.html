@@ -1,463 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!--
- ╔══════════════════════════════════════════════════════════════════╗
- ║ TEMPLATE C, Vivo ║
- ║ Insurance Agency Website Template • © Your Agency Name ║
- ╠══════════════════════════════════════════════════════════════════╣
- ║ DELIVERY CHECKLIST, Find & Replace before going live: ║
- ║ ║
- ║ Stevens Agency → e.g. "Smith & Associates Insurance" ║
- ║ Coverage You Can Count On → e.g. "Your Trusted Local Experts" ║
- ║ (516) 780-1385 → Display format: "(555) 123-4567" ║
- ║ 5167801385 → Digits only for tel: links: "5551234567" ║
- ║ info@stevensagency.com → e.g. "info@smithinsurance.com" ║
- ║ 8801 Lead Mine Rd, Raleigh, NC 27615 → e.g. "456 Oak St, Springfield, IL 62701" ║
- ║ https://facebook.com/StevensAgencyNC → "https://facebook.com/YourPage" ║
- ║ https://instagram.com/stevensagencync → "https://instagram.com/YourHandle" ║
- ║ https://linkedin.com/company/stevens-agency-nc → "https://linkedin.com/company/YourCo" ║
- ╠══════════════════════════════════════════════════════════════════╣
- ║ CSS BRANDING: Edit styles.css, search "CLIENT CONFIG" ║
- ╚══════════════════════════════════════════════════════════════════╝
--->
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Blog &amp; Insurance Resources, Stevens Agency</title>
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Resources | Stevens & Co. Insurance</title>
+<meta name="description" content="Plain-English insurance articles, checklists, and explainers from the Stevens & Co. team."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<div class="topbar"><div class="container">
+  <div class="left"><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span> Open today, 8:30 AM to 5:30 PM</span><span class="hide-md" style="opacity:.5;">·</span><span class="hide-md">8801 Lead Mine Rd, Suite 214 · Raleigh, NC</span></div>
+  <div class="right"><a href="#" class="hide-md">Client Login</a><a href="claims-payments.html" class="hide-md">File a Claim</a><a href="#" style="color:white;font-weight:500;">Pay Bill →</a></div>
+</div></div>
+<header class="nav"><div class="container">
+  <a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a>
+  <nav class="nav-center"><a href="index.html#coverage">Coverage</a><a href="about.html">About</a><a href="index.html#carriers">Carriers</a><a href="index.html#reviews">Reviews</a><a href="ins-faq.html">FAQ</a><a href="ins-contact.html">Contact</a></nav>
+  <div class="nav-right"><a href="tel:5167801385" class="nav-phone hide-md">(516) 780-1385</a><a href="ins-contact.html" class="btn btn-primary">Get a Quote</a><button class="nav-toggle" id="navToggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div>
+</div></header>
 
- <!-- FLOATING CTA -->
- <div class="floating-cta" id="floatingCta">
- <a href="ins-contact.html">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
- Get a Free Quote
- </a>
- </div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mn-head"><a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a><button class="mn-close" id="mnClose" aria-label="Close menu">&times;</button></div>
+  <nav><a class="section">Coverage</a><a href="personal-lines.html">Personal Lines</a><a href="commercial-lines.html">Commercial Lines</a><a href="life-insurance.html">Life Insurance</a><a href="medicare-aca.html">Medicare &amp; ACA</a><a href="final-expense.html">Final Expense</a><a class="section">Company</a><a href="about.html">About</a><a href="ins-faq.html">FAQ</a><a href="claims-payments.html">Claims</a><a href="ins-contact.html">Contact</a></nav>
+  <div class="mn-cta"><a href="tel:5167801385" class="mn-phone">(516) 780-1385</a><a href="ins-contact.html" class="btn btn-primary">Get a Quote</a></div>
+</div>
 
- <!-- TOP BAR -->
- <div class="topbar">
- <div class="container">
- <div class="topbar-left">
- <a href="#" class="topbar-icon">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
- 8801 Lead Mine Rd, Raleigh, NC 27615
- </a>
- <span style="opacity:.3">|</span>
- <a href="mailto:info@stevensagency.com" class="topbar-icon">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
- info@stevensagency.com
- </a>
- </div>
- <div class="topbar-right">
- 
- </div>
- </div>
- </div>
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">›</span><span>Resources</span></div>
+    <h1 class="display">Plain-English insurance, <span class="accent-light">written down.</span></h1>
+    <p class="lede">Articles, checklists, and explainers we send to clients. No sales pitches, just the kind of thinking we do for the families we represent.</p>
+  </div>
+</section>
 
- <!-- HEADER -->
- <header class="site-header" id="siteHeader">
- <div class="header-inner">
- <a href="index.html" class="logo-wrap">
- <div class="logo-mark">
- <svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
- </div>
- <div class="logo-text">
- <strong>Stevens Agency</strong>
- <span>Coverage You Can Count On</span>
- </div>
- </a>
- <nav class="primary-nav">
- <div class="nav-dropdown">
- <a href="personal-lines.html">Coverage</a>
- <div class="dropdown-menu">
- <a href="personal-lines.html">Personal Lines</a>
- <a href="commercial-lines.html">Commercial Lines</a>
- <a href="life-insurance.html">Life Insurance</a>
- <a href="medicare-aca.html">Medicare &amp; ACA</a>
- <a href="final-expense.html">Final Expense</a>
- <a href="auto-insurance.html">Auto Insurance</a>
- <a href="home-insurance.html">Home Insurance</a>
- <a href="business-insurance.html">Business Insurance</a>
- <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
- </div>
- </div>
- <a href="claims-payments.html">Claims</a>
- <a href="blog.html" class="active">Blog</a>
- <div class="nav-dropdown">
- <a href="#">Contact</a>
- <div class="dropdown-menu">
- <a href="ins-contact.html">Contact Our Office</a>
- <a href="ins-faq.html">FAQ</a>
- </div>
- </div>
- </nav>
- <div class="header-right">
- <a href="tel:5167801385" class="phone-link">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
- (516) 780-1385
- </a>
- <a href="ins-contact.html" class="btn btn-primary">Free Quote</a>
- <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
- </div>
- </div>
- </header>
-
- <!-- MOBILE NAV -->
- <div class="mobile-nav" id="mobileNav">
- <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#x2715;</button>
- <a href="index.html">Home</a>
- <a href="personal-lines.html">Personal Lines</a>
- <a href="commercial-lines.html">Commercial Lines</a>
- <a href="life-insurance.html">Life Insurance</a>
- <a href="medicare-aca.html">Medicare &amp; ACA</a>
- <a href="final-expense.html">Final Expense</a>
- <a href="auto-insurance.html">Auto</a>
- <a href="home-insurance.html">Home</a>
- <a href="business-insurance.html">Business</a>
- <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
- <a href="claims-payments.html">Claims &amp; Payments</a>
- <a href="blog.html" class="active">Blog</a>
- <a href="ins-contact.html">Contact Us</a>
- <a href="ins-faq.html">FAQ</a>
- <a href="tel:5167801385" style="color: var(--gold); font-weight: 700;">(516) 780-1385</a>
- <a href="ins-contact.html" class="btn btn-primary btn-full">Get a Free Quote</a>
- </div>
-
- <main>
-
- <!-- PAGE HERO -->
- <section class="page-hero">
- <div class="container">
- <div class="breadcrumb">
- <a href="index.html">Home</a>
- <span class="sep">›</span>
- <span>Blog</span>
- </div>
- <h1>Insurance Tips,<br><span style="color:var(--gold)">Explained in Plain English</span></h1>
- <p>Simple, clear guides to help your family make smarter insurance decisions, without the confusing jargon.</p>
- <div class="page-hero-ctas">
- <a href="ins-contact.html" class="btn btn-primary">Get a Free Quote</a>
- <a href="tel:5167801385" class="btn btn-outline">Call (516) 780-1385</a>
- </div>
- </div>
- </section>
-
- <!-- BLOG SECTION -->
- <section class="blog-section">
- <div class="container">
-
- <!-- Filter Bar -->
- <div class="filter-bar">
- <button class="filter-btn active">All</button>
- <button class="filter-btn">Auto</button>
- <button class="filter-btn">Home</button>
- <button class="filter-btn">Business</button>
- <button class="filter-btn">Tips &amp; Savings</button>
- </div>
-
- <!-- Blog Grid, 9 Cards -->
- <div class="blog-grid">
-
- <!-- Card 1, Auto -->
- <article class="blog-card reveal">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20H6a2 2 0 01-2-2V7l2-3h10l2 3v11a2 2 0 01-2 2h-3m-4 0v-5h4v5m-4 0h4"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Auto</span>
- <div class="blog-card-meta">
- <span>February 12, 2026</span>
- <span>4 min read</span>
- </div>
- <h3 class="blog-card-title">5 Ways to Lower Your Car Insurance Premium Without Sacrificing Coverage</h3>
- <p class="blog-card-excerpt">You don't have to choose between saving money and staying protected. These five proven strategies can cut your premium while keeping your family fully covered on the road.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 2, Auto -->
- <article class="blog-card reveal reveal-delay-1">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Auto</span>
- <div class="blog-card-meta">
- <span>January 28, 2026</span>
- <span>5 min read</span>
- </div>
- <h3 class="blog-card-title">What to Do Immediately After a Car Accident: A Step-by-Step Guide</h3>
- <p class="blog-card-excerpt">The moments after an accident are stressful and confusing. Here's exactly what to do, and what not to do, to protect yourself and your insurance claim from the start.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 3, Home -->
- <article class="blog-card reveal reveal-delay-2">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 21V12h6v9"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Home</span>
- <div class="blog-card-meta">
- <span>January 15, 2026</span>
- <span>6 min read</span>
- </div>
- <h3 class="blog-card-title">Does Homeowners Insurance Cover Flooding? What Every Homeowner Must Know</h3>
- <p class="blog-card-excerpt">Many families discover too late that standard homeowners insurance excludes flood damage. Learn exactly what's covered, what's not, and how to close the gap before it costs you.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 4, Tips & Savings -->
- <article class="blog-card reveal">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-2.21 0-4 1.343-4 3s1.79 3 4 3 4 1.343 4 3-1.79 3-4 3m0-12V4m0 16v-2"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Tips &amp; Savings</span>
- <div class="blog-card-meta">
- <span>January 2, 2026</span>
- <span>4 min read</span>
- </div>
- <h3 class="blog-card-title">Bundling Home and Auto: How Much Can Your Family Really Save?</h3>
- <p class="blog-card-excerpt">Bundling your home and auto policies with one carrier is one of the easiest ways to lower both premiums. We break down how much you can realistically expect to save, and when it's not worth it.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 5, Business -->
- <article class="blog-card reveal reveal-delay-1">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-2 0h-2M5 21H3m2 0h2m0-14h4m-4 4h4m-4 4h4m2-8h4m-4 4h4"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Business</span>
- <div class="blog-card-meta">
- <span>December 18, 2025</span>
- <span>5 min read</span>
- </div>
- <h3 class="blog-card-title">Why Every Small Business Owner Needs General Liability Insurance</h3>
- <p class="blog-card-excerpt">One lawsuit from a slip-and-fall or a damaged client laptop can put your negocio at risk. General liability is the foundation every small business needs before opening its doors.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 6, Home -->
- <article class="blog-card reveal reveal-delay-2">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Home</span>
- <div class="blog-card-meta">
- <span>December 5, 2025</span>
- <span>3 min read</span>
- </div>
- <h3 class="blog-card-title">Renters Insurance: Why Your Landlord's Policy Won't Protect You</h3>
- <p class="blog-card-excerpt">Your landlord's insurance covers the building, not your belongings, not your liability. Renters insurance costs less than a cup of coffee per day and covers everything your landlord's policy ignores.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 7, Auto -->
- <article class="blog-card reveal">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Auto</span>
- <div class="blog-card-meta">
- <span>November 22, 2025</span>
- <span>4 min read</span>
- </div>
- <h3 class="blog-card-title">Understanding SR-22 Insurance: What It Is and How Long You Need It</h3>
- <p class="blog-card-excerpt">An SR-22 is not insurance, it's a certificate your carrier files on your behalf. If your license was suspended, here's what the SR-22 process looks like and how to get back on the road faster.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 8, Business -->
- <article class="blog-card reveal reveal-delay-1">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Business</span>
- <div class="blog-card-meta">
- <span>November 10, 2025</span>
- <span>7 min read</span>
- </div>
- <h3 class="blog-card-title">Workers' Compensation 101: What Every Employer Needs to Know</h3>
- <p class="blog-card-excerpt">Workers' comp is legally required in most states, but many employers don't fully understand what it covers or how premiums are calculated. This plain-English guide covers everything you need to know.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- <!-- Card 9, Tips & Savings -->
- <article class="blog-card reveal reveal-delay-2">
- <div class="blog-card-img">
- <svg width="40" height="40" fill="none" stroke="var(--gray-400)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
- </div>
- <div class="blog-card-body">
- <span class="blog-card-tag">Tips &amp; Savings</span>
- <div class="blog-card-meta">
- <span>October 28, 2025</span>
- <span>5 min read</span>
- </div>
- <h3 class="blog-card-title">How to File an Insurance Claim the Right Way and Actually Win</h3>
- <p class="blog-card-excerpt">Most denied or underpaid claims happen because of simple mistakes during the filing process. Follow these steps to document, submit, and advocate for a fair payout every time.</p>
- <a href="blog-post-template.html" class="blog-card-link">Read more →</a>
- </div>
- </article>
-
- </div><!-- end .blog-grid -->
-
- </div><!-- end .container -->
- </section>
-
- <!-- NEWSLETTER STRIP -->
- <div class="newsletter-strip">
- <div class="container">
- <div class="newsletter-inner">
- <div class="newsletter-content">
- <h3>Insurance Tips Delivered to Your Inbox</h3>
- <p>Monthly savings alerts, coverage guides, and plain-English advice, en inglés y en .</p>
- </div>
- <form class="newsletter-form" onsubmit="return false;">
- <input type="email" placeholder="Your email address" />
- <button type="submit" class="btn btn-primary">Subscribe Free</button>
- </form>
- </div>
- </div>
- </div>
-
- <!-- CTA BANNER -->
- <section class="cta-banner">
- <div class="container">
- <h2 class="reveal">Ready to Save on Your Insurance?</h2>
- <p class="reveal reveal-delay-1">Get a free, no-obligation quote in minutes. Our agents compare top carriers to find you the best rate.</p>
- <div class="cta-btns reveal reveal-delay-2">
- <a href="ins-contact.html" class="btn btn-white">Get Your Free Quote</a>
- <a href="tel:5167801385" class="btn btn-ghost">Call (516) 780-1385</a>
- </div>
- </div>
- </section>
-
- </main>
-
- <!-- FOOTER -->
- <footer class="site-footer">
- <div class="container">
- <div class="footer-grid">
- <div class="footer-brand">
- <div class="logo-wrap" style="margin-bottom:20px;">
- <div class="logo-mark"><svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
- <div class="logo-text"><strong>Stevens Agency</strong><span>Coverage You Can Count On</span></div>
- </div>
- <p>An independent insurance agency committed to finding you the best coverage at the best price. Proudly serving our community for over 40 years.</p>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>8801 Lead Mine Rd, Raleigh, NC 27615</div>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:5167801385">(516) 780-1385</a></div>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@stevensagency.com">info@stevensagency.com</a></div>
- </div>
- <div class="footer-col">
- <h4>Coverage</h4>
- <ul>
- <li><a href="personal-lines.html">Personal Lines</a></li>
- <li><a href="commercial-lines.html">Commercial Lines</a></li>
- <li><a href="life-insurance.html">Life Insurance</a></li>
- <li><a href="medicare-aca.html">Medicare &amp; ACA</a></li>
- <li><a href="final-expense.html">Final Expense</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h4>Resources</h4>
- <ul>
- <li><a href="claims-payments.html">Claims &amp; Payments</a></li>
- <li><a href="blog.html">Blog &amp; Articles</a></li>
- <li><a href="ins-faq.html">FAQ</a></li>
- <li><a href="ins-contact.html">Contact Us</a></li>
- <li><a href="terms-of-service.html">Terms of Service</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h4>Office Hours</h4>
- <ul class="footer-hours">
- <li><span>Mon - Fri</span><span>9:00 AM - 6:00 PM</span></li>
- <li><span>Saturday</span><span>10:00 AM - 3:00 PM</span></li>
- <li><span>Sunday</span><span>Closed</span></li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
- <p>&#169; Stevens Agency. All Rights Reserved.</p>
- <div class="footer-links">
- <a href="#">Privacy Policy</a>
- <a href="terms-of-service.html">Terms of Service</a>
- <a href="blog.html">Blog</a>
- </div>
- <div class="social-links">
- <a href="https://facebook.com/StevensAgencyNC" class="social-link" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
- <a href="https://instagram.com/stevensagencync" class="social-link" aria-label="Instagram"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
- <a href="https://linkedin.com/company/stevens-agency-nc" class="social-link" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
- </div>
- </div>
- </div>
- </footer>
-
- <script>
- // Scroll Reveal
- const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
- const revealObs = new IntersectionObserver(entries => {
- entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); } });
- }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
- revealEls.forEach(el => revealObs.observe(el));
-
- // Header scroll shadow
- const header = document.getElementById('siteHeader');
- window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
-
- // Floating CTA
- const floatingCta = document.getElementById('floatingCta');
- let ctaVisible = false;
- window.addEventListener('scroll', () => {
- const show = window.scrollY > 400;
- if (show !== ctaVisible) { ctaVisible = show; floatingCta.classList.toggle('visible', ctaVisible); }
- }, { passive: true });
-
- // Mobile menu
- const hamburger = document.getElementById('hamburger');
- const mobileNav = document.getElementById('mobileNav');
- const mobileNavClose = document.getElementById('mobileNavClose');
- hamburger.addEventListener('click', () => {
- hamburger.classList.toggle('open');
- mobileNav.classList.toggle('open');
- document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
- });
- mobileNavClose.addEventListener('click', () => {
- hamburger.classList.remove('open');
- mobileNav.classList.remove('open');
- document.body.style.overflow = '';
- });
- mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
- hamburger.classList.remove('open');
- mobileNav.classList.remove('open');
- document.body.style.overflow = '';
- }));
-
- // ADD PAGE-SPECIFIC JS BELOW THIS LINE
- // Blog filter buttons (visual only, no filtering logic needed for template)
- document.querySelectorAll('.filter-btn').forEach(btn => {
- btn.addEventListener('click', () => {
- document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
- btn.classList.add('active');
- });
- });
- </script>
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <article style="background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="aspect-ratio:16/10;background:linear-gradient(160deg,#5a4a3d 0%, #2a2520 100%);position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(255,240,220,.10), transparent 50%),radial-gradient(circle at 70% 70%, rgba(184,32,46,.20), transparent 50%);"></div>
+        </div>
+        <div style="padding:28px;flex-grow:1;display:flex;flex-direction:column;">
+          <span class="eyebrow" style="margin-bottom:10px;">Personal Lines</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;font-weight:500;letter-spacing:-0.01em;margin-bottom:10px;line-height:1.25;">Why your North Carolina home insurance went up 22% this year</h3>
+          <p style="color:var(--slate);font-size:14px;flex-grow:1;line-height:1.5;">Reinsurance, hurricane reserves, and inflation are all part of the story, and dropping coverage is almost always the wrong move.</p>
+          <a href="blog-post-template.html" class="btn-link" style="margin-top:18px;">Read article →</a>
+        </div>
+      </article>
+      <article style="background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="aspect-ratio:16/10;background:linear-gradient(160deg,#7a6451 0%, #3a2e22 100%);position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(255,240,220,.10), transparent 50%),radial-gradient(circle at 70% 70%, rgba(184,32,46,.20), transparent 50%);"></div>
+        </div>
+        <div style="padding:28px;flex-grow:1;display:flex;flex-direction:column;">
+          <span class="eyebrow" style="margin-bottom:10px;">Medicare</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;font-weight:500;letter-spacing:-0.01em;margin-bottom:10px;line-height:1.25;">Medicare Advantage vs. Medigap: how to actually decide</h3>
+          <p style="color:var(--slate);font-size:14px;flex-grow:1;line-height:1.5;">A short framework based on your doctors, your meds, and how often you travel. We use it on every client we enroll.</p>
+          <a href="blog-post-template.html" class="btn-link" style="margin-top:18px;">Read article →</a>
+        </div>
+      </article>
+      <article style="background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="aspect-ratio:16/10;background:linear-gradient(160deg,#cdb6a3 0%, #5a4a3d 100%);position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(255,240,220,.10), transparent 50%),radial-gradient(circle at 70% 70%, rgba(184,32,46,.20), transparent 50%);"></div>
+        </div>
+        <div style="padding:28px;flex-grow:1;display:flex;flex-direction:column;">
+          <span class="eyebrow" style="margin-bottom:10px;">Commercial</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;font-weight:500;letter-spacing:-0.01em;margin-bottom:10px;line-height:1.25;">The 5 endorsements every NC contractor's GL is missing</h3>
+          <p style="color:var(--slate);font-size:14px;flex-grow:1;line-height:1.5;">Tools, builders' risk, hired-and-non-owned auto, additional insured wording, and a primary &amp; non-contributory clause that actually holds up.</p>
+          <a href="blog-post-template.html" class="btn-link" style="margin-top:18px;">Read article →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div><a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a><p>Independent insurance brokerage. Two generations protecting Carolina families and businesses since 1991. NC License #20081234.</p></div>
+    <div><h5>Coverage</h5><ul><li><a href="personal-lines.html">Personal Lines</a></li><li><a href="commercial-lines.html">Commercial Lines</a></li><li><a href="life-insurance.html">Life Insurance</a></li><li><a href="medicare-aca.html">Medicare &amp; ACA</a></li><li><a href="final-expense.html">Final Expense</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="about.html#team">Our team</a></li><li><a href="ins-faq.html">FAQ</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+    <div><h5>Clients</h5><ul><li><a href="#">Pay bill</a></li><li><a href="claims-payments.html">File claim</a></li><li><a href="claims-payments.html">ID card</a></li><li><a href="ins-contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-base"><div>© 2026 Stevens &amp; Co.</div><div class="legal"><a href="terms-of-service.html">Privacy</a><a href="terms-of-service.html">Terms</a><a href="#">Licensing</a></div></div>
+</div></footer>
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+const navToggle = document.getElementById('navToggle'); const mobileNav = document.getElementById('mobileNav'); const mnClose = document.getElementById('mnClose');
+if (navToggle) navToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+if (mnClose) mnClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+if (mobileNav) mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+</script>
 </body>
 </html>

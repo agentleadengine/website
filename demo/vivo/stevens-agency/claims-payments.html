@@ -1,465 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!--
- ╔══════════════════════════════════════════════════════════════════╗
- ║ TEMPLATE C, Vivo ║
- ║ Insurance Agency Website Template • © Your Agency Name ║
- ╠══════════════════════════════════════════════════════════════════╣
- ║ DELIVERY CHECKLIST, Find & Replace before going live: ║
- ║ ║
- ║ Stevens Agency → e.g. "Smith & Associates Insurance" ║
- ║ Coverage You Can Count On → e.g. "Your Trusted Local Experts" ║
- ║ (516) 780-1385 → Display format: "(555) 123-4567" ║
- ║ 5167801385 → Digits only for tel: links: "5551234567" ║
- ║ info@stevensagency.com → e.g. "info@smithinsurance.com" ║
- ║ 8801 Lead Mine Rd, Raleigh, NC 27615 → e.g. "456 Oak St, Springfield, IL 62701" ║
- ║ https://facebook.com/StevensAgencyNC → "https://facebook.com/YourPage" ║
- ║ https://instagram.com/stevensagencync → "https://instagram.com/YourHandle" ║
- ║ https://linkedin.com/company/stevens-agency-nc → "https://linkedin.com/company/YourCo" ║
- ╠══════════════════════════════════════════════════════════════════╣
- ║ CSS BRANDING: Edit styles.css, search "CLIENT CONFIG" ║
- ╚══════════════════════════════════════════════════════════════════╝
--->
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Claims &amp; Payments, Stevens Agency</title>
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Claims & Payments | Stevens & Co. Insurance</title>
+<meta name="description" content="How claims work at Stevens & Co. Five-step process, with the same handful of people on your side from the first call."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<div class="topbar"><div class="container">
+  <div class="left"><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span> Open today, 8:30 AM to 5:30 PM</span><span class="hide-md" style="opacity:.5;">·</span><span class="hide-md">8801 Lead Mine Rd, Suite 214 · Raleigh, NC</span></div>
+  <div class="right"><a href="#" class="hide-md">Client Login</a><a href="claims-payments.html" class="hide-md">File a Claim</a><a href="#" style="color:white;font-weight:500;">Pay Bill →</a></div>
+</div></div>
+<header class="nav"><div class="container">
+  <a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a>
+  <nav class="nav-center"><a href="index.html#coverage">Coverage</a><a href="about.html">About</a><a href="index.html#carriers">Carriers</a><a href="index.html#reviews">Reviews</a><a href="ins-faq.html">FAQ</a><a href="ins-contact.html">Contact</a></nav>
+  <div class="nav-right"><a href="tel:5167801385" class="nav-phone hide-md">(516) 780-1385</a><a href="ins-contact.html" class="btn btn-primary">Get a Quote</a><button class="nav-toggle" id="navToggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div>
+</div></header>
 
- <!-- FLOATING CTA -->
- <div class="floating-cta" id="floatingCta">
- <a href="ins-contact.html">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
- Get a Free Quote
- </a>
- </div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mn-head"><a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a><button class="mn-close" id="mnClose" aria-label="Close menu">&times;</button></div>
+  <nav><a class="section">Coverage</a><a href="personal-lines.html">Personal Lines</a><a href="commercial-lines.html">Commercial Lines</a><a href="life-insurance.html">Life Insurance</a><a href="medicare-aca.html">Medicare &amp; ACA</a><a href="final-expense.html">Final Expense</a><a class="section">Company</a><a href="about.html">About</a><a href="ins-faq.html">FAQ</a><a href="claims-payments.html">Claims</a><a href="ins-contact.html">Contact</a></nav>
+  <div class="mn-cta"><a href="tel:5167801385" class="mn-phone">(516) 780-1385</a><a href="ins-contact.html" class="btn btn-primary">Get a Quote</a></div>
+</div>
 
- <!-- TOP BAR -->
- <div class="topbar">
- <div class="container">
- <div class="topbar-left">
- <a href="#" class="topbar-icon">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
- 8801 Lead Mine Rd, Raleigh, NC 27615
- </a>
- <span style="opacity:.3">|</span>
- <a href="mailto:info@stevensagency.com" class="topbar-icon">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
- info@stevensagency.com
- </a>
- </div>
- <div class="topbar-right">
- 
- </div>
- </div>
- </div>
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a><span class="sep">›</span><span>Claims &amp; Payments</span></div>
+    <h1 class="display">Claims handled the way <span class="accent-light">they should be.</span></h1>
+    <p class="lede">Call us first, not the 1-800 number. We help you file, follow up with the carrier, and advocate for the outcome you actually deserve. Most clients say this is the moment they realized they made the right move.</p>
+    <div class="actions">
+      <a href="tel:5167801385" class="btn btn-light">Call (516) 780-1385 →</a>
+      <a href="ins-contact.html" class="btn btn-outline">Start a claim online</a>
+    </div>
+  </div>
+</section>
 
- <!-- HEADER -->
- <header class="site-header" id="siteHeader">
- <div class="header-inner">
- <a href="index.html" class="logo-wrap">
- <div class="logo-mark">
- <svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
- </div>
- <div class="logo-text">
- <strong>Stevens Agency</strong>
- <span>Coverage You Can Count On</span>
- </div>
- </a>
- <nav class="primary-nav">
- <div class="nav-dropdown">
- <a href="personal-lines.html">Coverage</a>
- <div class="dropdown-menu">
- <a href="personal-lines.html">Personal Lines</a>
- <a href="commercial-lines.html">Commercial Lines</a>
- <a href="life-insurance.html">Life Insurance</a>
- <a href="medicare-aca.html">Medicare &amp; ACA</a>
- <a href="final-expense.html">Final Expense</a>
- <a href="auto-insurance.html">Auto Insurance</a>
- <a href="home-insurance.html">Home Insurance</a>
- <a href="business-insurance.html">Business Insurance</a>
- <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
- </div>
- </div>
- <a href="claims-payments.html" class="active">Claims</a>
- <a href="blog.html">Blog</a>
- <div class="nav-dropdown">
- <a href="#">Contact</a>
- <div class="dropdown-menu">
- <a href="ins-contact.html">Contact Our Office</a>
- <a href="ins-faq.html">FAQ</a>
- </div>
- </div>
- </nav>
- <div class="header-right">
- <a href="tel:5167801385" class="phone-link">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
- (516) 780-1385
- </a>
- <a href="ins-contact.html" class="btn btn-primary">Free Quote</a>
- <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
- </div>
- </div>
- </header>
+<section class="steps">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:48px;">
+      <span class="eyebrow">How a claim works with us</span>
+      <h2 class="display">Five steps, <span class="accent">one phone number.</span></h2>
+      <p>From the first call to the final check, we are on your side and on the phone with the carrier.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step"><div class="num">01</div><h3>Call us first</h3><p>Even before the carrier. We'll make sure the claim is filed correctly the first time and document the right way.</p></div>
+      <div class="step"><div class="num">02</div><h3>We file with the carrier</h3><p>Same day during business hours. After hours, we connect you with the 24/7 claim line and follow up the next morning.</p></div>
+      <div class="step"><div class="num">03</div><h3>Adjuster assignment</h3><p>We track the assignment and stay in the loop so nothing stalls. Most adjusters reach out within 24-48 hours.</p></div>
+      <div class="step"><div class="num">04</div><h3>Repair &amp; advocacy</h3><p>If the offer is low or coverage is denied, we push back. We've seen the playbook before, and we know how to escalate.</p></div>
+      <div class="step"><div class="num">05</div><h3>Resolved &amp; reviewed</h3><p>Once the claim closes, we review your coverage to make sure nothing similar can happen again. Adjustments on us.</p></div>
+    </div>
+  </div>
+</section>
 
- <!-- MOBILE NAV -->
- <div class="mobile-nav" id="mobileNav">
- <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#x2715;</button>
- <a href="index.html">Home</a>
- <a href="personal-lines.html">Personal Lines</a>
- <a href="commercial-lines.html">Commercial Lines</a>
- <a href="life-insurance.html">Life Insurance</a>
- <a href="medicare-aca.html">Medicare &amp; ACA</a>
- <a href="final-expense.html">Final Expense</a>
- <a href="auto-insurance.html">Auto</a>
- <a href="home-insurance.html">Home</a>
- <a href="business-insurance.html">Business</a>
- <a href="motorcycle-boat-rv.html">Motorcycle / Boat / RV</a>
- <a href="claims-payments.html" class="active">Claims &amp; Payments</a>
- <a href="blog.html">Blog</a>
- <a href="ins-contact.html">Contact Us</a>
- <a href="ins-faq.html">FAQ</a>
- <a href="tel:5167801385" style="color: var(--gold); font-weight: 700;">(516) 780-1385</a>
- <a href="ins-contact.html" class="btn btn-primary btn-full">Get a Free Quote</a>
- </div>
-
- <main>
-
- <!-- PAGE HERO -->
- <section class="page-hero">
- <div class="container">
- <div class="breadcrumb">
- <a href="index.html">Home</a>
- <span class="sep">›</span>
- <span>Claims &amp; Payments</span>
- </div>
- <h1>We're Here When<br><span style="color:var(--gold)">You Need Us Most</span></h1>
- <p>Filing a claim is stressful enough. We handle the paperwork, advocate for a fair settlement, and keep you informed at every step of the process.</p>
- <div class="page-hero-ctas">
- <a href="ins-contact.html" class="btn btn-primary">Get a Free Quote</a>
- <a href="tel:5167801385" class="btn btn-outline">Call (516) 780-1385</a>
- </div>
- </div>
- </section>
-
- <!-- HOW THE CLAIMS PROCESS WORKS -->
- <section class="steps-section bg-white">
- <div class="container">
- <div class="section-header">
- <span class="section-label reveal">The Claims Process</span>
- <h2 class="section-title reveal reveal-delay-1">How It Works, Step by Step</h2>
- <p class="section-sub reveal reveal-delay-2">From the moment an incident happens to the day your claim is fully resolved, we guide you through every step so nothing falls through the cracks.</p>
- </div>
- <div class="steps-grid">
- <div class="step-card reveal">
- <div class="step-number">1</div>
- <h3>Report the Incident</h3>
- <p>Call us or your carrier's 24/7 claims hotline as soon as an incident occurs. Early reporting gives your claim the strongest possible start.</p>
- </div>
- <div class="step-card reveal reveal-delay-1">
- <div class="step-number">2</div>
- <h3>Document Everything</h3>
- <p>Take photos, gather police reports, and collect witness contact information. Thorough documentation protects your claim and speeds up the process.</p>
- </div>
- <div class="step-card reveal reveal-delay-2">
- <div class="step-number">3</div>
- <h3>File Your Claim</h3>
- <p>We submit your claim directly with your carrier and verify every detail is accurate, so nothing delays your settlement or gets lost in the process.</p>
- </div>
- <div class="step-card reveal reveal-delay-3">
- <div class="step-number">4</div>
- <h3>We Advocate for You</h3>
- <p>Our team monitors progress and pushes for a fair, timely outcome. You're never left alone navigating the insurance company on your own.</p>
- </div>
- <div class="step-card reveal">
- <div class="step-number">5</div>
- <h3>Claim Resolved</h3>
- <p>Payment is issued and repairs are authorized. We follow up to confirm everything was handled correctly before we close the file.</p>
- </div>
- </div>
- </div>
- </section>
-
- <!-- PAYMENT OPTIONS -->
- <section class="payment-section">
- <div class="container">
- <div class="section-header">
- <span class="section-label reveal">Convenient Payment Options</span>
- <h2 class="section-title reveal reveal-delay-1">Pay Your Premium Your Way</h2>
- <p class="section-sub reveal reveal-delay-2">We offer multiple payment methods so keeping your coverage active is always fast and hassle-free.</p>
- </div>
- <div class="payment-grid">
- <div class="payment-card reveal">
- <div class="payment-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
- </div>
- <h3>Online Portal</h3>
- <p>Log in to your carrier's secure portal anytime to view policy details, make a payment, and download documents, available 24/7 from any device, no phone call required.</p>
- </div>
- <div class="payment-card reveal reveal-delay-1">
- <div class="payment-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
- </div>
- <h3>Pay by Phone</h3>
- <p>Call our billing team during business hours to pay by credit or debit card. A real person answers, and can help with billing questions or payment arrangements on the spot.</p>
- </div>
- <div class="payment-card reveal reveal-delay-2">
- <div class="payment-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
- </div>
- <h3>Auto-Pay Enrollment</h3>
- <p>Set it and forget it. Enroll in automatic payments and your premium is deducted on the same date every month, no missed payments, no policy lapses, no hassle.</p>
- </div>
- </div>
- </div>
- </section>
-
- <!-- EMERGENCY NOTICE -->
- <section class="notice-section">
- <div class="container">
- <div class="notice-card">
- <div class="notice-icon">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
- </div>
- <div class="notice-body">
- <h4>Need to Report an Emergency Claim Right Now?</h4>
- <p>If you've been in an accident or suffered a covered loss, don't wait. Contact us directly or reach your carrier's 24-hour emergency claims line. We're available during business hours to walk you through every step, and can connect you with after-hours emergency resources for incidents that can't wait until morning.</p>
- <div class="notice-contacts">
- <a href="tel:5167801385">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
- Call (516) 780-1385
- </a>
- <a href="mailto:info@stevensagency.com">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
- Email info@stevensagency.com
- </a>
- <a href="ins-contact.html">
- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
- Submit a Contact Form
- </a>
- </div>
- </div>
- </div>
- </div>
- </section>
-
- <!-- WHAT TO DO AFTER AN ACCIDENT -->
- <section class="split-section bg-gray">
- <div class="container">
- <div class="split-grid">
- <div class="split-content reveal-left">
- <span class="section-label">Accident Guide</span>
- <h2 class="section-title">What to Do Immediately<br><span style="color:var(--gold)">After an Accident</span></h2>
- <p>The actions you take in the first few minutes after an accident can directly affect your claim outcome. Follow these steps to protect yourself, your passengers, and your coverage.</p>
- <ul class="check-list">
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Move to Safety</strong>, Get your vehicle out of traffic if safe to do so, and turn on hazard lights immediately.</p>
- </li>
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Call 911</strong>, Report the accident and request a police report, even for minor incidents. Official documentation strengthens your claim.</p>
- </li>
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Document the Scene</strong>, Photograph all vehicles, damage, road conditions, and visible injuries before anything is moved or altered.</p>
- </li>
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Collect Information</strong>, Get names, phone numbers, license plates, and insurance details from every driver and witness involved.</p>
- </li>
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Avoid Admitting Fault</strong>, Do not apologize or accept liability at the scene. Let the claims process and the facts determine responsibility.</p>
- </li>
- <li class="check-item">
- <span class="check-dot">
- <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
- </span>
- <p><strong>Call Us Right Away</strong>, Dial (516) 780-1385 and we'll guide you through the next steps and begin the claims process immediately.</p>
- </li>
- </ul>
- </div>
- <div class="split-image reveal-right">
- <span class="split-image-text">Accident documentation photo</span>
- </div>
- </div>
- </div>
- </section>
-
- <!-- RELATED COVERAGE -->
- <section class="related-section">
- <div class="container">
- <div class="section-header">
- <span class="section-label reveal">More From Us</span>
- <h2 class="section-title reveal reveal-delay-1">Explore Your Coverage Options</h2>
- </div>
- <div class="related-grid">
- <a href="auto-insurance.html" class="related-card reveal">
- <div class="related-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 6H7L4 10v4h2m7-8l3 4m0 0h2l1 3v1h-2m-3-4l1 4m0 0H9"/></svg>
- </div>
- <h4>Auto Insurance</h4>
- <p>Coverage you can count on, from liability to full protection.</p>
- <span>Explore Coverage →</span>
- </a>
- <a href="home-insurance.html" class="related-card reveal reveal-delay-1">
- <div class="related-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline stroke-linecap="round" stroke-linejoin="round" points="9 22 9 12 15 12 15 22"/></svg>
- </div>
- <h4>Home Insurance</h4>
- <p>Protect the place that matters most to your family.</p>
- <span>Explore Coverage →</span>
- </a>
- <a href="business-insurance.html" class="related-card reveal reveal-delay-2">
- <div class="related-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
- </div>
- <h4>Business Insurance</h4>
- <p>Shield your business from the risks that come with growth.</p>
- <span>Explore Coverage →</span>
- </a>
- <a href="ins-contact.html" class="related-card reveal reveal-delay-3">
- <div class="related-card-icon">
- <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
- </div>
- <h4>Contact Our Office</h4>
- <p>Talk to a local agent who understands your needs.</p>
- <span>Get in Touch →</span>
- </a>
- </div>
- </div>
- </section>
-
- <!-- CTA BANNER -->
- <section class="cta-banner">
- <div class="container">
- <h2 class="reveal">Ready to Save on Your Insurance?</h2>
- <p class="reveal reveal-delay-1">Get a free, no-obligation quote in minutes. Our agents compare top carriers to find you the best rate.</p>
- <div class="cta-btns reveal reveal-delay-2">
- <a href="ins-contact.html" class="btn btn-white">Get Your Free Quote</a>
- <a href="tel:5167801385" class="btn btn-ghost">Call (516) 780-1385</a>
- </div>
- </div>
- </section>
-
- </main>
-
- <!-- FOOTER -->
- <footer class="site-footer">
- <div class="container">
- <div class="footer-grid">
- <div class="footer-brand">
- <div class="logo-wrap" style="margin-bottom:20px;">
- <div class="logo-mark"><svg fill="none" stroke="white" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
- <div class="logo-text"><strong>Stevens Agency</strong><span>Coverage You Can Count On</span></div>
- </div>
- <p>An independent insurance agency committed to finding you the best coverage at the best price. Proudly serving our community for over 40 years.</p>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>8801 Lead Mine Rd, Raleigh, NC 27615</div>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:5167801385">(516) 780-1385</a></div>
- <div class="footer-contact-item"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@stevensagency.com">info@stevensagency.com</a></div>
- </div>
- <div class="footer-col">
- <h4>Coverage</h4>
- <ul>
- <li><a href="personal-lines.html">Personal Lines</a></li>
- <li><a href="commercial-lines.html">Commercial Lines</a></li>
- <li><a href="life-insurance.html">Life Insurance</a></li>
- <li><a href="medicare-aca.html">Medicare &amp; ACA</a></li>
- <li><a href="final-expense.html">Final Expense</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h4>Resources</h4>
- <ul>
- <li><a href="claims-payments.html">Claims &amp; Payments</a></li>
- <li><a href="blog.html">Blog &amp; Articles</a></li>
- <li><a href="ins-faq.html">FAQ</a></li>
- <li><a href="ins-contact.html">Contact Us</a></li>
- <li><a href="terms-of-service.html">Terms of Service</a></li>
- </ul>
- </div>
- <div class="footer-col">
- <h4>Office Hours</h4>
- <ul class="footer-hours">
- <li><span>Mon - Fri</span><span>9:00 AM - 6:00 PM</span></li>
- <li><span>Saturday</span><span>10:00 AM - 3:00 PM</span></li>
- <li><span>Sunday</span><span>Closed</span></li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
- <p>&#169; Stevens Agency. All Rights Reserved.</p>
- <div class="footer-links">
- <a href="#">Privacy Policy</a>
- <a href="terms-of-service.html">Terms of Service</a>
- <a href="blog.html">Blog</a>
- </div>
- <div class="social-links">
- <a href="https://facebook.com/StevensAgencyNC" class="social-link" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
- <a href="https://instagram.com/stevensagencync" class="social-link" aria-label="Instagram"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
- <a href="https://linkedin.com/company/stevens-agency-nc" class="social-link" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
- </div>
- </div>
- </div>
- </footer>
-
- <script>
- // Scroll Reveal
- const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
- const revealObs = new IntersectionObserver(entries => {
- entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); } });
- }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
- revealEls.forEach(el => revealObs.observe(el));
-
- // Header scroll shadow
- const header = document.getElementById('siteHeader');
- window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
-
- // Floating CTA
- const floatingCta = document.getElementById('floatingCta');
- let ctaVisible = false;
- window.addEventListener('scroll', () => {
- const show = window.scrollY > 400;
- if (show !== ctaVisible) { ctaVisible = show; floatingCta.classList.toggle('visible', ctaVisible); }
- }, { passive: true });
-
- // Mobile menu
- const hamburger = document.getElementById('hamburger');
- const mobileNav = document.getElementById('mobileNav');
- const mobileNavClose = document.getElementById('mobileNavClose');
- hamburger.addEventListener('click', () => {
- hamburger.classList.toggle('open');
- mobileNav.classList.toggle('open');
- document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
- });
- mobileNavClose.addEventListener('click', () => {
- hamburger.classList.remove('open');
- mobileNav.classList.remove('open');
- document.body.style.overflow = '';
- });
- mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
- hamburger.classList.remove('open');
- mobileNav.classList.remove('open');
- document.body.style.overflow = '';
- }));
-
- // ADD PAGE-SPECIFIC JS BELOW THIS LINE
- </script>
+<section class="tiles">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="eyebrow">Quick links</span>
+      <h2 class="display">Everything else <span class="accent">in one place.</span></h2>
+    </div>
+    <div class="tiles-grid">
+      <div class="tile">
+        <div class="tic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>File a claim</h3>
+        <p>Auto, home, business, life, or any other line. Call our line first and we will walk you through it.</p>
+        <a href="tel:5167801385" class="lnk">Call (516) 780-1385 →</a>
+      </div>
+      <div class="tile">
+        <div class="tic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
+        <h3>Pay your bill</h3>
+        <p>Pay your premium directly through your carrier. We can send the right portal link if you can't find it.</p>
+        <a href="ins-contact.html" class="lnk">Get my pay link →</a>
+      </div>
+      <div class="tile">
+        <div class="tic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+        <h3>Request an ID card</h3>
+        <p>Most carriers email or text the digital card the same day. We'll forward it to you within an hour.</p>
+        <a href="ins-contact.html" class="lnk">Request ID card →</a>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <div class="callout">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 2 4 5v6.5C4 16 7.5 19.7 12 22c4.5-2.3 8-6 8-10.5V5l-8-3z"/></svg></div>
+        <div>
+          <h4>After hours emergency claim?</h4>
+          <p>Carrier 24/7 claim lines are listed on your dec page. Call us the next morning and we'll pick up the file and run with it.</p>
+        </div>
+        <div class="nums">
+          <div><strong>(516) 780-1385</strong>Office, Mon-Fri</div>
+          <div><strong>claims@stevensandco.com</strong>Email any time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div><a href="index.html" class="brand"><div class="brand-mark">S</div><div class="brand-name">Stevens <em>&amp;</em> Co.</div></a><p>Independent insurance brokerage. Two generations protecting Carolina families and businesses since 1991. NC License #20081234.</p></div>
+    <div><h5>Coverage</h5><ul><li><a href="personal-lines.html">Personal Lines</a></li><li><a href="commercial-lines.html">Commercial Lines</a></li><li><a href="life-insurance.html">Life Insurance</a></li><li><a href="medicare-aca.html">Medicare &amp; ACA</a></li><li><a href="final-expense.html">Final Expense</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="about.html#team">Our team</a></li><li><a href="ins-faq.html">FAQ</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+    <div><h5>Clients</h5><ul><li><a href="#">Pay bill</a></li><li><a href="claims-payments.html">File claim</a></li><li><a href="claims-payments.html">ID card</a></li><li><a href="ins-contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-base"><div>© 2026 Stevens &amp; Co.</div><div class="legal"><a href="terms-of-service.html">Privacy</a><a href="terms-of-service.html">Terms</a><a href="#">Licensing</a></div></div>
+</div></footer>
+<script>
+document.querySelectorAll('.faq-item .faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+const navToggle = document.getElementById('navToggle'); const mobileNav = document.getElementById('mobileNav'); const mnClose = document.getElementById('mnClose');
+if (navToggle) navToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+if (mnClose) mnClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+if (mobileNav) mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+</script>
 </body>
 </html>
