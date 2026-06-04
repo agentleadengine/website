@@ -1,9 +1,14 @@
-.claude/
-.claude/worktrees/
-.mcp.json
-_*.txt
-_*.log
-_*.ps1
-_*.py
-_live.css
-_home.html
+# OS / editor cruft
+.DS_Store
+*.swp
+# Local scratch & Windows working files
+_*
+*.ps1
+*.log
+New folder*/
+# Local-only backups (never deploy these)
+sitebackups/
+3.3.2026/
+# Local audit working doc
+AUDIT.md
+TITLE-REVIEW.md
