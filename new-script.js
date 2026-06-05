@@ -120,7 +120,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         first_name: { label: 'First name' },
         last_name:  { label: 'Last name' },
         email:      { label: 'Email', validate: isValidEmail, msg: 'Please enter a valid email address.' },
-        phone:      { label: 'Phone', validate: isValidPhone, msg: 'Please enter a valid phone number (10+ digits).' },
     };
 
     // ── Field state helpers ──────────────────────────────────────────────────
@@ -221,7 +220,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             first_name:  raw.first_name.trim(),
             last_name:   raw.last_name.trim(),
             email:       raw.email.trim(),
-            phone:       raw.phone.trim(),
             message:     (raw.message || '').trim(),
         });
 
