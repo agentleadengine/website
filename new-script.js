@@ -103,9 +103,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const errorBanner    = document.getElementById('formErrorBanner');
     const errorBannerMsg = document.getElementById('formErrorText');
 
-    const CRM_ENDPOINT   = 'https://services.leadconnectorhq.com/funnels/submit';
-    const CRM_FORM_ID    = 'WvMtjqzJFsT8KKYGmP0b';
-    const CRM_LOCATION   = '3YEf1u4MnIkbrLqJaqdQ';
+    const CRM_ENDPOINT   = 'https://backend.leadconnectorhq.com/forms/submit';
+    const CRM_FORM_ID    = 'ibrpskCPi4BSwcVLiouZ';
+    const CRM_LOCATION   = 'DmvEowZuVydz83uIqSti';
+    const RECAPTCHA_KEY  = '6LeDBFwpAAAAAJe8ux9-imrqZ2ueRsEtdiWoDDpX';
+
+    // GHL's form endpoint rejects submissions without a reCAPTCHA v3 token
+    // ("captchaV3 is required"), so start loading Google's script now and
+    // have it ready before the visitor submits.
+    const recaptchaReady = new Promise(function (resolve, reject) {
+        const s = document.createElement('script');
+        s.src = 'https://www.google.com/recaptcha/api.js?render=' + RECAPTCHA_KEY;
+        s.onload  = function () { grecaptcha.ready(resolve); };
+        s.onerror = function () { reject(new Error('reCAPTCHA failed to load')); };
+        document.head.appendChild(s);
+    });
 
     // ── Validators ──────────────────────────────────────────────────────────
     function isValidEmail(v) {
@@ -214,20 +226,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         setLoading(true);
 
-        const params = new URLSearchParams({
-            formId:      CRM_FORM_ID,
-            location_id: CRM_LOCATION,
-            first_name:  raw.first_name.trim(),
-            last_name:   raw.last_name.trim(),
-            email:       raw.email.trim(),
-            message:     (raw.message || '').trim(),
-        });
-
         try {
-            const res = await fetch(CRM_ENDPOINT, {
-                method:  'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body:    params.toString(),
+            await recaptchaReady;
+            const token = await grecaptcha.execute(RECAPTCHA_KEY, { action: 'submit' });
+
+            const fields = {
+                first_name:  raw.first_name.trim(),
+                last_name:   raw.last_name.trim(),
+                email:       raw.email.trim(),
+                message:     (raw.message || '').trim(),
+                formId:      CRM_FORM_ID,
+                location_id: CRM_LOCATION,
+            };
+            const body = new FormData();
+            body.append('formData', JSON.stringify(fields));
+            body.append('locationId', CRM_LOCATION);
+            body.append('formId', CRM_FORM_ID);
+            body.append('captchaV3', token);
+
+            const res = await fetch(CRM_ENDPOINT + '?formId=' + CRM_FORM_ID + '&locationId=' + CRM_LOCATION, {
+                method: 'POST',
+                body:   body,
             });
 
             if (!res.ok) throw new Error('HTTP ' + res.status);
