@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <title>Book a Call | Agent Lead Engine</title>
+    <meta name="description" content="Pick a time that works. A 30 minute call with the founder: we look at your agency's lead flow and tell you honestly whether Agent Lead Engine fits.">
+    <link rel="canonical" href="https://agentleadengine.com/book.html">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Agent Lead Engine">
+    <meta property="og:title" content="Book a Call with Agent Lead Engine">
+    <meta property="og:description" content="A 30 minute call with the founder. Honest answers about your agency's lead flow.">
+    <meta property="og:image" content="https://agentleadengine.com/og-image.png">
+    <meta property="og:url" content="https://agentleadengine.com/book.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new-styles.css?v=11">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TDMPXTZLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5TDMPXTZLH');
+</script>
+</head>
+<body>
+    <!-- Slim header: logo + phone only, no nav — keep the visitor on the booking task -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" style="justify-content: space-between;">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Logo.png" alt="Agent Lead Engine" width="500" height="500" fetchpriority="high" decoding="async">
+                    </a>
+                </div>
+                <div class="header-cta">
+                    <a href="tel:+15167801385" class="btn btn-light">CALL (516) 780-1385</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 720px; margin: 0 auto;">
+                <span class="badge">BOOK A CALL</span>
+                <h1>Pick a Time. Talk to the Founder.</h1>
+                <p class="hero-subtitle">30 minutes with Samuel Ochoa. We look at your agency's lead flow, show you the system, and tell you honestly whether ALE fits. If it does not, you will hear that too.</p>
+                <p style="font-size: 13px; color: var(--gray-500); margin-top: 4px;">No setup fee &middot; Month to month &middot; Cancel anytime &middot; 30-day satisfaction guarantee (SEO excluded)</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 8px 0 40px;">
+        <div class="container">
+            <!-- Calendly inline embed: straight to the event, no landing-page hop -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/agentleadengine/meet-with-sam?hide_gdpr_banner=1&primary_color=6200FF" style="min-width: 320px; height: 760px;"></div>
+            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <p style="text-align: center; font-size: 13px; color: var(--gray-500); margin-top: 12px;">Rather talk now? Call <a href="tel:+15167801385" style="color: inherit;">(516) 780-1385</a> or use the <a href="contact.html" style="color: inherit;">contact form</a>.</p>
+        </div>
+    </section>
+
+    <footer class="footer" style="padding-top: 28px;">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2026 Agent Lead Engine LLC. All rights reserved. Agent Lead Engine LLC, a New York limited liability company.</p><p class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a> | <a href="acceptable-use.html">Acceptable Use</a> | <a href="dpa.html">DPA</a> | <a href="status.html">Status</a></p></div>
+        </div>
+    </footer>
+
+    <script>
+    // Calendly posts events via postMessage; forward the real conversions to GA4.
+    window.addEventListener("message", function (e) {
+        if (e.origin !== "https://calendly.com" || !e.data || typeof e.data.event !== "string") return;
+        if (e.data.event === "calendly.event_scheduled" && window.gtag) {
+            gtag("event", "booking_scheduled", { method: "calendly_inline" });
+        }
+        if (e.data.event === "calendly.date_and_time_selected" && window.gtag) {
+            gtag("event", "booking_time_selected", { method: "calendly_inline" });
+        }
+    });
+    </script>
+
+</body>
+</html>
