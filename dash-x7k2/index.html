@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Ops Dashboard</title>
+<style>
+:root{--paper:#faf6ef;--card:#fffdf8;--ink:#1a2e35;--soft:#41555c;--faint:#6d7f85;--line:rgba(26,46,53,.14);
+--es:#e8562a;--en:#1f78c8;--good:#1d7a53;--warn:#a3660a;--act:#b02914;--sun:#f5c842}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla','Inter',system-ui,sans-serif;background:var(--paper);color:var(--soft);line-height:1.5;padding:20px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:22px;color:var(--ink);letter-spacing:-.01em}
+.sub{font-size:13px;color:var(--faint);margin-bottom:18px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:16px}
+.tile{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:14px 16px}
+.tile .lbl{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.tile .val{font-size:30px;font-weight:800;color:var(--ink);line-height:1.15;margin-top:4px}
+.tile .note{font-size:12px;color:var(--faint);margin-top:2px}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+.card h2{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.insight{display:flex;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.insight:last-child{border-bottom:none}
+.badge{flex:0 0 auto;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:3px 8px;border-radius:5px;color:#fff;margin-top:2px}
+.b-act{background:var(--act)} .b-watch{background:var(--warn)} .b-good{background:var(--good)} .b-info{background:var(--faint)}
+.insight .t{font-weight:800;color:var(--ink);font-size:14.5px}
+.insight .d{font-size:13.5px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);padding:6px 8px;border-bottom:1.5px solid var(--line)}
+td{padding:7px 8px;border-bottom:1px dashed var(--line);color:var(--soft)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:baseline}
+.legend{display:flex;gap:16px;font-size:12.5px;color:var(--soft);margin-bottom:8px}
+.funnel{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.fstep{background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:8px 14px;text-align:center}
+.fstep .n{font-size:22px;font-weight:800;color:var(--ink)}
+.fstep .l{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint)}
+.farrow{color:var(--faint);font-weight:800}
+svg text{font-family:inherit}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);font-size:12px;padding:6px 9px;border-radius:6px;opacity:0;transition:opacity .1s;z-index:50;white-space:nowrap}
+#gate{position:fixed;inset:0;background:var(--paper);display:flex;align-items:center;justify-content:center;z-index:100}
+#gate .g{background:var(--card);border:1.5px solid var(--ink);border-radius:12px;padding:30px;max-width:320px;width:100%;text-align:center}
+#gate input{width:100%;padding:11px;border:1.5px solid var(--line);border-radius:8px;font-size:16px;margin:12px 0;font-family:inherit}
+#gate button{width:100%;padding:11px;background:var(--ink);color:var(--paper);border:none;border-radius:8px;font-weight:800;font-size:15px;cursor:pointer;font-family:inherit}
+.small{font-size:12px;color:var(--faint)}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="gate"><div class="g"><h1 style="margin-bottom:4px">Ops Dashboard</h1><p class="small">Private. Enter the passcode.</p>
+<input id="pw" type="password" placeholder="Passcode" autofocus><button onclick="unlock()">Open</button>
+<p id="gerr" class="small" style="color:var(--act);margin-top:8px"></p></div></div>
+
+<div class="wrap" id="app" style="visibility:hidden">
+  <h1>Website Offer: Ops Dashboard</h1>
+  <p class="sub" id="updated"></p>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="grid">
+    <div>
+      <div class="card"><h2>What to do next</h2><div id="insights"></div></div>
+      <div class="card"><h2>Daily spend by campaign</h2>
+        <div class="legend"><span><i class="dot" style="background:var(--es)"></i>Spanish (ES)</span><span><i class="dot" style="background:var(--en)"></i>English (EN)</span></div>
+        <div id="spendChart"></div>
+      </div>
+      <div class="card"><h2>Daily clicks by campaign</h2>
+        <div class="legend"><span><i class="dot" style="background:var(--es)"></i>Spanish (ES)</span><span><i class="dot" style="background:var(--en)"></i>English (EN)</span></div>
+        <div id="clickChart"></div>
+      </div>
+    </div>
+    <div>
+      <div class="card"><h2>The funnel so far</h2><div class="funnel" id="funnel"></div>
+        <p class="small" style="margin-top:10px">Leads = form submissions since launch + tracked calls over 60s. Closes are logged manually (tell Claude when you close).</p></div>
+      <div class="card"><h2>Campaigns right now</h2><table id="camps"></table></div>
+      <div class="card"><h2>What people actually searched (7 days)</h2><table id="terms"></table>
+        <p class="small" style="margin-top:8px">This is where every click and dollar comes from. Junk here becomes a negative keyword: ask Claude to add it.</p></div>
+      <div class="card"><h2>Money plan</h2><table id="plan"></table></div>
+    </div>
+  </div>
+  <p class="small" style="margin:6px 0 20px">Auto-refreshes every ~3 hours during ad hours from Google Ads + Netlify. Questions or actions: tell Claude. Not indexed, not linked anywhere.</p>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const HASH = "6fe2d33c391f4ccb02d928bcbb22ad1142866f159c8c71d699620c7e733bdd8c";
+async function sha256(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+async function unlock(){const v=document.getElementById("pw").value.trim();if(await sha256(v)===HASH){sessionStorage.dash="1";boot()}else{document.getElementById("gerr").textContent="Nope."}}
+document.getElementById("pw").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+
+const $=id=>document.getElementById(id);
+const fmt$=n=>"$"+(+n).toLocaleString(undefined,{maximumFractionDigits:n<100?2:0});
+function tile(lbl,val,note){return `<div class="tile"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="note">${note||""}</div></div>`}
+
+function barChart(el,daily,key,unit){
+  const days=daily.map(d=>({date:d.date.slice(5),es:d.ES[key],en:d.EN[key]}));
+  const max=Math.max(1,...days.map(d=>d.es+d.en));
+  const W=560,H=180,pad=30,bw=Math.min(46,(W-pad-10)/Math.max(4,days.length)-8);
+  let s=`<svg viewBox="0 0 ${W} ${H+24}" style="width:100%;height:auto" role="img" aria-label="daily ${key} chart">`;
+  [0,.5,1].forEach(f=>{const y=H-f*(H-24);s+=`<line x1="${pad}" x2="${W}" y1="${y}" y2="${y}" stroke="rgba(26,46,53,.08)"/><text x="${pad-5}" y="${y+4}" text-anchor="end" font-size="10" fill="#6d7f85">${unit==="$"?"$":""}${Math.round(f*max)}</text>`});
+  days.forEach((d,i)=>{
+    const x=pad+12+i*(bw+8);
+    const hEs=(H-24)*d.es/max, hEn=(H-24)*d.en/max;
+    const yEn=H-hEn, yEs=yEn-2-hEs;
+    s+=`<rect class="hv" data-tip="${d.date} EN: ${unit==="$"?fmt$(d.en):d.en}" x="${x}" y="${yEn}" width="${bw}" height="${Math.max(hEn,d.en?3:0)}" rx="3" fill="#1f78c8"/>`;
+    s+=`<rect class="hv" data-tip="${d.date} ES: ${unit==="$"?fmt$(d.es):d.es}" x="${x}" y="${yEs}" width="${bw}" height="${Math.max(hEs,d.es?3:0)}" rx="3" fill="#e8562a"/>`;
+    s+=`<text x="${x+bw/2}" y="${H+14}" text-anchor="middle" font-size="10" fill="#6d7f85">${d.date}</text>`;
+  });
+  s+="</svg>";
+  el.innerHTML=s;
+}
+document.addEventListener("mousemove",e=>{const t=e.target.closest?.(".hv");const tip=$("tip");
+  if(t){tip.textContent=t.dataset.tip;tip.style.opacity=1;tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY-10)+"px"}else tip.style.opacity=0});
+
+async function boot(){
+  $("gate").style.display="none";$("app").style.visibility="visible";
+  const d=await (await fetch("data.json?t="+Date.now())).json();
+  $("updated").textContent=`Day ${d.days_live} since launch (${d.launch_date}). Updated ${d.generated_at}.`;
+  const t=d.totals;
+  $("tiles").innerHTML=
+    tile("Spent since launch",fmt$(t.cost),`of $${d.tranche.cash_budget} cash budget`)+
+    tile("Leads",t.leads,`${t.form_leads} forms + ${t.call_conversions} calls`)+
+    tile("Cost per lead",t.cpl?fmt$(t.cpl):"—",t.cpl?"target: under $60":"no leads yet")+
+    tile("Closes",`${t.closes} / ${fmt$(t.revenue)}`,"logged manually")+
+    tile("Clicks",t.clicks,"since launch")+
+    tile("$1,000 promo",d.promo.remaining>0?fmt$(d.promo.remaining)+" to go":"CLEARED ✓",`deadline ${d.promo.deadline} (${d.promo.days_left}d)`);
+  $("insights").innerHTML=d.insights.map(i=>{
+    const cls={act:"b-act",watch:"b-watch",good:"b-good",info:"b-info"}[i.level];
+    const word={act:"ACT",watch:"WATCH",good:"GOOD",info:"FYI"}[i.level];
+    return `<div class="insight"><span class="badge ${cls}">${word}</span><div><div class="t">${i.title}</div><div class="d">${i.detail}</div></div></div>`}).join("");
+  $("funnel").innerHTML=[["Clicks",t.clicks],["Leads",t.leads],["Closes",t.closes]]
+    .map(([l,n])=>`<div class="fstep"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('<span class="farrow">→</span>');
+  const today=d.daily[d.daily.length-1]||{ES:{},EN:{}};
+  $("camps").innerHTML=`<tr><th>Campaign</th><th class="num">Budget</th><th class="num">Today</th><th class="num">Clicks</th><th class="num">Avg CPC</th><th class="num">Impr. share</th></tr>`+
+    d.campaigns.map(c=>{const x=today[c.campaign]||{};const col=c.campaign==="ES"?"var(--es)":"var(--en)";
+      return `<tr><td><i class="dot" style="background:${col}"></i>${c.campaign==="ES"?"Spanish":"English"} <span class="small">(${c.status})</span></td><td class="num">$${c.budget}/d</td><td class="num">${fmt$(x.cost||0)}</td><td class="num">${x.clicks||0}</td><td class="num">${x.cpc?fmt$(x.cpc):"—"}</td><td class="num">${x.is?Math.round(x.is*100)+"%":"—"}</td></tr>`}).join("");
+  $("terms").innerHTML=`<tr><th>Search term</th><th>Camp</th><th class="num">Clicks</th><th class="num">Cost</th></tr>`+
+    (d.search_terms.length?d.search_terms.map(s=>`<tr><td>"${s.term}"</td><td><i class="dot" style="background:${s.campaign==="ES"?"var(--es)":"var(--en)"}"></i>${s.campaign}</td><td class="num">${s.clicks}</td><td class="num">${fmt$(s.cost)}</td></tr>`).join(""):`<tr><td colspan="4" class="small">Nothing yet today.</td></tr>`);
+  $("plan").innerHTML=`<tr><td>Tripwire</td><td class="small">${d.tranche.tripwire}</td></tr><tr><td>Next gate</td><td class="small">${d.tranche.gate_a}</td></tr>`;
+  barChart($("spendChart"),d.daily,"cost","$");
+  barChart($("clickChart"),d.daily,"clicks","");
+}
+if(sessionStorage.dash==="1")boot();
+</script>
+</body>
+</html>

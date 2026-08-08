@@ -1,0 +1,102 @@
+{
+ "generated_at": "2026-08-08 20:02 UTC",
+ "launch_date": "2026-08-08",
+ "days_live": 1,
+ "budgets": {
+  "ES": 55.0,
+  "EN": 25.0
+ },
+ "campaigns": [
+  {
+   "campaign": "ES",
+   "status": "ENABLED",
+   "budget": 55.0
+  },
+  {
+   "campaign": "EN",
+   "status": "ENABLED",
+   "budget": 25.0
+  }
+ ],
+ "daily": [
+  {
+   "date": "2026-08-08",
+   "ES": {
+    "impr": 47,
+    "clicks": 3,
+    "cost": 10.39,
+    "cpc": 3.46,
+    "is": 0.75,
+    "conv": 0.0
+   },
+   "EN": {
+    "impr": 92,
+    "clicks": 2,
+    "cost": 4.64,
+    "cpc": 2.32,
+    "is": 0.1,
+    "conv": 0.0
+   }
+  }
+ ],
+ "totals": {
+  "cost": 15.03,
+  "clicks": 5,
+  "leads": 0,
+  "form_leads": 0,
+  "call_conversions": 0,
+  "cpl": null,
+  "closes": 0,
+  "revenue": 0
+ },
+ "conv_by_action": {},
+ "search_terms": [
+  {
+   "term": "dise\u00f1o de paginas web",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 3.5,
+   "date": "2026-08-08"
+  },
+  {
+   "term": "dise\u00f1ador de paginas",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 3.44,
+   "date": "2026-08-08"
+  }
+ ],
+ "promo": {
+  "remaining": 169.09,
+  "deadline": "2026-08-14",
+  "days_left": 6
+ },
+ "tranche": {
+  "cash_budget": 1700,
+  "spent": 15.03,
+  "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
+  "tripwire": "No close by $600 spend -> drop to $40/day"
+ },
+ "insights": [
+  {
+   "level": "good",
+   "title": "$1,000 promo on track: $169.09 to go by Aug 14",
+   "detail": "Current pace clears it with room. Verify final terms under Billing > Promotions in the Ads UI."
+  },
+  {
+   "level": "info",
+   "title": "EN sees only 10% of available auctions",
+   "detail": "By design: the $6 CPC cap keeps us out of expensive auctions. Fine while Spanish delivers cheaper leads."
+  },
+  {
+   "level": "info",
+   "title": "Day 1 of the learning phase",
+   "detail": "Google is calibrating. Numbers are lumpy and that is normal. No campaign changes for 2 weeks unless an ACT item says so."
+  },
+  {
+   "level": "info",
+   "title": "No leads yet, and that is within normal range",
+   "detail": "$15.03 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
+  }
+ ]
+}
