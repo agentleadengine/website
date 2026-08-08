@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-08 20:02 UTC",
+ "generated_at": "2026-08-08 20:04 UTC",
  "launch_date": "2026-08-08",
  "days_live": 1,
  "budgets": {
@@ -30,7 +30,7 @@
     "conv": 0.0
    },
    "EN": {
-    "impr": 92,
+    "impr": 93,
     "clicks": 2,
     "cost": 4.64,
     "cpc": 2.32,
