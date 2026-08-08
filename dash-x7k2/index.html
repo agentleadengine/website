@@ -30,6 +30,15 @@ h1{font-size:22px;color:var(--ink);letter-spacing:-.01em}
 .tile .lbl{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
 .tile .val{font-size:30px;font-weight:800;color:var(--ink);line-height:1.15;margin-top:4px}
 .tile .note{font-size:12px;color:var(--faint);margin-top:2px}
+.bar{height:9px;background:rgba(26,46,53,.09);border-radius:99px;overflow:hidden;margin-top:9px}
+.bar i{display:block;height:100%;border-radius:99px;transition:width .4s ease}
+.split{display:flex;height:26px;border-radius:8px;overflow:hidden;margin:6px 0 4px}
+.split div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;min-width:34px}
+.fbar{display:flex;align-items:center;gap:10px;margin:8px 0}
+.fbar .fl{flex:0 0 64px;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--faint)}
+.fbar .ftrack{flex:1;height:26px;background:rgba(26,46,53,.06);border-radius:7px;overflow:hidden}
+.fbar .ffill{height:100%;border-radius:7px;display:flex;align-items:center;padding-left:10px;color:#fff;font-weight:800;font-size:13px;min-width:34px}
+.frate{font-size:11.5px;color:var(--faint);margin-left:74px}
 .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
 .card{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:14px}
 .card h2{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
@@ -91,7 +100,7 @@ svg text{font-family:inherit}
       <div class="card"><h2>At this pace</h2><div id="pace" style="font-size:14.5px"></div></div>
       <div class="card"><h2>The funnel so far</h2><div class="funnel" id="funnel"></div>
         <p class="small" style="margin-top:10px">Leads = form submissions since launch + tracked calls over 60s. Closes are logged manually (tell Claude when you close).</p></div>
-      <div class="card"><h2>Campaigns right now</h2><table id="camps"></table>
+      <div class="card"><h2>Campaigns right now</h2><div id="split"></div><table id="camps"></table>
         <p class="small" style="margin-top:8px">Plain words: <b>Avg CPC</b> = what one click costs. <b>Impr. share</b> = of all the times your ad could have shown, how often it did. Low share on EN is intentional (the price cap keeps us out of expensive auctions).</p></div>
       <div class="card"><h2>What people actually searched (7 days)</h2><table id="terms"></table>
         <p class="small" style="margin-top:8px">This is where every click and dollar comes from. Junk here becomes a negative keyword: ask Claude to add it.</p></div>
@@ -110,7 +119,8 @@ document.getElementById("pw").addEventListener("keydown",e=>{if(e.key==="Enter")
 
 const $=id=>document.getElementById(id);
 const fmt$=n=>"$"+(+n).toLocaleString(undefined,{maximumFractionDigits:n<100?2:0});
-function tile(lbl,val,note){return `<div class="tile"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="note">${note||""}</div></div>`}
+function tile(lbl,val,note,bar){return `<div class="tile"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="note">${note||""}</div>${bar||""}</div>`}
+function bar(frac,color){return `<div class="bar"><i style="width:${Math.min(100,Math.max(2,frac*100))}%;background:${color}"></i></div>`}
 
 function barChart(el,daily,key,unit){
   const days=daily.map(d=>({date:d.date.slice(5),es:d.ES[key],en:d.EN[key]}));
@@ -153,20 +163,34 @@ async function boot(){
     `At the current rate: <b style="color:var(--ink)">~${d.pace.leads_per_week} leads/week</b> on ~${fmt$(d.pace.spend_per_week)}/week of ads.<br>`+
     `<b style="color:var(--ink)">${d.pace.breakeven_closes} close${d.pace.breakeven_closes===1?"":"s"}</b> pays back everything spent so far.<br>`+
     `Net cash (collected minus ads): <b style="color:${d.pace.net_cash>=0?"var(--good)":"var(--act)"}">${d.pace.net_cash>=0?"+":""}${fmt$(Math.abs(d.pace.net_cash))}${d.pace.net_cash<0?" out":""}</b>`}
+  const cplCol=t.cpl==null?"var(--ink)":t.cpl<=60?"var(--good)":t.cpl<=90?"var(--warn)":"var(--act)";
+  const promoDone=(184.12-d.promo.remaining)/184.12;
   $("tiles").innerHTML=
-    tile("Spent since launch",fmt$(t.cost),`of $${d.tranche.cash_budget} cash budget`)+
+    tile("Spent since launch",fmt$(t.cost),`of $${d.tranche.cash_budget} cash budget`,bar(t.cost/d.tranche.cash_budget,"var(--ink)"))+
     tile("Leads",t.leads,`${t.form_leads} forms + ${t.call_conversions} calls`)+
-    tile("Cost per lead",t.cpl?fmt$(t.cpl):"—",t.cpl?"target: under $60":"no leads yet")+
+    tile("Cost per lead",`<span style="color:${cplCol}">${t.cpl?fmt$(t.cpl):"—"}</span>`,t.cpl?"target: under $60":"no leads yet")+
     tile("Closes",`${t.closes} / ${fmt$(t.revenue)}`,"logged manually")+
     tile("Clicks",t.clicks,"since launch")+
-    tile("$1,000 promo",d.promo.remaining>0?fmt$(d.promo.remaining)+" to go":"CLEARED ✓",`deadline ${d.promo.deadline} (${d.promo.days_left}d)`);
+    tile("$1,000 promo",d.promo.remaining>0?fmt$(d.promo.remaining)+" to go":"CLEARED ✓",`deadline ${d.promo.deadline} (${d.promo.days_left}d)`,bar(promoDone,"var(--good)"));
   $("insights").innerHTML=d.insights.map(i=>{
     const cls={act:"b-act",watch:"b-watch",good:"b-good",info:"b-info"}[i.level];
     const word={act:"ACT",watch:"WATCH",good:"GOOD",info:"FYI"}[i.level];
     return `<div class="insight"><span class="badge ${cls}">${word}</span><div><div class="t">${i.title}</div><div class="d">${i.detail}</div></div></div>`}).join("");
-  $("funnel").innerHTML=[["Clicks",t.clicks],["Leads",t.leads],["Closes",t.closes]]
-    .map(([l,n])=>`<div class="fstep"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('<span class="farrow">→</span>');
+  const mx=Math.max(1,t.clicks);
+  const stages=[["Clicks",t.clicks,"var(--en)"],["Leads",t.leads,"var(--sun)"],["Closes",t.closes,"var(--good)"]];
+  $("funnel").innerHTML=stages.map(([l,n,c],i)=>{
+    const w=Math.max(6,n/mx*100);
+    const prev=i>0?stages[i-1][1]:null;
+    const rate=i>0&&prev>0?`<div class="frate">${Math.round(n/prev*100)}% of ${stages[i-1][0].toLowerCase()} became ${l.toLowerCase()}</div>`:"";
+    return `<div class="fbar"><div class="fl">${l}</div><div class="ftrack"><div class="ffill" style="width:${w}%;background:${c};${l==="Leads"?"color:var(--ink)":""}">${n}</div></div></div>${rate}`;
+  }).join("");
+  $("funnel").style.display="block";
   const today=d.daily[d.daily.length-1]||{ES:{},EN:{}};
+  const esTot=d.daily.reduce((a,x)=>a+x.ES.cost,0), enTot=d.daily.reduce((a,x)=>a+x.EN.cost,0), spTot=Math.max(.01,esTot+enTot);
+  $("split").innerHTML=`<div class="split">`+
+    `<div style="width:${esTot/spTot*100}%;background:var(--es)" title="Spanish">${Math.round(esTot/spTot*100)}%</div>`+
+    `<div style="width:${enTot/spTot*100}%;background:var(--en)" title="English">${Math.round(enTot/spTot*100)}%</div></div>`+
+    `<p class="small">Where every ad dollar has gone: <b style="color:var(--es)">Spanish ${fmt$(esTot)}</b> · <b style="color:var(--en)">English ${fmt$(enTot)}</b></p>`;
   $("camps").innerHTML=`<tr><th>Campaign</th><th class="num">Budget</th><th class="num">Today</th><th class="num">Clicks</th><th class="num">Avg CPC</th><th class="num">Impr. share</th></tr>`+
     d.campaigns.map(c=>{const x=today[c.campaign]||{};const col=c.campaign==="ES"?"var(--es)":"var(--en)";
       return `<tr><td><i class="dot" style="background:${col}"></i>${c.campaign==="ES"?"Spanish":"English"} <span class="small">(${c.status})</span></td><td class="num">$${c.budget}/d</td><td class="num">${fmt$(x.cost||0)}</td><td class="num">${x.clicks||0}</td><td class="num">${x.cpc?fmt$(x.cpc):"—"}</td><td class="num">${x.is?Math.round(x.is*100)+"%":"—"}</td></tr>`}).join("");
