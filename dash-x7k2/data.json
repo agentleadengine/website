@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-08-08 20:17 UTC",
+ "generated_at": "2026-08-10 22:28 UTC",
  "launch_date": "2026-08-08",
- "days_live": 1,
+ "days_live": 3,
  "budgets": {
   "ES": 55.0,
   "EN": 25.0
@@ -22,26 +22,64 @@
   {
    "date": "2026-08-08",
    "ES": {
-    "impr": 63,
+    "impr": 87,
     "clicks": 4,
     "cost": 13.89,
     "cpc": 3.47,
-    "is": 0.75,
+    "is": 0.508,
     "conv": 0.0
    },
    "EN": {
-    "impr": 95,
+    "impr": 224,
+    "clicks": 9,
+    "cost": 23.39,
+    "cpc": 2.6,
+    "is": 0.1,
+    "conv": 0.0
+   }
+  },
+  {
+   "date": "2026-08-09",
+   "ES": {
+    "impr": 37,
+    "clicks": 4,
+    "cost": 13.71,
+    "cpc": 3.43,
+    "is": 0.265,
+    "conv": 0.0
+   },
+   "EN": {
+    "impr": 193,
+    "clicks": 9,
+    "cost": 25.26,
+    "cpc": 2.81,
+    "is": 0.1,
+    "conv": 0.0
+   }
+  },
+  {
+   "date": "2026-08-10",
+   "ES": {
+    "impr": 37,
     "clicks": 2,
-    "cost": 4.64,
-    "cpc": 2.32,
+    "cost": 6.82,
+    "cpc": 3.41,
+    "is": 0.114,
+    "conv": 0.0
+   },
+   "EN": {
+    "impr": 252,
+    "clicks": 5,
+    "cost": 14.72,
+    "cpc": 2.94,
     "is": 0.1,
     "conv": 0.0
    }
   }
  ],
  "totals": {
-  "cost": 18.53,
-  "clicks": 6,
+  "cost": 97.79,
+  "clicks": 33,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -51,6 +89,13 @@
  },
  "conv_by_action": {},
  "search_terms": [
+  {
+   "term": "straw page",
+   "campaign": "EN",
+   "clicks": 2,
+   "cost": 5.76,
+   "date": "2026-08-09"
+  },
   {
    "term": "dise\u00f1o de paginas web",
    "campaign": "ES",
@@ -71,23 +116,103 @@
    "clicks": 1,
    "cost": 3.44,
    "date": "2026-08-08"
+  },
+  {
+   "term": "personas que hagan paginas web",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 3.42,
+   "date": "2026-08-09"
+  },
+  {
+   "term": "cuanto cuesta hacer una p\u00e1gina web en espa\u00f1a",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 3.41,
+   "date": "2026-08-09"
+  },
+  {
+   "term": "crear un sitio web",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 3.38,
+   "date": "2026-08-09"
+  },
+  {
+   "term": "business website",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.17,
+   "date": "2026-08-09"
+  },
+  {
+   "term": "strawpage maker",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.08,
+   "date": "2026-08-09"
+  },
+  {
+   "term": "sites google com",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 2.96,
+   "date": "2026-08-10"
+  },
+  {
+   "term": "orange county web design",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 2.95,
+   "date": "2026-08-10"
+  },
+  {
+   "term": "wedding website design",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 2.91,
+   "date": "2026-08-10"
+  },
+  {
+   "term": "website designer near me",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 2.67,
+   "date": "2026-08-08"
+  },
+  {
+   "term": "create website",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 2.42,
+   "date": "2026-08-09"
   }
  ],
  "promo": {
-  "remaining": 165.59,
+  "remaining": 86.33,
   "deadline": "2026-08-14",
-  "days_left": 6
+  "days_left": 4
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 18.53,
+  "spent": 97.79,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
  "insights": [
   {
+   "level": "watch",
+   "title": "Spanish CPC hugging the $3.50 ceiling",
+   "detail": "The cap may be pricing us out of some auctions. If ES leads are good, test raising the ceiling to $4.50 next week."
+  },
+  {
+   "level": "watch",
+   "title": "Underspending: $22 of $80 daily budget",
+   "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
+  },
+  {
    "level": "good",
-   "title": "$1,000 promo on track: $165.59 to go by Aug 14",
+   "title": "$1,000 promo on track: $86.33 to go by Aug 14",
    "detail": "Current pace clears it with room. Verify final terms under Billing > Promotions in the Ads UI."
   },
   {
@@ -97,25 +222,28 @@
   },
   {
    "level": "info",
-   "title": "Day 1 of the learning phase",
+   "title": "Day 3 of the learning phase",
    "detail": "Google is calibrating. Numbers are lumpy and that is normal. No campaign changes for 2 weeks unless an ACT item says so."
   },
   {
    "level": "info",
    "title": "No leads yet, and that is within normal range",
-   "detail": "$18.53 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
+   "detail": "$97.79 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
   }
  ],
  "bottom_line": {
-  "text": "Day 1. $18.53 spent, clicks arriving, no leads yet (normal at this spend level). Nothing needs your attention right now.",
+  "text": "Day 3. $97.79 spent, clicks arriving, no leads yet (normal at this spend level). Nothing needs your attention right now.",
   "level": "info"
  },
  "today": {
-  "cost": 18.53,
-  "clicks": 6,
+  "cost": 21.54,
+  "clicks": 7,
   "leads": 0
  },
- "yesterday": null,
+ "yesterday": {
+  "cost": 38.97,
+  "clicks": 13
+ },
  "scorecard": [
   {
    "name": "Leads under $60",
@@ -129,14 +257,14 @@
   },
   {
    "name": "Ads actually spending",
-   "state": "watch",
-   "note": "$19 in 1 day(s)"
+   "state": "pass",
+   "note": "$98 in 3 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 130.0,
+  "spend_per_week": 228.0,
   "breakeven_closes": 1,
-  "net_cash": -18.53
+  "net_cash": -97.79
  }
 }
