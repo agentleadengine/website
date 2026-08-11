@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-08-11 00:15 UTC",
+ "generated_at": "2026-08-11 18:15 UTC",
  "launch_date": "2026-08-08",
- "days_live": 3,
+ "days_live": 4,
  "budgets": {
   "ES": 55.0,
   "EN": 25.0
@@ -60,26 +60,45 @@
   {
    "date": "2026-08-10",
    "ES": {
-    "impr": 49,
+    "impr": 52,
     "clicks": 5,
     "cost": 18.41,
     "cpc": 3.68,
-    "is": 0.263,
+    "is": 0.333,
     "conv": 0.0
    },
    "EN": {
-    "impr": 243,
+    "impr": 157,
     "clicks": 6,
     "cost": 17.62,
     "cpc": 2.94,
     "is": 0.1,
     "conv": 0.0
    }
+  },
+  {
+   "date": "2026-08-11",
+   "ES": {
+    "impr": 45,
+    "clicks": 3,
+    "cost": 13.28,
+    "cpc": 4.43,
+    "is": 0.0,
+    "conv": 0.0
+   },
+   "EN": {
+    "impr": 188,
+    "clicks": 5,
+    "cost": 19.25,
+    "cpc": 3.85,
+    "is": 0.0,
+    "conv": 0.0
+   }
   }
  ],
  "totals": {
-  "cost": 112.28,
-  "clicks": 37,
+  "cost": 144.81,
+  "clicks": 45,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -102,6 +121,27 @@
    "clicks": 1,
    "cost": 4.19,
    "date": "2026-08-10"
+  },
+  {
+   "term": "paginas web para negocios",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 4.12,
+   "date": "2026-08-10"
+  },
+  {
+   "term": "web designer website",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.85,
+   "date": "2026-08-11"
+  },
+  {
+   "term": "web design companies",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.83,
+   "date": "2026-08-11"
   },
   {
    "term": "dise\u00f1o de paginas web",
@@ -203,13 +243,13 @@
   }
  ],
  "promo": {
-  "remaining": 71.84,
+  "remaining": 39.31,
   "deadline": "2026-08-14",
-  "days_left": 4
+  "days_left": 3
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 112.28,
+  "spent": 144.81,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
@@ -221,42 +261,32 @@
   },
   {
    "level": "watch",
-   "title": "Underspending: $36 of $80 daily budget",
+   "title": "Underspending: $33 of $80 daily budget",
    "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
   },
   {
    "level": "good",
-   "title": "$1,000 promo on track: $71.84 to go by Aug 14",
+   "title": "$1,000 promo on track: $39.31 to go by Aug 14",
    "detail": "Current pace clears it with room. Verify final terms under Billing > Promotions in the Ads UI."
   },
   {
    "level": "info",
-   "title": "EN sees only 10% of available auctions",
-   "detail": "By design: the $6 CPC cap keeps us out of expensive auctions. Fine while Spanish delivers cheaper leads."
-  },
-  {
-   "level": "info",
-   "title": "Day 3 of the learning phase",
-   "detail": "Google is calibrating. Numbers are lumpy and that is normal. No campaign changes for 2 weeks unless an ACT item says so."
-  },
-  {
-   "level": "info",
    "title": "No leads yet, and that is within normal range",
-   "detail": "$112.28 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
+   "detail": "$144.81 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
   }
  ],
  "bottom_line": {
-  "text": "Day 3. $112.28 spent, clicks arriving, no leads yet (normal at this spend level). Nothing needs your attention right now.",
+  "text": "Day 4. $144.81 spent, clicks arriving, no leads yet (normal at this spend level). Nothing needs your attention right now.",
   "level": "info"
  },
  "today": {
-  "cost": 36.03,
-  "clicks": 11,
+  "cost": 32.53,
+  "clicks": 8,
   "leads": 0
  },
  "yesterday": {
-  "cost": 38.97,
-  "clicks": 13
+  "cost": 36.03,
+  "clicks": 11
  },
  "scorecard": [
   {
@@ -272,13 +302,13 @@
   {
    "name": "Ads actually spending",
    "state": "pass",
-   "note": "$112 in 3 day(s)"
+   "note": "$145 in 4 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 262.0,
+  "spend_per_week": 253.0,
   "breakeven_closes": 1,
-  "net_cash": -112.28
+  "net_cash": -144.81
  }
 }
