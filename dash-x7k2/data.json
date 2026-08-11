@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-11 18:47 UTC",
+ "generated_at": "2026-08-11 21:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 4,
  "budgets": {
@@ -79,26 +79,26 @@
   {
    "date": "2026-08-11",
    "ES": {
-    "impr": 39,
-    "clicks": 3,
-    "cost": 13.28,
-    "cpc": 4.43,
+    "impr": 45,
+    "clicks": 4,
+    "cost": 18.63,
+    "cpc": 4.66,
     "is": 0.0,
     "conv": 0.0
    },
    "EN": {
-    "impr": 210,
-    "clicks": 6,
-    "cost": 22.99,
-    "cpc": 3.83,
+    "impr": 135,
+    "clicks": 8,
+    "cost": 30.7,
+    "cpc": 3.84,
     "is": 0.0,
     "conv": 0.0
    }
   }
  ],
  "totals": {
-  "cost": 148.55,
-  "clicks": 46,
+  "cost": 161.61,
+  "clicks": 49,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -141,6 +141,13 @@
    "campaign": "EN",
    "clicks": 1,
    "cost": 3.83,
+   "date": "2026-08-11"
+  },
+  {
+   "term": "freelance web designer",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.79,
    "date": "2026-08-11"
   },
   {
@@ -243,45 +250,40 @@
   }
  ],
  "promo": {
-  "remaining": 35.57,
+  "remaining": 22.51,
   "deadline": "2026-08-14",
   "days_left": 3
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 148.55,
+  "spent": 161.61,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
  "insights": [
+  {
+   "level": "act",
+   "title": "$150+ spent with zero leads",
+   "detail": "Clicks are arriving but nobody is calling or submitting. Landing page or tracking issue: verify the phone number works and the form submits."
+  },
   {
    "level": "watch",
    "title": "Spanish CPC hugging the $3.50 ceiling",
    "detail": "The cap may be pricing us out of some auctions. If ES leads are good, test raising the ceiling to $4.50 next week."
   },
   {
-   "level": "watch",
-   "title": "Underspending: $36 of $80 daily budget",
-   "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
-  },
-  {
    "level": "good",
-   "title": "$1,000 promo on track: $35.57 to go by Aug 14",
+   "title": "$1,000 promo on track: $22.51 to go by Aug 14",
    "detail": "Current pace clears it with room. Verify final terms under Billing > Promotions in the Ads UI."
-  },
-  {
-   "level": "info",
-   "title": "No leads yet, and that is within normal range",
-   "detail": "$148.55 spent so far. The model expects the first lead somewhere in the first $60-120 of spend."
   }
  ],
  "bottom_line": {
-  "text": "Day 4. $148.55 spent, clicks arriving, no leads yet (normal at this spend level). Nothing needs your attention right now.",
-  "level": "info"
+  "text": "Day 4. $150+ spent with zero leads. Everything else is holding.",
+  "level": "act"
  },
  "today": {
-  "cost": 36.27,
-  "clicks": 9,
+  "cost": 49.33,
+  "clicks": 12,
   "leads": 0
  },
  "yesterday": {
@@ -291,8 +293,8 @@
  "scorecard": [
   {
    "name": "Leads under $60",
-   "state": "pending",
-   "note": "no leads yet"
+   "state": "fail",
+   "note": "spend without leads"
   },
   {
    "name": "At least 1 close",
@@ -302,13 +304,13 @@
   {
    "name": "Ads actually spending",
    "state": "pass",
-   "note": "$149 in 4 day(s)"
+   "note": "$162 in 4 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 260.0,
+  "spend_per_week": 283.0,
   "breakeven_closes": 1,
-  "net_cash": -148.55
+  "net_cash": -161.61
  }
 }
