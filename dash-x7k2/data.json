@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-08-12 12:15 UTC",
+ "generated_at": "2026-08-12 14:06 UTC",
  "launch_date": "2026-08-08",
- "days_live": 4,
+ "days_live": 5,
  "budgets": {
   "ES": 55.0,
   "EN": 25.0
@@ -94,11 +94,30 @@
     "is": 0.1,
     "conv": 0.0
    }
+  },
+  {
+   "date": "2026-08-12",
+   "ES": {
+    "impr": 12,
+    "clicks": 2,
+    "cost": 11.76,
+    "cpc": 5.88,
+    "is": 0.0,
+    "conv": 0.0
+   },
+   "EN": {
+    "impr": 38,
+    "clicks": 1,
+    "cost": 3.71,
+    "cpc": 3.71,
+    "is": 0.0,
+    "conv": 0.0
+   }
   }
  ],
  "totals": {
-  "cost": 182.99,
-  "clicks": 53,
+  "cost": 198.46,
+  "clicks": 56,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -109,11 +128,25 @@
  "conv_by_action": {},
  "search_terms": [
   {
+   "term": "quien hace paginas web",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 6.0,
+   "date": "2026-08-12"
+  },
+  {
    "term": "straw page",
    "campaign": "EN",
    "clicks": 2,
    "cost": 5.76,
    "date": "2026-08-09"
+  },
+  {
+   "term": "costo de pagina web con carrito de compras",
+   "campaign": "ES",
+   "clicks": 1,
+   "cost": 5.76,
+   "date": "2026-08-12"
   },
   {
    "term": "c\u00f3mo crear mi propia tienda en l\u00ednea",
@@ -170,6 +203,13 @@
    "clicks": 1,
    "cost": 3.79,
    "date": "2026-08-11"
+  },
+  {
+   "term": "website design packages",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.71,
+   "date": "2026-08-12"
   },
   {
    "term": "dise\u00f1o de paginas web",
@@ -271,13 +311,13 @@
   }
  ],
  "promo": {
-  "remaining": 1.13,
+  "remaining": 0.0,
   "deadline": "2026-08-14",
   "days_left": 2
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 182.99,
+  "spent": 198.46,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
@@ -293,28 +333,28 @@
    "detail": "The cap may be pricing us out of some auctions. If ES leads are good, test raising the ceiling to $4.50 next week."
   },
   {
-   "level": "good",
-   "title": "$1,000 promo on track: $1.13 to go by Aug 14",
-   "detail": "Current pace clears it with room. Verify final terms under Billing > Promotions in the Ads UI."
+   "level": "watch",
+   "title": "Underspending: $15 of $80 daily budget",
+   "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
   },
   {
-   "level": "info",
-   "title": "EN sees only 10% of available auctions",
-   "detail": "By design: the $6 CPC cap keeps us out of expensive auctions. Fine while Spanish delivers cheaper leads."
+   "level": "good",
+   "title": "Promo spend threshold cleared",
+   "detail": "The $1,000 credit should post within ~35 days. Watch Billing > Promotions."
   }
  ],
  "bottom_line": {
-  "text": "Day 4. $150+ spent with zero leads. Everything else is holding.",
+  "text": "Day 5. $150+ spent with zero leads. Everything else is holding.",
   "level": "act"
  },
  "today": {
-  "cost": 70.71,
-  "clicks": 16,
+  "cost": 15.47,
+  "clicks": 3,
   "leads": 0
  },
  "yesterday": {
-  "cost": 36.03,
-  "clicks": 11
+  "cost": 70.71,
+  "clicks": 16
  },
  "scorecard": [
   {
@@ -330,13 +370,13 @@
   {
    "name": "Ads actually spending",
    "state": "pass",
-   "note": "$183 in 4 day(s)"
+   "note": "$198 in 5 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 320.0,
+  "spend_per_week": 278.0,
   "breakeven_closes": 1,
-  "net_cash": -182.99
+  "net_cash": -198.46
  }
 }
