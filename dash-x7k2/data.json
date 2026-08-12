@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12 18:15 UTC",
+ "generated_at": "2026-08-12 21:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 5,
  "budgets": {
@@ -9,12 +9,12 @@
  "campaigns": [
   {
    "campaign": "ES",
-   "status": "ENABLED",
+   "status": "PAUSED",
    "budget": 55.0
   },
   {
    "campaign": "EN",
-   "status": "ENABLED",
+   "status": "PAUSED",
    "budget": 25.0
   }
  ],
@@ -98,26 +98,26 @@
   {
    "date": "2026-08-12",
    "ES": {
-    "impr": 42,
-    "clicks": 5,
-    "cost": 29.67,
+    "impr": 54,
+    "clicks": 6,
+    "cost": 35.56,
     "cpc": 5.93,
     "is": 0.0,
     "conv": 0.0
    },
    "EN": {
-    "impr": 58,
-    "clicks": 1,
-    "cost": 3.71,
-    "cpc": 3.71,
+    "impr": 71,
+    "clicks": 3,
+    "cost": 10.52,
+    "cpc": 3.51,
     "is": 0.0,
     "conv": 0.0
    }
   }
  ],
  "totals": {
-  "cost": 216.37,
-  "clicks": 59,
+  "cost": 229.07,
+  "clicks": 62,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -233,6 +233,13 @@
    "date": "2026-08-08"
   },
   {
+   "term": "web creator",
+   "campaign": "EN",
+   "clicks": 1,
+   "cost": 3.43,
+   "date": "2026-08-12"
+  },
+  {
    "term": "personas que hagan paginas web",
    "campaign": "ES",
    "clicks": 1,
@@ -317,7 +324,7 @@
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 216.37,
+  "spent": 229.07,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
@@ -334,7 +341,7 @@
   },
   {
    "level": "watch",
-   "title": "Underspending: $33 of $80 daily budget",
+   "title": "Underspending: $46 of $80 daily budget",
    "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
   },
   {
@@ -348,8 +355,8 @@
   "level": "act"
  },
  "today": {
-  "cost": 33.38,
-  "clicks": 6,
+  "cost": 46.08,
+  "clicks": 9,
   "leads": 0
  },
  "yesterday": {
@@ -370,13 +377,13 @@
   {
    "name": "Ads actually spending",
    "state": "pass",
-   "note": "$216 in 5 day(s)"
+   "note": "$229 in 5 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 303.0,
+  "spend_per_week": 321.0,
   "breakeven_closes": 1,
-  "net_cash": -216.37
+  "net_cash": -229.07
  }
 }
