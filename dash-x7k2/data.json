@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-12 15:15 UTC",
+ "generated_at": "2026-08-12 18:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 5,
  "budgets": {
@@ -98,15 +98,15 @@
   {
    "date": "2026-08-12",
    "ES": {
-    "impr": 13,
-    "clicks": 3,
-    "cost": 17.71,
-    "cpc": 5.9,
+    "impr": 42,
+    "clicks": 5,
+    "cost": 29.67,
+    "cpc": 5.93,
     "is": 0.0,
     "conv": 0.0
    },
    "EN": {
-    "impr": 37,
+    "impr": 58,
     "clicks": 1,
     "cost": 3.71,
     "cpc": 3.71,
@@ -116,8 +116,8 @@
   }
  ],
  "totals": {
-  "cost": 204.41,
-  "clicks": 57,
+  "cost": 216.37,
+  "clicks": 59,
   "leads": 0,
   "form_leads": 0,
   "call_conversions": 0,
@@ -317,7 +317,7 @@
  },
  "tranche": {
   "cash_budget": 1700,
-  "spent": 204.41,
+  "spent": 216.37,
   "gate_a": "By ~$800 spend: CPL under $60 and at least 1 close -> raise to $150/day",
   "tripwire": "No close by $600 spend -> drop to $40/day"
  },
@@ -334,7 +334,7 @@
   },
   {
    "level": "watch",
-   "title": "Underspending: $21 of $80 daily budget",
+   "title": "Underspending: $33 of $80 daily budget",
    "detail": "Either Google is still learning (normal in week 1) or keyword volume caps out. If it persists past day 5, we widen keywords."
   },
   {
@@ -348,8 +348,8 @@
   "level": "act"
  },
  "today": {
-  "cost": 21.42,
-  "clicks": 4,
+  "cost": 33.38,
+  "clicks": 6,
   "leads": 0
  },
  "yesterday": {
@@ -370,13 +370,13 @@
   {
    "name": "Ads actually spending",
    "state": "pass",
-   "note": "$204 in 5 day(s)"
+   "note": "$216 in 5 day(s)"
   }
  ],
  "pace": {
   "leads_per_week": 0.0,
-  "spend_per_week": 286.0,
+  "spend_per_week": 303.0,
   "breakeven_closes": 1,
-  "net_cash": -204.41
+  "net_cash": -216.37
  }
 }
