@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16 00:15 UTC",
+ "generated_at": "2026-08-16 12:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 5,
  "budgets": {
@@ -212,27 +212,6 @@
    "date": "2026-08-12"
   },
   {
-   "term": "dise\u00f1o de paginas web",
-   "campaign": "ES",
-   "clicks": 1,
-   "cost": 3.5,
-   "date": "2026-08-08"
-  },
-  {
-   "term": "dise\u00f1os de paginas web",
-   "campaign": "ES",
-   "clicks": 1,
-   "cost": 3.5,
-   "date": "2026-08-08"
-  },
-  {
-   "term": "dise\u00f1ador de paginas",
-   "campaign": "ES",
-   "clicks": 1,
-   "cost": 3.44,
-   "date": "2026-08-08"
-  },
-  {
    "term": "web creator",
    "campaign": "EN",
    "clicks": 1,
@@ -303,13 +282,6 @@
    "date": "2026-08-10"
   },
   {
-   "term": "website designer near me",
-   "campaign": "EN",
-   "clicks": 1,
-   "cost": 2.67,
-   "date": "2026-08-08"
-  },
-  {
    "term": "create website",
    "campaign": "EN",
    "clicks": 1,
@@ -320,7 +292,7 @@
  "promo": {
   "remaining": 0.0,
   "deadline": "2026-08-14",
-  "days_left": -1
+  "days_left": -2
  },
  "tranche": {
   "cash_budget": 1700,
