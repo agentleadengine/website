@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20 00:15 UTC",
+ "generated_at": "2026-08-20 15:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 5,
  "budgets": {
@@ -126,40 +126,11 @@
   "revenue": 0
  },
  "conv_by_action": {},
- "search_terms": [
-  {
-   "term": "quien hace paginas web",
-   "campaign": "ES",
-   "clicks": 1,
-   "cost": 6.0,
-   "date": "2026-08-12"
-  },
-  {
-   "term": "costo de pagina web con carrito de compras",
-   "campaign": "ES",
-   "clicks": 1,
-   "cost": 5.76,
-   "date": "2026-08-12"
-  },
-  {
-   "term": "website design packages",
-   "campaign": "EN",
-   "clicks": 1,
-   "cost": 3.71,
-   "date": "2026-08-12"
-  },
-  {
-   "term": "web creator",
-   "campaign": "EN",
-   "clicks": 1,
-   "cost": 3.43,
-   "date": "2026-08-12"
-  }
- ],
+ "search_terms": [],
  "promo": {
   "remaining": 0.0,
   "deadline": "2026-08-14",
-  "days_left": -5
+  "days_left": -6
  },
  "tranche": {
   "cash_budget": 1700,
