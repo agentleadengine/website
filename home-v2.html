@@ -79,12 +79,12 @@
         .ledger-row { display: flex; align-items: baseline; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
         .ledger-row:first-child { border-top: 1px solid var(--rule); }
         .leak-name { font-weight: 600; font-size: 18px; white-space: nowrap; }
-        .leak-name span { color: var(--purple); font-family: var(--mono); font-weight: 500; font-size: 15px; margin-right: 10px; }
+        .leak-name .lk { color: var(--purple); font-family: var(--mono); font-weight: 500; font-size: 15px; margin-right: 10px; }
         .leader { flex: 1; border-bottom: 2px dotted var(--rule); transform: translateY(-5px); min-width: 40px; }
         .leak-amt { font-family: var(--mono); font-size: 16.5px; white-space: nowrap; }
         .leak-tag { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--ink-soft); background: var(--paper-deep); padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
         .ledger-note { margin-top: 14px; font-size: 14px; color: var(--ink-soft); max-width: 66ch; }
-        .ledger-sub { display: block; font-weight: 400; font-size: 14.5px; color: var(--ink-soft); white-space: normal; margin-top: 2px; }
+        .ledger-sub { display: block; font-family: var(--sans); font-weight: 400; font-size: 14.5px; color: var(--ink-soft); white-space: normal; margin-top: 2px; }
         @media (max-width: 720px) {
             .ledger-row { flex-wrap: wrap; gap: 6px 14px; }
             .leader { display: none; }
@@ -112,7 +112,7 @@
 
         /* sample page tease */
         .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-        .page-thumb { background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 30px 28px; box-shadow: 0 18px 44px rgba(28,25,23,.09), 0 2px 6px rgba(28,25,23,.05); transform: rotate(-1.2deg); transition: transform .25s ease-out, box-shadow .25s ease-out; }
+        .page-thumb { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 30px 28px; box-shadow: 0 18px 44px rgba(28,25,23,.09), 0 2px 6px rgba(28,25,23,.05); transform: rotate(-1.2deg); transition: transform .25s ease-out, box-shadow .25s ease-out; }
         .page-thumb:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 26px 56px rgba(28,25,23,.12); }
         .page-thumb .ph-head { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: var(--purple); }
         .page-thumb .ph-title { font-family: var(--serif); font-size: 21px; margin-top: 8px; }
@@ -196,31 +196,31 @@
             <p class="section-intro">A leak is any place where money depends on a person remembering to do something. The audit traces all five through your actual phone logs, quote register, and renewal book.</p>
             <div class="ledger">
                 <div class="ledger-row">
-                    <div class="leak-name"><span>Leak 1</span>After-hours calls to voicemail<span class="ledger-sub">A prospect hears the machine and tries another agency.</span></div>
+                    <div class="leak-name"><span class="lk">Leak 1</span>After-hours calls to voicemail<span class="ledger-sub">A prospect hears the machine and tries another agency.</span></div>
                     <div class="leader"></div>
                     <div class="leak-amt">$10,000&ndash;$25,000/yr</div>
                     <div class="leak-tag">BENCHMARK</div>
                 </div>
                 <div class="ledger-row">
-                    <div class="leak-name"><span>Leak 2</span>Quote follow-up lives in someone's memory<span class="ledger-sub">Quiet quotes quietly disappear.</span></div>
+                    <div class="leak-name"><span class="lk">Leak 2</span>Quote follow-up lives in someone's memory<span class="ledger-sub">Quiet quotes quietly disappear.</span></div>
                     <div class="leader"></div>
                     <div class="leak-amt">$15,000&ndash;$40,000/yr</div>
                     <div class="leak-tag">BENCHMARK</div>
                 </div>
                 <div class="ledger-row">
-                    <div class="leak-name"><span>Leak 3</span>Web leads answered in hours<span class="ledger-sub">A faster agency starts the conversation first.</span></div>
+                    <div class="leak-name"><span class="lk">Leak 3</span>Web leads answered in hours<span class="ledger-sub">A faster agency starts the conversation first.</span></div>
                     <div class="leader"></div>
                     <div class="leak-amt">$3,000&ndash;$15,000/yr</div>
                     <div class="leak-tag">BENCHMARK</div>
                 </div>
                 <div class="ledger-row">
-                    <div class="leak-name"><span>Leak 4</span>Renewal outreach starts at the notice<span class="ledger-sub">Starting late leaves no time to re-shop or explain value.</span></div>
+                    <div class="leak-name"><span class="lk">Leak 4</span>Renewal outreach starts at the notice<span class="ledger-sub">Starting late leaves no time to re-shop or explain value.</span></div>
                     <div class="leader"></div>
                     <div class="leak-amt">$10,000&ndash;$30,000/yr</div>
                     <div class="leak-tag">BENCHMARK</div>
                 </div>
                 <div class="ledger-row">
-                    <div class="leak-name"><span>Leak 5</span>Every lead re-typed between systems<span class="ledger-sub">Hours of re-keying, plus the typo that kills a lead.</span></div>
+                    <div class="leak-name"><span class="lk">Leak 5</span>Every lead re-typed between systems<span class="ledger-sub">Hours of re-keying, plus the typo that kills a lead.</span></div>
                     <div class="leader"></div>
                     <div class="leak-amt">$4,000&ndash;$9,000/yr</div>
                     <div class="leak-tag">BENCHMARK</div>
