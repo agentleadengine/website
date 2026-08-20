@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Design 5: Immersion | Agent Lead Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #6200ff;
+      --violet: #8b5cf6;
+      --ink: #171229;
+      --muted: #625b75;
+      --line: #e8e3f2;
+      --paper: #fff;
+      --wash: #f7f4ff;
+      --shadow: 0 22px 60px rgba(40, 11, 122, .22), 0 4px 12px rgba(40, 11, 122, .1);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(135deg, #6200ff 0%, #8b5cf6 52%, #6e27ff 100%);
+      background-attachment: fixed;
+      font: 400 16px/1.6 Inter, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar { padding: 14px 0 8px; }
+    .nav-card, .card {
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .nav-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 12px 10px 16px;
+    }
+    .brand img { display: block; width: auto; height: 48px; }
+    .nav-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px 18px; font-size: 13px; font-weight: 700; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:not(.pill):hover { color: var(--purple); }
+    .pill, .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .pill { min-height: 38px; padding: 8px 15px; background: var(--purple); color: #fff; }
+    .button { background: #fff; color: var(--purple); box-shadow: 0 10px 24px rgba(38, 10, 107, .18); }
+    .button.secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.8); box-shadow: none; }
+    .pill:hover, .button:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(38, 10, 107, .22); }
+    .button.secondary:hover { background: #fff; color: var(--purple); }
+    :focus-visible { outline: 3px solid #ffe36e; outline-offset: 4px; }
+    .hero { padding: 76px 0 88px; }
+    .hero-card { padding: clamp(28px, 6vw, 72px); position: relative; overflow: hidden; }
+    .hero-card:after { content: ""; position: absolute; width: 180px; height: 180px; right: -55px; top: -65px; border-radius: 50%; background: #eee8ff; }
+    h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -.045em; line-height: 1.02; }
+    h1 { max-width: 800px; font-size: clamp(2.8rem, 8vw, 6.4rem); }
+    h2 { font-size: clamp(2.25rem, 5vw, 4.5rem); color: #fff; text-shadow: 0 3px 18px rgba(50, 8, 144, .18); }
+    h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
+    .hero-copy { max-width: 710px; margin: 28px 0 0; font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .offer-strip { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .91rem; }
+    .offer-strip strong { color: var(--ink); }
+    .section { padding: 0 0 94px; }
+    .section-heading { margin: 0 0 26px; }
+    .section-heading p { max-width: 660px; margin: 17px 0 0; color: rgba(255,255,255,.94); font-size: 1.05rem; }
+    .probe-card { display: grid; grid-template-columns: .85fr 1.15fr; gap: 32px; padding: clamp(26px, 5vw, 52px); background: #f7f4ff; }
+    .probe-card h3 { font-size: clamp(1.8rem, 4vw, 3.25rem); }
+    .probe-card p { margin: 0; color: var(--muted); }
+    .probe-note { align-self: center; padding: 22px; border-radius: 12px; background: #fff; box-shadow: 0 10px 30px rgba(40, 11, 122, .09); }
+    .probe-note strong { display: block; margin-bottom: 7px; color: var(--purple); }
+    .leaks-card { padding: clamp(24px, 5vw, 54px); }
+    .leak-row { display: grid; grid-template-columns: 42px 1fr auto; gap: 18px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .leak-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .leak-row:first-child { padding-top: 0; }
+    .leak-num { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--purple); color: #fff; font-weight: 800; }
+    .leak-row h3 { letter-spacing: -.025em; }
+    .leak-row p { margin: 5px 0 0; color: var(--muted); font-size: .92rem; }
+    .estimate { color: var(--purple); text-align: right; font-size: .86rem; font-weight: 800; white-space: nowrap; }
+    .estimate span { display: block; color: var(--muted); font-size: .7rem; font-weight: 600; }
+    .inline-link { color: var(--purple); font-weight: 800; text-underline-offset: 3px; }
+    .deliverables { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .deliverable { padding: 24px; }
+    .deliverable b { display: block; margin-bottom: 9px; color: var(--purple); }
+    .deliverable p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .ladder { display: grid; gap: 14px; }
+    .step { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 20px; padding: 22px 26px; }
+    .step-num { color: var(--purple); font-size: 3.5rem; line-height: 1; font-weight: 800; letter-spacing: -.08em; }
+    .step h3 { margin-bottom: 4px; }
+    .step p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .step-price { color: var(--purple); font-size: 1.15rem; font-weight: 800; text-align: right; white-space: nowrap; }
+    .step-price small { display: block; color: var(--muted); font-size: .7rem; font-weight: 600; }
+    .honesty { margin-top: 20px; padding: 26px; color: var(--muted); background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .honesty p { margin: 0; font-size: 1.05rem; }
+    .honesty cite { display: block; margin-top: 12px; color: var(--ink); font-size: .9rem; font-style: normal; font-weight: 800; }
+    .sample-wrap { padding: 10px 0 16px; }
+    .sample-card { max-width: 760px; margin: 0 auto; padding: 36px; transform: rotate(-2deg); background: #fff; box-shadow: 0 28px 60px rgba(40, 11, 122, .3); }
+    .sample-card:before { content: "FICTIONAL SAMPLE"; display: inline-block; margin-bottom: 28px; padding: 6px 10px; border: 1px solid #c7b7ff; border-radius: 999px; color: var(--purple); font-size: .7rem; font-weight: 800; letter-spacing: .08em; }
+    .sample-card h3 { font-size: clamp(2rem, 5vw, 3.8rem); }
+    .sample-card p { max-width: 570px; margin: 18px 0 26px; color: var(--muted); }
+    .sample-rule { height: 1px; margin: 18px 0; background: var(--line); }
+    .sample-line { display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: .88rem; }
+    .sample-line strong { color: var(--ink); }
+    .faq-grid { display: grid; gap: 14px; }
+    details { padding: 22px 24px; }
+    summary { cursor: pointer; font-weight: 800; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary:after { content: "+"; float: right; color: var(--purple); font-size: 1.3rem; }
+    details[open] summary:after { content: "−"; }
+    details p { margin: 13px 0 0; color: var(--muted); }
+    .final-card { padding: clamp(28px, 6vw, 64px); text-align: center; }
+    .final-card h2 { color: var(--ink); text-shadow: none; }
+    .final-card p { max-width: 560px; margin: 18px auto 26px; color: var(--muted); }
+    .footer { padding: 4px 0 36px; }
+    .footer-card { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 30px; padding: 26px; color: var(--muted); font-size: .78rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .footer a { text-decoration: none; }
+    .footer a:hover { color: var(--purple); }
+    @media (max-width: 760px) {
+      .nav-card { align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; }
+      .hero { padding: 32px 0 58px; }
+      .section { padding-bottom: 62px; }
+      .probe-card, .deliverables { grid-template-columns: 1fr; }
+      .leak-row { grid-template-columns: 36px 1fr; gap: 12px; }
+      .estimate { grid-column: 2; text-align: left; }
+      .step { grid-template-columns: 52px 1fr; gap: 12px; }
+      .step-price { grid-column: 2; text-align: left; }
+      .sample-card { padding: 26px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <nav class="nav-card" aria-label="Main navigation">
+        <a class="brand" href="/"><img src="Logo.png" alt="Agent Lead Engine" style="height:48px"></a>
+        <div class="nav-links">
+          <a href="/ai-revenue-leak-audit.html">The Audit</a>
+          <a href="/sample-report.html">Sample Report</a>
+          <a href="tel:+15167801385">(516) 780-1385</a>
+          <a class="pill" href="/book.html">Free leak check</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-card card">
+          <h1>Money is leaking from your agency. We put a dollar figure on it.</h1>
+          <p class="hero-copy">Missed after-hours calls. Quiet quotes. Late renewals. The AI Revenue Leak Audit finds the gaps, tests the public entry points, and gives you a plain report in 5 days. Findings are guaranteed or refunded.</p>
+          <div class="hero-actions">
+            <a class="button" href="/book.html">Get a free 15-minute leak check</a>
+            <a class="button secondary" href="/sample-report.html">See the sample report</a>
+          </div>
+          <div class="offer-strip">
+            <span><strong>Price:</strong> $1,500 flat</span>
+            <span><strong>Founding price:</strong> $750 for the first 3, all 3 open</span>
+            <span><strong>Owner time:</strong> about 75 minutes</span>
+            <span><strong>Refund:</strong> in full if no leak is found worth more than the fee</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><h2>We test the front door, with your written OK.</h2></div>
+        <div class="probe-card card">
+          <div><h3>A real Saturday check.</h3></div>
+          <div>
+            <p>We call the published number after hours and submit the website form on a Saturday. We use public entry points only. No passwords. No logins. You approve the test first.</p>
+            <div class="probe-note"><strong>What you get</strong>The result goes in your report as evidence, with the time, path, and response noted plainly.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>Five quiet leaks can add up fast.</h2>
+          <p>These are conservative industry benchmark estimates. Your report replaces estimates with measured evidence where the data allows.</p>
+        </div>
+        <div class="leaks-card card">
+          <div class="leak-row"><div class="leak-num">1</div><div><h3>After-hours calls go to voicemail</h3><p>A caller reaches the next agency instead.</p></div><div class="estimate"><span>Industry benchmark estimate</span>$10,000 to $25,000/yr</div></div>
+          <div class="leak-row"><div class="leak-num">2</div><div><h3>Quote follow-up lives in memory</h3><p>A quote goes quiet while the prospect keeps shopping.</p></div><div class="estimate"><span>Industry benchmark estimate</span>$15,000 to $40,000/yr</div></div>
+          <div class="leak-row"><div class="leak-num">3</div><div><h3>Web leads get an answer in hours</h3><p>The first helpful reply often gets the conversation.</p></div><div class="estimate"><span>Industry benchmark estimate</span>$3,000 to $15,000/yr</div></div>
+          <div class="leak-row"><div class="leak-num">4</div><div><h3>Renewal outreach starts at the notice</h3><p>By then, the client may already be shopping.</p></div><div class="estimate"><span>Industry benchmark estimate</span>$10,000 to $30,000/yr</div></div>
+          <div class="leak-row"><div class="leak-num">5</div><div><h3>Leads are re-typed between systems</h3><p>Staff time burns, and records drift out of date.</p></div><div class="estimate"><span>Industry benchmark estimate</span>$4,000 to $9,000/yr</div></div>
+          <p style="margin:24px 0 0"><a class="inline-link" href="/five-revenue-leaks-insurance-agencies.html">Read how the five leaks work →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><h2>The report shows what to do next.</h2></div>
+        <div class="deliverables">
+          <div class="deliverable card"><b>Leak map</b><p>Dollar ranges marked as measured, estimated, or benchmarked.</p></div>
+          <div class="deliverable card"><b>Findings and evidence</b><p>What we saw, where we saw it, and why it matters.</p></div>
+          <div class="deliverable card"><b>Ranked fix plan</b><p>Build it yourself, hire us, or wait.</p></div>
+          <div class="deliverable card"><b>A simple walkthrough</b><p>A 10-minute recording, then a 30-minute call.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><h2>Start small. Fix what pays back first.</h2></div>
+        <div class="ladder">
+          <div class="step card"><div class="step-num">1</div><div><h3>Free leak check</h3><p>15 minutes by phone. Find out if a deeper look is worth your time.</p></div><div class="step-price"><small>Price</small>$0</div></div>
+          <div class="step card"><div class="step-num">2</div><div><h3>The Audit</h3><p>Five days, about 75 minutes of owner time, and a refund guarantee. The audit fee counts toward any build.</p></div><div class="step-price"><small>Price</small>$1,500 <small>$750 founding price</small></div></div>
+          <div class="step card"><div class="step-num">3</div><div><h3>One fix built</h3><p>Missed-call textback, quote follow-up, speed-to-lead, renewal countdown, and more.</p></div><div class="step-price"><small>Fixed price</small>$2,500 to $5,000</div></div>
+          <div class="step card"><div class="step-num">4</div><div><h3>Guard</h3><p>Monitoring plus a monthly money-recovered report.</p></div><div class="step-price"><small>Monthly price</small>$297 to $497/mo</div></div>
+        </div>
+        <div class="honesty"><p>“We are new at selling audits. The first 3 agencies get half price in exchange for an honest testimonial if the work earns one. That is the entire catch.”</p><cite>Sam Ochoa, founder</cite></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap sample-wrap">
+        <div class="section-heading"><h2>See what the evidence looks like.</h2></div>
+        <div class="sample-card">
+          <div class="sample-line"><strong>Agent Lead Engine</strong><span>Revenue leak audit</span></div>
+          <div class="sample-rule"></div>
+          <h3>Maple Grove Insurance</h3>
+          <p>This is a fictional sample report. It shows the shape of the work, not a real agency result.</p>
+          <div class="sample-line"><span>Leak status</span><strong>Evidence gathered</strong></div>
+          <div class="sample-rule"></div>
+          <a class="inline-link" href="/sample-report.html">Open the fictional sample report →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-heading"><h2>Questions worth asking before you start.</h2></div>
+        <div class="faq-grid">
+          <details class="card"><summary>Is this a sales pitch for software?</summary><p>No. The findings are yours. Some fixes will not involve us.</p></details>
+          <details class="card"><summary>Do you need system access?</summary><p>No passwords or logins. The probe uses public entry points, plus read-only exports you approve.</p></details>
+          <details class="card"><summary>What if you find nothing?</summary><p>You get a full refund, in writing.</p></details>
+          <details class="card"><summary>Who is this not for?</summary><p>Captives, agencies with 25 or more staff, and report-filers.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="final-card card">
+          <h2>Find the leak before you pay to fix it.</h2>
+          <p>Start with a free 15-minute leak check. We will tell you if the Audit makes sense for your agency.</p>
+          <a class="button" href="/book.html">Get the free leak check</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-card card">
+        <div>© 2026 Agent Lead Engine LLC, East Meadow NY</div>
+        <div class="footer-links">
+          <a href="/ai-revenue-leak-audit.html">Audit</a><a href="/sample-report.html">Sample</a><a href="/what-an-ai-revenue-leak-audit-costs.html">Audit cost</a><a href="/five-revenue-leaks-insurance-agencies.html">Five leaks</a><a href="/guarantee.html">Guarantee</a><a href="/services.html">Services</a><a href="/packages.html">Packages</a><a href="/guides.html">Guides</a><a href="/faq.html">FAQ</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms-of-service.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
