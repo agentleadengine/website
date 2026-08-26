@@ -11,20 +11,20 @@ body[data-theme="a"] {
   --t-radius: 6px; --t-border: 2px solid var(--t-ink);
 }
 body[data-theme="b"] {
-  --t-bg: #0c0c0e; --t-panel: #17171a; --t-band: #17171a; --t-band-deep: #0c0c0e;
-  --t-ink: #f4f1ec; --t-ink-soft: #b5b0a6; --t-on-band: #f4f1ec; --t-on-band-dim: #b5b0a6;
-  --t-accent: #b08d57; --t-accent-ink: #0c0c0e; --t-accent-on-band: #d3b078; --t-line: rgba(176, 141, 87, .35); --t-link: #d3b078;
-  --t-head: "Marcellus", serif; --t-head-weight: 400; --t-head-transform: none; --t-head-spacing: .01em;
+  --t-bg: #f7faf8; --t-panel: #ffffff; --t-band: #14453a; --t-band-deep: #0f352d;
+  --t-ink: #131c17; --t-ink-soft: #5b6660; --t-on-band: #eef7f3; --t-on-band-dim: #97bfb1;
+  --t-accent: #1d6f5c; --t-accent-ink: #ffffff; --t-accent-on-band: #8fd0be; --t-line: #e3e9e5; --t-link: #14453a;
+  --t-head: "Archivo", system-ui, sans-serif; --t-head-weight: 800; --t-head-transform: none; --t-head-spacing: -.015em;
   --t-body: "Figtree", system-ui, sans-serif;
-  --t-radius: 2px; --t-border: 1px solid var(--t-line);
+  --t-radius: 16px; --t-border: 1px solid var(--t-line);
 }
 body[data-theme="c"] {
-  --t-bg: #f4f1ea; --t-panel: #fbf9f4; --t-band: #22394c; --t-band-deep: #1b2d3c;
-  --t-ink: #23241f; --t-ink-soft: #565349; --t-on-band: #fbf9f4; --t-on-band-dim: #cdd6dd;
-  --t-accent: #2e4a62; --t-accent-ink: #ffffff; --t-accent-on-band: #e9dfc8; --t-line: #d8d2c4; --t-link: #2e4a62;
+  --t-bg: #f8f8f6; --t-panel: #ffffff; --t-band: #1c2f45; --t-band-deep: #142335;
+  --t-ink: #131c29; --t-ink-soft: #5b6470; --t-on-band: #f4f6f8; --t-on-band-dim: #93a5bb;
+  --t-accent: #1c2f45; --t-accent-ink: #ffffff; --t-accent-on-band: #d9a441; --t-line: #e5e7ea; --t-link: #1c2f45;
   --t-head: "Archivo", system-ui, sans-serif; --t-head-weight: 800; --t-head-transform: none; --t-head-spacing: -.015em;
-  --t-body: "Archivo", system-ui, sans-serif;
-  --t-radius: 2px; --t-border: 2px solid var(--t-ink);
+  --t-body: "Figtree", system-ui, sans-serif;
+  --t-radius: 16px; --t-border: 1px solid var(--t-line);
 }
 
 body {

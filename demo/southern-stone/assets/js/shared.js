@@ -47,7 +47,7 @@
   }
 
   /* ---------- review bar ---------- */
-  var NAMES = { a: 'The Trade Sign', b: 'The Polish', c: 'The Specimen Board' };
+  var NAMES = { a: 'Flat Blue', b: 'Forest', c: 'Navy & Stone' };
   function reviewBar() {
     if (page === 'gate') return;
     var active = concept || getViewing() || getChoice();
