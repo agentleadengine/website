@@ -2,13 +2,13 @@
    Painted board green, cream & gold-leaf lettering, pinstripes, enamel buttons. */
 
 :root {
-  --board: #1b4332;
-  --board-deep: #123227;
+  --board: #4a5240;
+  --board-deep: #3b4234;
   --cream: #f2e9d8;
-  --cream-dim: #d9cfb8;
-  --gold: #d9b44a;
-  --gold-deep: #c9a227;
-  --oxblood: #6e2a1d;
+  --cream-dim: #d6cdb8;
+  --gold: #c7a35f;
+  --gold-deep: #a3854a;
+  --oxblood: #6f4a33;
   --ink: #1a1714;
   --paper: #f7f1e3;
   --paint-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='240' height='240' filter='url(%23g)'/></svg>");
@@ -30,8 +30,8 @@ body {
   background-image:
     var(--paint-grain),
     var(--brush-streaks),
-    radial-gradient(ellipse 120% 90% at 30% 10%, rgba(255, 255, 255, .05), transparent 60%),
-    radial-gradient(ellipse 90% 70% at 80% 100%, rgba(0, 0, 0, .22), transparent 65%);
+    radial-gradient(ellipse 120% 90% at 30% 10%, rgba(255, 255, 255, .03), transparent 60%),
+    radial-gradient(ellipse 90% 70% at 80% 100%, rgba(0, 0, 0, .14), transparent 65%);
 }
 .proof { background-image: var(--paint-grain), var(--brush-streaks), radial-gradient(ellipse 100% 80% at 70% 0%, rgba(255, 255, 255, .06), transparent 60%) !important; }
 .why { background-image: var(--paint-grain), var(--brush-streaks); }
@@ -79,12 +79,12 @@ body {
 .hero-frame { position: relative; transform: rotate(1.4deg); }
 .hero-frame img { border: 10px solid var(--cream); box-shadow: 0 18px 40px rgba(8, 20, 15, .45); aspect-ratio: 4/5; object-fit: cover; }
 .hero-frame figcaption { font: 400 1.25rem/1.2 "Yellowtail", cursive; color: var(--gold); text-align: center; margin-top: .7em; transform: rotate(-1.4deg); }
-.board-edge { height: 16px; background: var(--board-deep); border-top: 2px solid rgba(217, 180, 74, .4); }
+.board-edge { height: 16px; background: var(--board-deep); border-top: 2px solid rgba(199, 163, 95, .4); }
 
 /* ---------- buttons ---------- */
 .btn { display: inline-flex; align-items: center; gap: .55em; padding: .8em 1.5em; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; letter-spacing: .01em; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
 .btn:active { transform: translateY(1px); }
-.btn-gold { background: var(--gold); color: var(--ink); box-shadow: 0 4px 14px rgba(0, 0, 0, .3), inset 0 -2px 0 rgba(0, 0, 0, .18); }
+.btn-gold { background: var(--gold); color: var(--ink); box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .16); }
 .btn-gold:hover { background: var(--cream); }
 .btn-line { border: 2px solid var(--cream); color: var(--cream); }
 .btn-line:hover { border-color: var(--gold); color: var(--gold); }

@@ -3,9 +3,9 @@
 
 /* ---------- theme tokens ---------- */
 body[data-theme="a"] {
-  --t-bg: #f7f1e3; --t-panel: #ffffff; --t-band: #1b4332; --t-band-deep: #123227;
+  --t-bg: #f7f1e3; --t-panel: #ffffff; --t-band: #4a5240; --t-band-deep: #3b4234;
   --t-ink: #1a1714; --t-ink-soft: #5c554a; --t-on-band: #f2e9d8; --t-on-band-dim: #d9cfb8;
-  --t-accent: #d9b44a; --t-accent-ink: #1a1714; --t-accent-on-band: #d9b44a; --t-line: #d9cfb8; --t-link: #6e2a1d;
+  --t-accent: #c7a35f; --t-accent-ink: #1a1714; --t-accent-on-band: #c7a35f; --t-line: #d6cdb8; --t-link: #6f4a33;
   --t-head: "Alfa Slab One", serif; --t-head-weight: 400; --t-head-transform: uppercase; --t-head-spacing: .01em;
   --t-body: "Source Sans 3", system-ui, sans-serif;
   --t-radius: 6px; --t-border: 2px solid var(--t-ink);
