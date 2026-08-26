@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231c2f45%27/%3E%3Ctext x=%2716%27 y=%2723%27 text-anchor=%27middle%27 font-family=%27Arial,sans-serif%27 font-weight=%27700%27 font-size=%2719%27 fill=%27%23d9a441%27%3EW%3C/text%3E%3C/svg%3E">
+<title>Wallder Construction · Design Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+:root {
+  --bg: #131311; --panel: #1d1d1a; --line: #37352e;
+  --text: #f0ede4; --dim: #a49f92; --gold: #e8c979;
+}
+body { background: var(--bg); color: var(--text); font: 400 1.02rem/1.6 "Archivo", system-ui, sans-serif; }
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: clamp(18px, 4vw, 40px); }
+
+.hub-head { padding-block: clamp(40px, 7vw, 80px) clamp(28px, 4vw, 44px); border-bottom: 1px solid var(--line); }
+.hub-mark { font: 600 .72rem/1.5 "JetBrains Mono", monospace; letter-spacing: .14em; color: var(--gold); margin-top: .7em; }
+.hub-head h1 { font: 800 clamp(1.9rem, 4vw, 3rem)/1.1 "Archivo", sans-serif; letter-spacing: -.015em; }
+.hub-head p { color: var(--dim); max-width: 62ch; margin-top: .9em; font-size: 1.08rem; }
+
+.concepts { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 26px); padding-block: clamp(32px, 5vw, 56px); }
+.concept { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s ease, transform .2s ease; position: relative; }
+.concept:hover { border-color: #57534a; transform: translateY(-3px); }
+.swatch { height: 128px; display: grid; place-items: center; position: relative; }
+.swatch-type { font: 800 1.6rem/1 "Archivo", sans-serif; color: #fff; text-transform: uppercase; letter-spacing: -.02em; }
+.chips { position: absolute; bottom: 10px; right: 12px; display: flex; gap: 6px; }
+.chips i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(0,0,0,.25); }
+.concept-body { padding: clamp(18px, 2.4vw, 26px); display: flex; flex-direction: column; flex: 1; }
+.concept-tag { font: 600 .62rem/1 "JetBrains Mono", monospace; letter-spacing: .2em; color: var(--dim); }
+.concept-body h2 { font: 800 1.45rem/1.2 "Archivo", sans-serif; margin-top: .45em; }
+.concept-body p { color: var(--dim); font-size: .95rem; margin-top: .6em; flex: 1; }
+.concept-actions { display: flex; gap: 10px; margin-top: 1.4em; }
+.c-view { flex: 1; text-align: center; background: var(--text); color: #131311; text-decoration: none; font-weight: 700; padding: .75em 1em; border-radius: 6px; font-size: .92rem; }
+.c-view:hover { background: #fff; }
+
+.hub-foot { border-top: 1px solid var(--line); padding-block: 18px 26px; color: var(--dim); font-size: .82rem; }
+
+@media (max-width: 880px) { .concepts { grid-template-columns: 1fr; max-width: 480px; } }
+</style>
+</head>
+<body data-page="hub">
+
+<div class="hub" id="hub">
+  <header class="hub-head">
+    <div class="wrap">
+      <h1>Ten directions for Wallder Construction</h1>
+      <p class="hub-mark">A private client review from Agent Lead Engine</p>
+      <p>Same business, same copy, ten takes on a modern homepage for a Connecticut
+      stucco, EIFS, and masonry contractor. Open each one, live with it for a minute,
+      and note the one that feels like Wallder Construction.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="concepts">
+      <article class="concept">
+        <div class="swatch" style="background:#024d87" aria-hidden="true">
+          <span class="swatch-type">Wallder</span>
+          <span class="chips"><i style="background:#0a8fd8"></i><i style="background:#024d87"></i><i style="background:#f7fafc"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 1</p>
+          <h2>Flat Blue</h2>
+          <p>The modern service-business look in flat blue: floating menu with the big
+          dropdown, bold headlines, clean white cards. Bright, direct, trustworthy.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-a.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#14453a" aria-hidden="true">
+          <span class="swatch-type">Wallder</span>
+          <span class="chips"><i style="background:#1d6f5c"></i><i style="background:#14453a"></i><i style="background:#f7faf8"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 2</p>
+          <h2>Forest</h2>
+          <p>Same modern structure in a calm flat forest green. Centered headlines over a
+          photo band. Steady, established, easy on the eyes.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-b.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">Wallder</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 3</p>
+          <h2>Navy &amp; Stone</h2>
+          <p>The most premium read: deep flat navy with a warm stone-gold accent, services
+          as wide rows. Quietly upscale.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-c.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">Sidebar</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 4</p>
+          <h2>Navy Sidebar</h2>
+          <p>A fixed navy side rail carries the navigation; content scrolls beside it.
+          App-like and distinctive.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-d.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">Fullscreen</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 5</p>
+          <h2>Navy Fullscreen</h2>
+          <p>A full-screen photo opens the page with a flat navy panel carrying the
+          headline and calls to action.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-f.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">Proof-First</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 6</p>
+          <h2>Proof-First</h2>
+          <p>The before/after slider is the hero. Proof before promises, then the services.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-g.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">Zigzag</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 7</p>
+          <h2>Zigzag</h2>
+          <p>Alternating photo and text rows walk through every service one at a time.
+          Easy to scan.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-h.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#1c2f45" aria-hidden="true">
+          <span class="swatch-type" style="color:#d9a441">One-Pager</span>
+          <span class="chips"><i style="background:#1c2f45"></i><i style="background:#d9a441"></i><i style="background:#f8f8f6"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 8</p>
+          <h2>One-Pager</h2>
+          <p>Sticky section tabs under the menu jump you down one long page: services,
+          proof, process, reviews.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-i.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#024d87" aria-hidden="true">
+          <span class="swatch-type">Minimal</span>
+          <span class="chips"><i style="background:#0a8fd8"></i><i style="background:#024d87"></i><i style="background:#f7fafc"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 9</p>
+          <h2>Blue Minimal</h2>
+          <p>One centered column, big type, few elements, lots of air. The quietest
+          layout here.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-k.html">View template</a></div>
+        </div>
+      </article>
+
+      <article class="concept">
+        <div class="swatch" style="background:#024d87" aria-hidden="true">
+          <span class="swatch-type">Estimate-First</span>
+          <span class="chips"><i style="background:#0a8fd8"></i><i style="background:#024d87"></i><i style="background:#f7fafc"></i></span>
+        </div>
+        <div class="concept-body">
+          <p class="concept-tag">TEMPLATE 10</p>
+          <h2>Estimate-First</h2>
+          <p>The estimate form sits right in the hero. Built to convert from the first
+          screen.</p>
+          <div class="concept-actions"><a class="c-view" href="concept-m.html">View template</a></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="hub-foot">
+    <div class="wrap">Prepared by Agent Lead Engine for Wallder Construction LLC. Design preview, not indexed.</div>
+  </footer>
+</div>
+
+</body>
+</html>

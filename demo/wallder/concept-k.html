@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23024d87%27/%3E%3Ctext x=%2716%27 y=%2723%27 text-anchor=%27middle%27 font-family=%27Arial,sans-serif%27 font-weight=%27800%27 font-size=%2719%27 fill=%27%23ffffff%27%3EW%3C/text%3E%3C/svg%3E">
+<title>Wallder Construction · Template K: Blue Minimal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sp.css">
+<style>
+/* Blue Minimal: everything lives in one centered 760px column with generous air */
+.kcol { max-width: 760px; margin-inline: auto; padding-inline: clamp(18px, 4vw, 40px); }
+.k-hero { text-align: center; padding-block: clamp(64px, 10vw, 132px) clamp(36px, 5vw, 60px); }
+.k-hero .lede { margin: 1.5em auto 0; }
+.k-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 2.2em; }
+.k-photo { aspect-ratio: 16/10; }
+.k-sec { padding-block: clamp(60px, 9vw, 120px); text-align: center; }
+.k-sec .lede { margin: 1em auto 0; }
+.k-rows { text-align: left; margin-top: clamp(34px, 5vw, 56px); border-top: 1px solid var(--line); }
+.k-row { display: grid; grid-template-columns: 1fr auto; column-gap: clamp(16px, 3vw, 32px); align-items: center; padding-block: clamp(24px, 3.6vw, 36px); border-bottom: 1px solid var(--line); }
+.k-row h3 { font: 800 1.15rem/1.2 "Archivo", sans-serif; text-transform: uppercase; letter-spacing: -.01em; }
+.k-row p { grid-column: 1; color: var(--gray); font-size: .95rem; max-width: 54ch; margin-top: .4em; }
+.k-row .k-link { grid-row: 1 / span 2; }
+.k-link { font: 800 .74rem/1 "Archivo", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); text-decoration: none; border-bottom: 2px solid var(--accent-soft-2); padding-bottom: .35em; width: fit-content; }
+.k-link:hover { border-color: var(--accent); }
+.k-ba { aspect-ratio: 3/2; margin-top: clamp(30px, 5vw, 48px); }
+.k-note { font-size: .84rem; color: var(--gray); margin-top: 1.1em; }
+.k-quotes { display: grid; gap: clamp(40px, 6vw, 60px); margin-top: clamp(38px, 5vw, 60px); }
+.k-quote { padding: 0; align-items: center; text-align: center; }
+.k-quote p { font-size: 1.06rem; max-width: 48ch; }
+.k-more { display: inline-block; margin-top: clamp(38px, 5vw, 56px); }
+@media (max-width: 560px) {
+  .k-row { grid-template-columns: 1fr; row-gap: 12px; }
+  .k-row .k-link { grid-row: auto; }
+}
+</style>
+</head>
+<body class="sp-blue" data-page="home" data-concept="k">
+<!--
+THESIS: The quietest read of the flat blue system: one narrow centered column, few elements, white space does the selling.
+OWN-WORLD: Flat bright blue on white; Archivo 800 uppercase display with one blue accent word; borders instead of cards; no gradients, no texture.
+STORY: A homeowner scrolls one calm column: promise, one photo, three trades, proof slider, three voices, call.
+FIRST VIEWPORT: Pill nav, huge centered headline, one lede, one CTA pair, the top of a single large photo.
+FORM: SleekPixel canon distilled to a 760px minimal column. Brief-pinned.
+-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="sp-header">
+  <nav class="pill" aria-label="Main">
+    <a class="brand" href="concept-k.html">
+      <span class="brand-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 8.5 12 21l9-12.5L16 3z"/><path d="M3 8.5h18M12 21 8 8.5M12 21l4-12.5"/></svg></span>
+      <b>Wallder<span>Construction</span></b>
+    </a>
+    <div class="pill-links">
+      <div class="dd">
+            <button class="dd-btn" aria-expanded="false" aria-haspopup="true">Services
+              <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="dd-panel" role="menu">
+              <div class="dd-items">
+                <a class="dd-item" role="menuitem" href="#services">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 8.5 12 21l9-12.5L16 3z"/><path d="M3 8.5h18M12 21 8 8.5M12 21l4-12.5"/></svg></span>
+                  <div><strong>Stucco &amp; EIFS systems</strong><span>Synthetic and traditional stucco, installed by certified crews.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="#services">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+                  <div><strong>Stucco repair &amp; plaster</strong><span>Cracks, water damage, and failing coats fixed at the cause.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="#services">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-2 3.5-7 4-7 9a7 7 0 0 0 14 0c0-5-5-5.5-7-9Z"/></svg></span>
+                  <div><strong>Waterproofing</strong><span>Moisture barriers, flashing, and drainage details done right.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="#services">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l4-4 4 4v11M13 20v-7l4-3 2 2v8"/></svg></span>
+                  <div><strong>Stone &amp; brick veneer</strong><span>Stone veneer, thin brick, and masonry for homes and storefronts.</span></div>
+                </a>
+              </div>
+              <div class="dd-foot">
+                <a href="tel:+12035654719"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call Wallder</a>
+                <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Free estimate</a>
+              </div>
+            </div>
+          </div>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a class="pill-cta" href="tel:+12035654719">(203) 565-4719</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mmenu">
+        <span class="visually-hidden">Menu</span>
+        <svg width="24" height="17" viewBox="0 0 24 17" aria-hidden="true"><path d="M1 1.5h22M1 8.5h22M1 15.5h22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mmenu" data-nav>
+    <a href="#services">Stucco &amp; EIFS Systems</a>
+    <a href="#services">Stucco Repair &amp; Plaster</a>
+    <a href="#services">Waterproofing</a>
+    <a href="#services">Stone &amp; Brick Veneer</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+<main id="main">
+<section class="kcol k-hero">
+  <h1 class="disp h-xl">Stucco and EIFS, <span class="acc">done right.</span></h1>
+  <p class="lede">Stucco, EIFS, and masonry for Connecticut homes and commercial buildings.
+  Family-owned since 2002, with water management built into every wall we touch.</p>
+  <div class="k-actions">
+    <a class="btn btn-acc" href="tel:+12035654719">Call (203) 565-4719 <small>Mon to Sat, 7am to 6pm</small></a>
+    <a class="btn btn-frame" href="#contact">Free written estimate <small>No obligation</small></a>
+  </div>
+</section>
+<section class="kcol sec-tight">
+  <figure class="frame k-photo" data-reveal><img src="assets/img/bathroom-marble.jpg" alt="A freshly finished stucco exterior in an even coat" width="900" height="675"></figure>
+</section>
+<section class="kcol k-sec" id="services">
+  <h2 class="disp h-lg">What we <span class="acc">build</span></h2>
+  <p class="lede">Exterior wall systems, one standard: keep water out and make it last.</p>
+  <div class="k-rows">
+    <article class="k-row" data-reveal>
+      <h3>Stucco &amp; EIFS systems</h3>
+      <a class="k-link" href="#contact">Estimate</a>
+      <p>Synthetic and traditional stucco for homes, hotels, and commercial buildings. Certified on Dryvit, Parex, Sto, and Senergy.</p>
+    </article>
+    <article class="k-row" data-reveal>
+      <h3>Stucco repair &amp; plaster</h3>
+      <a class="k-link" href="#contact">Estimate</a>
+      <p>Cracks, stains, and soft spots fixed at the source. We solve the water problem first, then the finish. Not just a skim coat.</p>
+    </article>
+    <article class="k-row" data-reveal>
+      <h3>Masonry &amp; waterproofing</h3>
+      <a class="k-link" href="#contact">Estimate</a>
+      <p>Stone veneer, thin brick, and masonry, plus the moisture barriers and flashing that keep water out of the wall.</p>
+    </article>
+  </div>
+</section>
+<section class="kcol k-sec" style="padding-top:0" id="about">
+  <h2 class="disp h-lg">See the <span class="acc">difference</span></h2>
+  <p class="lede">Family-owned since 2002 and trusted on jobs from single-family homes to
+  Great Wolf Lodge EIFS work and 5 Constitution Plaza in Hartford. Licensed and insured,
+  CT HIC.0638080. Drag the handle.</p>
+  <figure class="ba sp-ba k-ba" data-reveal>
+    <div class="ba-before"><img src="assets/img/marble-counter-wide.jpg" alt="" class="ba-img-dull" loading="lazy" width="1100" height="720"></div>
+    <div class="ba-after" aria-hidden="true"><img src="assets/img/marble-counter-wide.jpg" alt="" loading="lazy" width="1100" height="720"></div>
+    <div class="ba-divider"></div>
+    <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" width="22" height="22" aria-hidden="true"><path d="M8 5 3 12l5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="ba-tags"><span class="ba-tag">Before</span><span class="ba-tag">After</span></div>
+    <input class="ba-range" type="range" min="0" max="100" value="55" aria-label="Compare a worn and a refinished stucco wall">
+  </figure>
+  <p class="k-note">Illustrative simulation. Project photography drops in on the live site.</p>
+</section>
+<section class="kcol k-sec" style="padding-top:0" id="reviews">
+  <h2 class="disp h-lg">The happy clients <span class="acc">speak</span></h2>
+  <p class="lede">Real Google reviews from real Connecticut projects.</p>
+  <div class="k-quotes">
+    <blockquote class="rev-card k-quote" data-reveal>
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+      <p>"Have been working with Wallder Construction on several commercial projects with a
+      very good quality of work, meeting schedule dates and quick response."</p>
+      <cite><b>Christopher G.</b> · Google review</cite>
+    </blockquote>
+    <blockquote class="rev-card k-quote" data-reveal>
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+      <p>"Extremely patient and helpful with all my questions and concerns. Professional as
+      they come and great work! Highly recommend."</p>
+      <cite><b>Jonathan C.</b> · Google review</cite>
+    </blockquote>
+    <blockquote class="rev-card k-quote" data-reveal>
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+      <p>"The craftsmanship is second to none and the attention to detail is what really
+      stood out to me during this project."</p>
+      <cite><b>Klaudio T.</b> · Google review</cite>
+    </blockquote>
+  </div>
+  <a class="k-link k-more" href="#contact">Ask us for references</a>
+</section>
+<section class="kcol sec-tight" id="contact">
+  <div class="band center" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,60px)" data-reveal>
+    <h2 class="disp h-lg">Your free written estimate awaits.</h2>
+    <p class="lede" style="margin:1em auto 0">No obligations. No pressure. We put every estimate in writing,
+    so you know exactly what the job costs before it starts.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.8em">
+      <a class="btn btn-acc" href="tel:+12035654719">Call (203) 565-4719 <small>Mon to Sat, 7am to 6pm</small></a>
+      <a class="btn btn-frame" href="mailto:wallderconstruction@gmail.com">Send a message</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="sp-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <b>Wallder<span>Construction</span> LLC</b>
+      <p style="margin-top:.8em">Family-owned stucco, EIFS &amp; masonry since 2002.<br>Meriden, Connecticut, serving all of CT.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <address>
+      141 Grove Street<br>Meriden, CT 06451<br>
+      <a href="tel:+12035654719">(203) 565-4719</a><br>
+      <a href="mailto:wallderconstruction@gmail.com">wallderconstruction@gmail.com</a>
+    </address>
+  </div>
+  <p class="foot-legal wrap">© 2026 Wallder Construction LLC. Licensed &amp; insured, CT HIC.0638080. Design preview by Agent Lead Engine.</p>
+</footer>
+<script src="assets/js/shared.js"></script>
+<script src="assets/js/dropdown.js"></script>
+</body>
+</html>
