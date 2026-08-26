@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23024d87%27/%3E%3Ctext x=%2716%27 y=%2723%27 text-anchor=%27middle%27 font-family=%27Arial,sans-serif%27 font-weight=%27800%27 font-size=%2719%27 fill=%27%23ffffff%27%3ES%3C/text%3E%3C/svg%3E">
+<title>Southern Stone &amp; Tile Care · Concept I: Navy One-Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sp.css">
+<style>
+/* per-template layout: navy one-pager with sticky section tabs */
+.tabbar { position: sticky; top: 74px; z-index: 60; display: flex; justify-content: center; padding-inline: clamp(12px, 3vw, 28px); margin-top: 12px; }
+.tabbar-inner { display: flex; gap: 4px; background: var(--band); border-radius: 999px; padding: 6px; max-width: 100%; overflow-x: auto; box-shadow: 0 10px 30px rgba(14, 23, 38, .18); }
+.tabbar-inner a { flex: none; font: 800 .68rem/1 "Archivo", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--on-band-dim); text-decoration: none; padding: .85em 1.25em; border-radius: 999px; transition: color .15s ease, background .15s ease; }
+.tabbar-inner a:hover, .tabbar-inner a:focus-visible { color: var(--band); background: var(--accent); }
+#services, #difference, #process, #reviews, #contact { scroll-margin-top: 136px; }
+.op-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(38px, 6vw, 72px) clamp(30px, 4vw, 52px); }
+.op-hero .frame { aspect-ratio: 4/3; }
+.op-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1.8em; }
+.op-kicker { font: 800 .74rem/1 "Archivo", sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-soft-2); border-radius: 999px; padding: .8em 1.3em; display: inline-block; margin-bottom: 1.4em; }
+.op-svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 26px); margin-top: clamp(30px, 4vw, 48px); }
+.op-svc { padding: clamp(22px, 3vw, 32px); display: flex; flex-direction: column; gap: 14px; }
+.op-svc h3 { font: 800 1.2rem/1.2 "Archivo", sans-serif; margin: 0; }
+.op-svc p { margin: 0; color: var(--gray); font-size: .95rem; flex: 1; }
+.op-svc-link { font: 800 .78rem/1 "Archivo", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-deep); text-decoration: none; border-bottom: 2px solid var(--accent-soft-2); padding-bottom: .35em; width: fit-content; }
+.op-svc-link:hover { border-color: var(--accent); }
+.op-proof-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(26px, 4vw, 60px); align-items: center; }
+.op-proof-grid .sp-ba { aspect-ratio: 3/2; }
+.op-proof-note { font-size: .84rem; color: var(--gray); margin-top: .9em; }
+.op-proc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 22px); margin-top: clamp(30px, 4vw, 48px); }
+.op-proc { padding: clamp(20px, 2.6vw, 28px); }
+.op-step { font: 800 1.6rem/1 "Archivo", sans-serif; color: var(--accent); background: var(--band); border-radius: 14px; width: 56px; height: 56px; display: grid; place-items: center; }
+.op-proc h3 { font: 800 1.05rem/1.2 "Archivo", sans-serif; margin: .9em 0 .4em; }
+.op-proc p { margin: 0; color: var(--gray); font-size: .9rem; }
+.op-rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2.2vw, 24px); margin-top: clamp(30px, 4vw, 48px); }
+.op-strip { aspect-ratio: 3/1; }
+@media (max-width: 960px) {
+  .op-hero, .op-proof-grid { grid-template-columns: 1fr; }
+  .op-svc-grid, .op-rev-grid { grid-template-columns: 1fr; max-width: 540px; margin-inline: auto; }
+  .op-proc-grid { grid-template-columns: 1fr 1fr; }
+  .op-strip { aspect-ratio: 2/1; }
+}
+</style>
+</head>
+<body class="sp-navy" data-page="home" data-concept="i">
+<!--
+THESIS: The whole pitch on one page, navigated by a slim sticky tab bar that rides under the pill nav.
+OWN-WORLD: Flat deep navy and warm stone-gold; the tab bar is a second navy pill echoing the header.
+STORY: A homeowner taps Services, Difference, Process, Reviews, Contact in order and never leaves the page.
+FIRST VIEWPORT: Pill nav, sticky section tabs, then a split hero: headline and dual CTA left, marble photo right.
+FORM: SleekPixel canon, sp-navy palette, one-pager variant. Brief-pinned.
+-->
+<a class="skip" href="#main">Skip to content</a>
+<header class="sp-header">
+  <nav class="pill" aria-label="Main">
+    <a class="brand" href="concept-i.html">
+      <span class="brand-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 8.5 12 21l9-12.5L16 3z"/><path d="M3 8.5h18M12 21 8 8.5M12 21l4-12.5"/></svg></span>
+      <b>Southern<span>Stone</span>&amp;Tile</b>
+    </a>
+    <div class="pill-links">
+      <div class="dd">
+            <button class="dd-btn" aria-expanded="false" aria-haspopup="true">Services
+              <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="dd-panel" role="menu">
+              <div class="dd-items">
+                <a class="dd-item" role="menuitem" href="natural-stone.html">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 8.5 12 21l9-12.5L16 3z"/><path d="M3 8.5h18M12 21 8 8.5M12 21l4-12.5"/></svg></span>
+                  <div><strong>Natural stone restoration</strong><span>Marble, granite, travertine, and slate honed, polished, and sealed.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="tile-and-grout.html">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+                  <div><strong>Tile &amp; grout cleaning</strong><span>Water extraction and orbital agitation lift the years out of the lines.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="care-and-maintenance.html">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-2 3.5-7 4-7 9a7 7 0 0 0 14 0c0-5-5-5.5-7-9Z"/></svg></span>
+                  <div><strong>Care &amp; maintenance</strong><span>Sealing schedules that keep the finish between visits.</span></div>
+                </a>
+                <a class="dd-item" role="menuitem" href="natural-stone.html">
+                  <span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l4-4 4 4v11M13 20v-7l4-3 2 2v8"/></svg></span>
+                  <div><strong>Outdoor stone</strong><span>Walkways, patios, and pool decks restored against Georgia weather.</span></div>
+                </a>
+              </div>
+              <div class="dd-foot">
+                <a href="tel:+14048363888"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call Brian</a>
+                <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Free estimate</a>
+              </div>
+            </div>
+          </div>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="testimonials.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a class="pill-cta" href="tel:+14048363888">(404) 836-3888</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mmenu">
+        <span class="visually-hidden">Menu</span>
+        <svg width="24" height="17" viewBox="0 0 24 17" aria-hidden="true"><path d="M1 1.5h22M1 8.5h22M1 15.5h22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mmenu" data-nav>
+    <a href="natural-stone.html">Natural Stone Restoration</a>
+    <a href="tile-and-grout.html">Tile &amp; Grout Cleaning</a>
+    <a href="care-and-maintenance.html">Care &amp; Maintenance</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="testimonials.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+<nav class="tabbar" aria-label="Page sections">
+  <div class="tabbar-inner">
+    <a href="#services">Services</a>
+    <a href="#difference">Difference</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<main id="main">
+<section class="wrap op-hero">
+  <div>
+    <span class="op-kicker">Newnan, Georgia · Serving Metro Atlanta</span>
+    <h1 class="disp h-xl">Your surfaces, <span class="acc">back at their best.</span></h1>
+    <p class="lede" style="margin-top:1.2em">Stone and tile restoration for Metro Atlanta. Owner-operated,
+    15+ years at the trade, priced so saving your stone always beats replacing it.</p>
+    <div class="op-hero-actions">
+      <a class="btn btn-acc" href="tel:+14048363888">Call (404) 836-3888 <small>Brian answers</small></a>
+      <a class="btn btn-frame" href="contact.html">Free estimate <small>No obligation</small></a>
+    </div>
+  </div>
+  <figure class="frame" data-reveal><img src="assets/img/bathroom-marble.jpg" alt="A marble bathroom with brass fixtures, restored to a soft glow" width="900" height="675"></figure>
+</section>
+<section class="wrap sec-tight"><div class="trust" data-reveal>
+      <div class="trust-item"><div class="big" style="display:flex;justify-content:center"><span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span></div><div class="small">5.0 on Google reviews</div></div>
+      <div class="trust-item"><div class="big">15+</div><div class="small">Years at the trade</div></div>
+      <div class="trust-item"><div class="big">Owner</div><div class="small">Operated, always</div></div>
+      <div class="trust-item"><div class="big">Free</div><div class="small">Honest estimates</div></div>
+    </div></section>
+<section class="wrap sec" id="services">
+  <div class="center">
+    <h2 class="disp h-lg">What we <span class="acc">restore</span></h2>
+    <p class="lede" style="margin:1em auto 0">Three trades, one truck, one standard: the surface leaves looking new.</p>
+  </div>
+  <div class="op-svc-grid">
+      <article class="card op-svc" data-reveal>
+        <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 3 8.5 12 21l9-12.5L16 3z"/><path d="M3 8.5h18M12 21 8 8.5M12 21l4-12.5"/></svg></span>
+        <h3>Natural stone restoration</h3>
+        <p>Countertops that lost their luster, floors dulled by traffic, outdoor stone beaten
+        by Georgia weather. We bring the finish back instead of tearing it out.</p>
+        <div class="tagpills"><span>Marble</span><span>Granite</span><span>Travertine</span><span>Slate</span></div>
+        <a class="op-svc-link" href="natural-stone.html">Explore restoration</a>
+      </article>
+      <article class="card op-svc" data-reveal>
+        <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+        <h3>Tile &amp; grout cleaning</h3>
+        <p>Advanced water extraction and orbital agitation lift years of dirt out of tile and
+        grout lines without harsh chemistry.</p>
+        <div class="tagpills"><span>Kitchens</span><span>Bathrooms</span><span>Showers</span><span>Foyers</span></div>
+        <a class="op-svc-link" href="tile-and-grout.html">Explore cleaning</a>
+      </article>
+      <article class="card op-svc" data-reveal>
+        <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-2 3.5-7 4-7 9a7 7 0 0 0 14 0c0-5-5-5.5-7-9Z"/></svg></span>
+        <h3>Care &amp; maintenance</h3>
+        <p>Sealing schedules and care plans that keep the finish you paid for, so small habits
+        never become replacement projects.</p>
+        <div class="tagpills"><span>Sealing</span><span>Schedules</span><span>Protection</span></div>
+        <a class="op-svc-link" href="care-and-maintenance.html">Explore care plans</a>
+      </article>
+    </div>
+</section>
+<section class="wrap sec" id="difference" style="padding-top:0">
+  <div class="op-proof-grid">
+    <div data-reveal>
+      <h2 class="disp h-lg">See the <span class="acc">difference</span></h2>
+      <p class="lede" style="margin-top:1em">Marble and granite run $75 to $200 or more per square foot to
+      replace. Restoration gives you your own stone back at its best for a fraction of that.
+      Drag the handle.</p>
+      <p class="op-proof-note">Illustrative simulation. Project photography drops in on the live site.</p>
+      <p style="margin-top:1.6em"><a class="btn btn-acc" href="why-hire-us.html">Why restoration wins</a></p>
+    </div>
+    <figure class="ba sp-ba" data-reveal>
+      <div class="ba-before"><img src="assets/img/marble-counter-wide.jpg" alt="" class="ba-img-dull" loading="lazy" width="1100" height="720"></div>
+      <div class="ba-after" aria-hidden="true"><img src="assets/img/marble-counter-wide.jpg" alt="" loading="lazy" width="1100" height="720"></div>
+      <div class="ba-divider"></div>
+      <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" width="22" height="22" aria-hidden="true"><path d="M8 5 3 12l5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ba-tags"><span class="ba-tag">Before</span><span class="ba-tag">After</span></div>
+      <input class="ba-range" type="range" min="0" max="100" value="55" aria-label="Compare worn and restored stone">
+    </figure>
+  </div>
+</section>
+
+<section class="wrap sec" id="process" style="padding-top:0">
+  <div class="center">
+    <h2 class="disp h-lg">How a job <span class="acc">runs</span></h2>
+  </div>
+  <div class="op-proc-grid">
+      <article class="card op-proc" data-reveal>
+        <span class="op-step">01</span>
+        <h3>Assess</h3>
+        <p>We look at the surface, name what it needs, and price it before any work starts. If
+        it doesn't need work, we say so.</p>
+      </article>
+      <article class="card op-proc" data-reveal>
+        <span class="op-step">02</span>
+        <h3>Restore</h3>
+        <p>Honing, polishing, extraction, repair. The right treatment for the stone, done by
+        the owner, not a rotating crew.</p>
+      </article>
+      <article class="card op-proc" data-reveal>
+        <span class="op-step">03</span>
+        <h3>Seal</h3>
+        <p>A penetrating sealer locks the result in and buys you time against every future
+        spill.</p>
+      </article>
+      <article class="card op-proc" data-reveal>
+        <span class="op-step">04</span>
+        <h3>Maintain</h3>
+        <p>An optional care schedule keeps the finish, year after year, for a fraction of what
+        replacement costs.</p>
+      </article>
+    </div>
+</section>
+
+<section class="wrap sec" id="reviews" style="padding-top:0">
+  <div class="center">
+    <h2 class="disp h-lg">The happy clients <span class="acc">speak</span></h2>
+    <p class="lede" style="margin:1em auto 0">Real Google reviews, five stars across the board.</p>
+  </div>
+  <div class="op-rev-grid">
+      <blockquote class="card rev-card" data-reveal>
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+        <p>"Brian did a fantastic job on our granite countertops. Look better now than they did
+        when they were new. Very professional."</p>
+        <cite><b>Lisa Fisher</b> · Google review</cite>
+      </blockquote>
+      <blockquote class="card rev-card" data-reveal>
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+        <p>"Highly trustworthy while he had access to our home, and kept me up to date with
+        progress throughout the process. Overall it was a great experience."</p>
+        <cite><b>Robert Raybon</b> · Google review</cite>
+      </blockquote>
+      <blockquote class="card rev-card" data-reveal>
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 118 20" fill="currentColor"><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(0,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(24,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(48,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(72,0)"/><path d="M10 1.2l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.6l-5.2 2.8 1-5.9L1.5 7.4l5.9-.8z" transform="translate(96,0)"/></svg></span><span class="visually-hidden">Five stars.</span>
+        <p>"Very professional and made our 50 yr old slate foyer floor look new again!"</p>
+        <cite><b>M. Ayers</b> · Google review</cite>
+      </blockquote>
+    </div>
+    <p class="center" style="margin-top:2em"><a class="btn btn-frame" href="testimonials.html">Read all eight reviews</a></p>
+</section>
+
+<section class="wrap sec-tight">
+  <figure class="frame op-strip" data-reveal><img src="assets/img/marble-texture-light.jpg" alt="" loading="lazy" width="1400" height="467"></figure>
+</section>
+
+<section class="sec-tight wrap" id="contact">
+  <div class="band center" style="padding:clamp(44px,6vw,72px) clamp(20px,4vw,60px)" data-reveal>
+    <h2 class="disp h-lg">Your free estimate awaits.</h2>
+    <p class="lede" style="margin:1em auto 0">No obligations. No pressure. If your stone doesn't need work, we'll
+    tell you so. That's the whole risk.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1.8em">
+      <a class="btn" style="background:var(--accent);color:var(--band)" href="tel:+14048363888">Call (404) 836-3888 <small style="color:inherit">Brian answers</small></a>
+      <a class="btn" style="border:1px solid var(--on-band-dim);color:var(--on-band)" href="contact.html">Send a message</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="sp-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <b>Southern<span>Stone</span>&amp;Tile Care</b>
+      <p style="margin-top:.8em">Owner-operated stone &amp; tile restoration.<br>Newnan, Georgia, serving Metro Atlanta.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="why-hire-us.html">Why Hire Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Reviews</a></li>
+        <li><a href="blog.html">Stone Care Notes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <address>
+      388 Bullsboro Drive #304<br>Newnan, GA 30263<br>
+      <a href="tel:+14048363888">(404) 836-3888</a><br>
+      <a href="mailto:brian@southernstoneandtile.com">brian@southernstoneandtile.com</a>
+    </address>
+  </div>
+  <p class="foot-legal wrap">© 2026 Southern Stone &amp; Tile Care LLC. Design preview by Agent Lead Engine.</p>
+</footer>
+<script src="assets/js/shared.js"></script>
+<script src="assets/js/dropdown.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@
 
   /* ---------- password gate ---------- */
   function authed() {
-    try { return sessionStorage.getItem(AUTH_KEY) === '1'; } catch (e) { return true; }
+    return true; /* review gate removed at client request */
   }
   window.sstUnlock = function (value) {
     if (value === PASS) {
@@ -30,7 +30,8 @@
   }
 
   /* ---------- concept memory ---------- */
-  var CONCEPTS = ['a', 'b', 'c'];
+  var CONCEPTS = ['a','b','c','d','e','f','g','h','i','j','k','l','m'];
+  var PALETTE = { a:'a', b:'b', c:'c', d:'c', e:'c', f:'c', g:'c', h:'c', i:'c', j:'c', k:'a', l:'b', m:'a' };
   function valid(c) { return CONCEPTS.indexOf(c) !== -1 ? c : null; }
   function getChoice() { try { return valid(localStorage.getItem(CHOICE_KEY)); } catch (e) { return null; } }
   function setChoice(c) { if (!valid(c)) return; try { localStorage.setItem(CHOICE_KEY, c); } catch (e) {} }
@@ -42,12 +43,12 @@
 
   /* Subpages inherit the concept being viewed (or the chosen one). */
   if (document.body.hasAttribute('data-themed')) {
-    var t = getViewing() || getChoice() || 'a';
-    document.body.setAttribute('data-theme', t);
+    var t = getViewing() || getChoice() || 'c';
+    document.body.setAttribute('data-theme', PALETTE[t] || 'c');
   }
 
   /* ---------- review bar ---------- */
-  var NAMES = { a: 'Flat Blue', b: 'Forest', c: 'Navy & Stone' };
+  var NAMES = { a: 'Flat Blue', b: 'Forest', c: 'Navy & Stone', d: 'Navy Sidebar', e: 'Navy Editorial', f: 'Navy Fullscreen', g: 'Navy Proof-First', h: 'Navy Zigzag', i: 'Navy One-Pager', j: 'Navy Inverted', k: 'Blue Minimal', l: 'Forest Gallery', m: 'Blue Estimate-First' };
   function reviewBar() {
     if (page === 'gate') return;
     var active = concept || getViewing() || getChoice();
