@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-02 00:15 UTC",
+ "generated_at": "2026-09-02 12:15 UTC",
  "launch_date": "2026-08-08",
  "days_live": 5,
  "budgets": {
@@ -130,7 +130,7 @@
  "promo": {
   "remaining": 0.0,
   "deadline": "2026-08-14",
-  "days_left": -18
+  "days_left": -19
  },
  "tranche": {
   "cash_budget": 1700,
